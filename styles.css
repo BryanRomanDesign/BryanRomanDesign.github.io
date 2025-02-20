@@ -1,0 +1,588 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #36563D;
+}
+
+/* SOCIAL BAR */
+.social-bar {
+  position: fixed;
+  left: 20px;
+  /* Adjust if needed */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  /* Space between icons */
+}
+
+.social-bar::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  /* Adjust as needed */
+  background-color: #E1D9C7;
+  top: 0;
+  left: -10px;
+  /* Move line to the left */
+}
+
+
+.social-bar a {
+  color: #E1D9C7;
+  font-size: 24px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-bar a:hover {
+  color: #ffffff;
+}
+
+/* PAGE */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #E1D9C7;
+}
+
+.logo_small {
+  justify-self: start;
+}
+
+.logo_small img {
+  max-width: clamp(100px, 10vw, 150px);
+  /* Adjusts between 100px and 150px */
+  height: auto;
+}
+
+.nav-center-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-center-logo img {
+  max-width: clamp(150px, 20vw, 300px);
+  /* Adjusts between 150px and 300px */
+  height: auto;
+
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*padding: 20px; /* Adjusted padding for smaller screens */
+  position: relative;
+  /* Added relative positioning */
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 20px;
+}
+
+/* NAV */
+nav {
+  margin-left: auto;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+/* Navigation Links */
+nav ul li a {
+  color: #E1D9C7;
+  text-decoration: none;
+  font-size: 1.2em;
+  position: relative;
+  /* Ensure the pseudo-element is positioned relative to the link */
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  /* Line height */
+  background-color: #E1D9C7;
+  transition: width 0.3s ease;
+  /* Smooth animation */
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  /* Make the line span across the entire width of the link */
+}
+
+/* INTRODUCTION PART */
+
+h1 {
+  font-size: 50px;
+  /* Default size for full screen */
+  font-size: clamp(40px, 5vw, 60px);
+  /* Scale text size, but not too big */
+}
+
+.introduction {
+  display: flex;
+  justify-content: center;
+  /* Keep the overall layout centered */
+  align-items: center;
+  padding: 50px;
+  /* Adjusted padding for responsiveness */
+  flex-wrap: wrap;
+  /* Allow items to wrap on smaller screens */
+  gap: 30px;
+  /* Adds space between text and image */
+}
+
+.introduction img {
+  max-width: 50%;
+  /* Image size limits to 50% of container */
+  height: auto;
+}
+
+.introduction_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* Align text to the left */
+  text-align: left;
+}
+
+.introduction p {
+  max-width: 600px;
+  margin-right: 20px;
+  font-size: clamp(18px, 3vw, 30px);
+  /* Text size scales but doesn't go over 30px */
+}
+
+/* PROJECTS */
+
+.projects {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.projects h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Adjusts automatically based on screen size */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.project-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-info-text {
+  margin: 0;
+  background-color: #36563D;
+  color: #E1D9C7;
+  /* Ensure the text is visible on the background */
+  border-radius: 10px;
+  /* Add curved corners */
+  padding: 10px 15px;
+  /* Add some padding for space around text */
+  text-align: center;
+  /* Center the text */
+}
+
+.project-info h2,
+.project-info p {
+  margin: 0;
+  transform: translateY(10px);
+  transition: transform 0.3s ease;
+  background-color: transparent;
+  color: #E1D9C7
+}
+
+.project:hover .project-info {
+  opacity: 1;
+}
+
+.project:hover .project-info h2,
+.project:hover .project-info p {
+  transform: translateY(0);
+}
+
+.project:hover img {
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+/* Footer Styling */
+footer {
+  background-color: #36563D;
+  color: #E1D9C7;
+  padding: 50px 0;
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.stay-connected form {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.stay-connected input {
+  padding: 15px;
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #E1D9C7;
+  color: #36563D;
+  transition: background-color 0.3s;
+}
+
+.stay-connected input:focus {
+  background-color: #b3a47c;
+  outline: none;
+}
+
+.stay-connected button {
+  padding: 15px;
+  background-color: #36563D;
+  color: #E1D9C7;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.stay-connected button:hover {
+  background-color: #b3a47c;
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-social a {
+  color: #E1D9C7;
+  font-size: 30px;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #ffffff;
+}
+
+/* Middle Section: Quote */
+.footer-middle {
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* Right Section: Links */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.footer-right ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-right li {
+  margin: 5px 0;
+}
+
+.footer-right a {
+  color: #E1D9C7;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-right a:hover {
+  color: #b3a47c;
+}
+
+/* Footer Container */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+/* MOBILE STUFF */
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    padding: 20px 10px;
+  }
+
+  .introduction {
+    padding: 20px;
+    flex-direction: column;
+    /* Stack text and image vertically */
+    justify-content: flex-start;
+    /* Align text to the left */
+    text-align: left;
+    /* Align text to the left */
+  }
+
+  .introduction_info {
+    text-align: left;
+    /* Ensure text is left-aligned in mobile view */
+  }
+
+  .introduction p {
+    font-size: 5vw;
+    /* Scale text size relative to screen width */
+    max-width: 100%;
+    /* Let the text block take the full width on smaller screens */
+    margin-bottom: 20px;
+    /* Add margin below text */
+  }
+
+  .introduction img {
+    max-width: 90%;
+    /* Let the image resize but keep it within 90% of its container */
+  }
+
+  .projects {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 8vw;
+    /* Smaller heading that scales with screen width */
+  }
+
+  .menu-toggle {
+    display: block;
+    /* Only show menu button on mobile */
+    background: none;
+    border: none;
+    color: #E1D9C7;
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    /* Ensure it stays on top */
+  }
+
+  /* Hide the navigation menu by default on mobile */
+  #nav-menu {
+    display: none;
+  }
+
+  /* Show the navigation menu when active */
+  #nav-menu.active {
+    display: block;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 0;
+    background-color: #36563D;
+    padding: 20px;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .logo_small img {
+    max-width: 100px;
+    /* Smaller size for the small logo on mobile */
+  }
+
+  .nav-center-logo img {
+    max-width: 200px;
+    /* Smaller size for the center logo on mobile */
+  }
+
+  .project-info {
+    position: absolute;
+    bottom: 10px;
+    /* Adjust the bottom position for mobile */
+    left: 10px;
+    /* Align to the left */
+    width: auto;
+    /* Allow the text to fit in the container */
+    height: auto;
+    /* Don't make it take up the entire space */
+    background: none;
+    /* Remove the background */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Align text to the left */
+    justify-content: flex-start;
+    /* Adjust content to the top */
+    opacity: 1;
+    /* Make the text always visible */
+  }
+
+  .project-info-text {
+    margin: 0;
+    background-color: #36563D;
+    color: white;
+    /* Ensure the text is visible on the background */
+    border-radius: 10px;
+    /* Add curved corners */
+    padding: 10px 15px;
+    /* Add some padding for space around text */
+    text-align: center;
+    /* Center the text */
+  }
+
+  .project-info h2,
+  .project-info p {
+    margin: 0;
+    transform: translateY(0);
+    /* Ensure no animation on mobile */
+  }
+
+  .project:hover .project-info {
+    opacity: 1;
+    /* Keep it visible, no hover effect */
+  }
+
+  /* Styling for the burger menu */
+  .social-links {
+    display: none;
+    margin-top: 20px;
+    /* Add spacing between nav links and social links */
+  }
+
+  #nav-menu.active .social-links {
+    display: flex;
+    justify-content: center;
+    /* Center the icons horizontally */
+    gap: 15px;
+    /* Space between icons */
+  }
+
+  .social-links a {
+    color: #E1D9C7;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .social-links a:hover {
+    color: #ffffff;
+  }
+
+  .social-bar {
+    display: none;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center; /* Center content */
+    text-align: center; /* Align text center */
+  }
+
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    align-items: center; /* Center individual sections */
+    text-align: center; /* Align text within sections */
+  }
+
+  .footer-right ul {
+    align-items: center;
+  }
+}
+
+@media (min-width: 769px) {
+
+  /* Hide the menu button on larger screens */
+  .menu-toggle {
+    display: none;
+  }
+
+  .social-links {
+    display: none;
+    /* Hide social links on PC */
+  }
+}
