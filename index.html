@@ -1,48 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bryan Román | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Monomaniac+One&display=auto" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Monomaniac+One&display=auto"
+        rel="stylesheet">
+
+
 </head>
+
+<script src="script.js"></script>
+
 <body>
-    <header>
-        <div class="social-bar">
-            <!--<a href="https://www.instagram.com" target="_blank"><i class="bx bxl-instagram"></i></a> !-->
-            <a href="https://www.behance.net" target="_blank"><i class="bx bxl-behance"></i></a>
-            <a href="https://www.linkedin.com" target="_blank"><i class="bx bxl-linkedin"></i></a>
-        </div>
-        
-        <div class="logo_small">
-            <img src="Images/BR_PICTOGRAM.png" alt="Bryan Román Logo">
-        </div>
+    <div id="header-container"></div>
 
-        <div class="nav-center-logo">
-            <img src="Images/FULL_NAME_DESIGN.png" alt="Centered Logo">
-        </div>
-
-        <button class="menu-toggle" id="menu-toggle">
-            <i class="bx bx-menu"></i> <!-- Boxicons menu icon -->
-        </button>
-        <nav id="nav-menu">
-            <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#projects">PROJECTS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-            <div class="social-links">
-                <!-- <a href="https://www.instagram.com" target="_blank"><i class="bx bxl-instagram"></i></a> !-->
-                <a href="https://www.behance.net" target="_blank"><i class="bx bxl-behance"></i></a>
-                <a href="https://www.linkedin.com" target="_blank"><i class="bx bxl-linkedin"></i></a>
-            </div>
-        </nav>
-    </header>
-    
     <!-- PAGE -->
+    <div id="social-bar-container"></div>
+
     <main>
         <div class="introduction">
             <div class="introduction_info">
@@ -50,9 +29,10 @@
                 <br>
                 <p>
                     I’m a graphic designer with a Master’s Degree in Graphic Arts. I’m passionate about
-                    using creativity to solve design challenges and bring ideas to life. The area of design that 
-                    excites me the most is branding. Whether it’s creating, developing, or refining a brand, I love 
-                    the process of shaping its identity and story. I also enjoy working on various design projects, always 
+                    using creativity to solve design challenges and bring ideas to life. The area of design that
+                    excites me the most is branding. Whether it’s creating, developing, or refining a brand, I love
+                    the process of shaping its identity and story. I also enjoy working on various design projects,
+                    always
                     ensuring each one is purposeful and impactful.
                     <br>
                     <br>
@@ -67,52 +47,61 @@
         <section class="projects">
             <h1>Projects</h1>
             <div class="projects-grid">
-                <div class="project">
-                    <img src="Images\Project_Template.png" alt="Project 1">
+                <a href="Pawlower.html">
+                    <div class="project">
+                        <img src="Images\Projects\Pawlower\Pawlower_Logo.png" alt="Project 1">
                         <div class="project-info">
                             <div class="project-info-text">
                                 <h2>Pawlower</h2>
                                 <p>2022</p>
                             </div>
+                        </div>
                     </div>
-                </div>
-                <div class="project">
-                    <img src="Images\Project_Template.png" alt="Project 2">
+                </a>
+                <a href="project.html">
+                    <div class="project">
+                        <img src="Images\Project_Template.png" alt="Project 2">
                         <div class="project-info">
                             <div class="project-info-text">
                                 <h2>Knotra</h2>
                                 <p>2024</p>
                             </div>
+                        </div>
                     </div>
-                </div>
-                <div class="project">
-                    <img src="Images\Project_Template.png" alt="Project 3">
+                </a>
+                <a href="project.html">
+                    <div class="project">
+                        <img src="Images\Project_Template.png" alt="Project 3">
                         <div class="project-info">
                             <div class="project-info-text">
                                 <h2>Hoof & Mane</h2>
                                 <p>2024</p>
                             </div>
+                        </div>
                     </div>
-                </div>
-                <div class="project">
-                    <img src="Images\Project_Template.png" alt="Project 4">
+                </a>
+                <a href="project.html">
+                    <div class="project">
+                        <img src="Images\Project_Template.png" alt="Project 4">
                         <div class="project-info">
                             <div class="project-info-text">
                                 <h2>Ember & Pine</h2>
                                 <p>2025</p>
                             </div>
+                        </div>
                     </div>
-                </div>
+                </a>
                 <!-- Add more projects as needed -->
             </div>
         </section>
-        
+
     </main>
 
     <!-- PAGE -->
 
     <div id="footer-container"></div>
-    <script src="script.js"></script>
+
 
 </body>
+
 </html>

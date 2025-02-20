@@ -6,7 +6,7 @@
 }
 
 /* SOCIAL BAR */
-.social-bar {
+#social-bar {
   position: fixed;
   left: 20px;
   /* Adjust if needed */
@@ -19,7 +19,7 @@
   /* Space between icons */
 }
 
-.social-bar::before {
+#social-bar::before {
   content: "";
   position: absolute;
   width: 2px;
@@ -32,14 +32,14 @@
 }
 
 
-.social-bar a {
+#social-bar a {
   color: #E1D9C7;
   font-size: 24px;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.social-bar a:hover {
+#social-bar a:hover {
   color: #ffffff;
 }
 
@@ -53,6 +53,8 @@ body {
   min-height: 100vh;
   color: #E1D9C7;
 }
+
+/* Header */
 
 .logo_small {
   justify-self: start;
@@ -77,6 +79,9 @@ body {
 
 }
 
+#header-container{
+  min-height: 100px;
+}
 
 header {
   display: flex;
@@ -262,6 +267,12 @@ h1 {
 
 /* FOOTER */
 /* Footer Styling */
+
+#footer-container
+{
+  min-height: 240px;  
+}
+
 footer {
   background-color: #36563D;
   color: #E1D9C7;
@@ -552,7 +563,7 @@ footer {
     color: #ffffff;
   }
 
-  .social-bar {
+  #social-bar {
     display: none;
   }
 
@@ -584,5 +595,39 @@ footer {
   .social-links {
     display: none;
     /* Hide social links on PC */
+  }
+}
+
+/* PROJECT STYLE */
+
+.project_introduction {
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: flex-start; /* Aligns the content at the top */
+  gap: 50px; /* Adds a smaller gap between the name and info */
+  margin: 20px;
+}
+
+.project_name, .project_info {
+  max-width: 500px; /* Optional: Limit width of each section */
+}
+
+.project_name h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.project_info p {
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Mobile view (adjusted for smaller screens) */
+@media (max-width: 768px) {
+  .project_introduction {
+      flex-direction: column; /* Stack the elements vertically */
+      align-items: center; /* Center the items */
   }
 }
