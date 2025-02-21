@@ -58,8 +58,8 @@ body {
   background-color: #36563D;
 
   /*ANIMATION STUFF*/
-  opacity: 0; /* Initially set the body to be invisible */
-  animation: popUp 0.25s forwards; /* Apply animation when page loads */
+  /*opacity: 0; /* Initially set the body to be invisible */
+  /*animation: popUp 0.25s forwards; /* Apply animation when page loads */
 }
 
 @keyframes popUp {
