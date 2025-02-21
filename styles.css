@@ -62,11 +62,6 @@ body {
   animation: popUp 0.25s forwards; /* Apply animation when page loads */
 }
 
-/* Apply the exit animation */
-.exit {
-  animation: exitPopUp 0.25s forwards; /* Apply the exit animation */
-}
-
 @keyframes popUp {
   0% {
     opacity: 0;
@@ -75,17 +70,6 @@ body {
     opacity: 1;
   }
 }
-
-@keyframes exitPopUp {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-
 
 /* Header */
 
