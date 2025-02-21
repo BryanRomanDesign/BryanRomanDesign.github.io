@@ -2,7 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #36563D;
+}
+
+p{
+  background: transparent;
 }
 
 /* SOCIAL BAR */
@@ -52,7 +55,37 @@ body {
   flex-direction: column;
   min-height: 100vh;
   color: #E1D9C7;
+  background-color: #36563D;
+
+  /*ANIMATION STUFF*/
+  opacity: 0; /* Initially set the body to be invisible */
+  animation: popUp 0.25s forwards; /* Apply animation when page loads */
 }
+
+/* Apply the exit animation */
+.exit {
+  animation: exitPopUp 0.25s forwards; /* Apply the exit animation */
+}
+
+@keyframes popUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes exitPopUp {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
 
 /* Header */
 
@@ -81,6 +114,7 @@ body {
 
 #header-container{
   min-height: 100px;
+  background-color: #36563D;
 }
 
 header {
@@ -603,9 +637,10 @@ footer {
 .project_introduction {
   display: flex;
   justify-content: center; /* Centers the content horizontally */
-  align-items: flex-start; /* Aligns the content at the top */
+  align-items: center; /* Aligns the content at the top */
   gap: 50px; /* Adds a smaller gap between the name and info */
   margin: 20px;
+  height: 200px;
 }
 
 .project_name, .project_info {
@@ -628,25 +663,125 @@ footer {
   display: flex;
   justify-content: center; /* Centers horizontally */
   align-items: center; /* Centers vertically */
+  width: 100%;
+  height: auto; /* Adjusts height based on image */
+  overflow: hidden; /* Prevents overflow issues */
 }
 
-.project_details {
-  background-color: #0d86c9;
+.project_cover img {
+  max-height: 562.5px; /* Keeps the height limit for PC */
+  width: 100%; /* Makes the image responsive */
+  height: auto; /* Ensures it keeps aspect ratio */
+  object-fit: cover; /* Makes sure it fills nicely */
+}
+
+/* Details 1 */
+
+.project_details_1 {
   display: flex;
   justify-content: center; /* Centers content horizontally */
   align-items: center; /* Centers content vertically */
   height: 450px;
 }
 
-.project_details h2 {
+.project_details_1 p {
+  text-align: center;
+  font-size: 20px;
+}
+
+.project_details_1 h2 {
   background: transparent;
   text-align: center;
 }
+
+/* Details 2 */
+
+.project_details_2 {
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  height: 450px;
+  text-align: left; /* Aligns the text to the left */
+  padding: 0 20px; /* Optional: Adds padding for spacing on the left and right */
+}
+
+.project_details_2 p {
+  font-size: 20px;
+  margin: 0;
+}
+
+.project_details_2 h2 {
+  background: transparent;
+  margin: 0; /* Optional: Removes any default margin for heading */
+}
+
+.project_tags {
+  display: flex;
+  gap: 8px; /* Space between tags */
+  flex-wrap: wrap; /* Ensures they wrap if needed */
+}
+
+.tag {
+  background-color: #0d86c9; /* Main color */
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px; /* Makes the capsule shape */
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap; /* Prevents breaking in two lines */
+}
+
+.project_images_scalable {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  justify-content: center; /* Centers the images */
+  gap: 0px; /* No space between images */
+}
+
+.project_images_scalable img {
+  width: 33.33%; /* Default: 3 images per row */
+  height: auto; /* Keeps aspect ratio */
+  object-fit: cover; /* Ensures images cover the space */
+}
+
+.project_images {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  justify-content: center; /* Centers the images */
+  gap: 0px; /* No space between images */
+}
+
+.project_images img {
+  width: 33.33%; /* Default: 3 images per row */
+  height: auto; /* Keeps aspect ratio */
+  object-fit: cover; /* Ensures images cover the space */
+}
+
+.branding { background-color: #FF5733; }
+.product-design { background-color: #33AFFF; }
+.web-design { background-color: #33FF7A; }
 
 /* Mobile view (adjusted for smaller screens) */
 @media (max-width: 768px) {
   .project_introduction {
       flex-direction: column; /* Stack the elements vertically */
       align-items: center; /* Center the items */
+  }
+
+  .project_cover {
+    height: 300px; /* Adjust height for mobile */
+  }
+
+  .project_cover img {
+      max-height: none; /* Removes PC height limit */
+      height: 100%; /* Makes sure it fills container */
+      width: auto; /* Maintains aspect ratio */
+  }
+
+  .project_images_scalable img {
+    width: 100%; /* 1 image per row */
   }
 }
