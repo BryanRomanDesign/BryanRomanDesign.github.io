@@ -23,5 +23,14 @@ fetch("Sections/header.html")
 fetch("Sections/socialbar.html").then(response => response.text()).then(data => { document.getElementById("social-bar-container").innerHTML = data; });
 fetch("Sections/footer.html").then(response => response.text()).then(data => { document.getElementById("footer-container").innerHTML = data; });
 
+window.addEventListener('scroll', function () {
+    let images = document.querySelectorAll('img[data-src]');
+    images.forEach(function (image) {
+      if (image.getBoundingClientRect().top <= window.innerHeight && !image.src) {
+        image.src = image.getAttribute('data-src');
+      }
+    });
+  });
+
 
 window.history.scrollRestoration = 'auto';

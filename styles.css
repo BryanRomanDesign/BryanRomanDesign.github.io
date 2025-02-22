@@ -71,6 +71,10 @@ body {
   }
 }
 
+main {
+
+}
+
 /* Header */
 
 .logo_small {
@@ -97,7 +101,7 @@ body {
 }
 
 #header-container{
-  min-height: 100px;
+  min-height: 120px;
   background-color: #36563D;
 }
 
@@ -225,6 +229,19 @@ h1 {
   cursor: pointer;
 }
 
+.project-tags {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers the tags */
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease;
+  margin-top: 20px;
+}
+
+.project:hover .project-tags {
+  opacity: 1; /* Show on hover */
+}
 .project img {
   width: 100%;
   height: auto;
@@ -623,7 +640,7 @@ footer {
   justify-content: center; /* Centers the content horizontally */
   align-items: center; /* Aligns the content at the top */
   gap: 50px; /* Adds a smaller gap between the name and info */
-  margin: 20px;
+  margin: 100px;
   height: 200px;
 }
 
@@ -666,11 +683,17 @@ footer {
   justify-content: center; /* Centers content horizontally */
   align-items: center; /* Centers content vertically */
   height: 450px;
+  width: 100%;
 }
 
 .project_details_1 p {
   text-align: center;
   font-size: 20px;
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Aligns the content at the top */
+  gap: 50px; /* Adds a smaller gap between the name and info */
+  margin: 100px;
 }
 
 .project_details_1 h2 {
@@ -682,11 +705,10 @@ footer {
 
 .project_details_2 {
   display: flex;
-  justify-content: center; /* Centers content horizontally */
-  align-items: center; /* Centers content vertically */
-  height: 450px;
-  text-align: left; /* Aligns the text to the left */
-  padding: 0 20px; /* Optional: Adds padding for spacing on the left and right */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Aligns the content at the top */
+  gap: 50px; /* Adds a smaller gap between the name and info */
+  margin: 100px;
 }
 
 .project_details_2 p {
@@ -699,10 +721,67 @@ footer {
   margin: 0; /* Optional: Removes any default margin for heading */
 }
 
-.project_tags {
+/* GRID TAGS */ 
+.tag-container {
+
+}
+
+.project_tags_type, .project_tags_tools {
   display: flex;
   gap: 8px; /* Space between tags */
   flex-wrap: wrap; /* Ensures they wrap if needed */
+  margin-top: 5px;
+  margin-bottom: 5px;
+  justify-content: center;
+}
+
+.project_tags_type .tag, .project_tags_tools .tag {
+  display: flex;
+  align-items: center; /* Align icon and text */
+  gap: 5px; /* Space between icon and text */
+  padding: 3px 6px; /* Smaller padding */
+  border-radius: 5px;
+  font-size: 12px; /* Adjust font size to make text smaller */
+}
+
+
+.project_tags_tools img {
+  width: 14px; /* Smaller icon size */
+  height: auto;
+  margin-right: 5px;
+}
+
+
+/* INFO TAGS*/
+
+.tag-container_info {
+
+}
+
+.project_tags_type_info, .project_tags_tools_info {
+  display: grid; /* Use grid for better control */
+  grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+  gap: 8px; /* Space between tags */
+  justify-items: left; /* Center the items in each cell */
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.project_tags_type_info .tag, .project_tags_tools_info .tag {
+  display: flex;
+  align-items: center; /* Align icon and text */
+  gap: 5px; /* Space between icon and text */
+  border-radius: 5px;
+  text-align: center; /* Center the text */
+
+  font-size: 12px; /* Smaller font size for info tags */
+  padding: 3px 6px; /* Smaller padding */
+}
+
+.project_tags_tools_info img {
+  width: 14px; /* Smaller icon size for info tags */
+  height: auto;
+  margin-right: 5px;
 }
 
 .tag {
@@ -745,8 +824,18 @@ footer {
 }
 
 .branding { background-color: #FF5733; }
-.product-design { background-color: #33AFFF; }
-.web-design { background-color: #33FF7A; }
+.packaging-design { background-color: #f831ff; }
+.motion-design { background-color: #33ffff; }
+.game-design { background-color: #f831ff; }
+.product-design { background-color: #a333ff; }
+.editorial-design { background-color: #a333ff; }
+.web-design { background-color: #33a3ff; }
+.web-development { background-color: #33ffe4; }
+
+
+.Illustrator { background-color: #FF9A00 ; }
+.Photoshop{ background-color: #31A8FF; }
+.InDesign { background-color: #F36; }
 
 /* Mobile view (adjusted for smaller screens) */
 @media (max-width: 768px) {
@@ -756,7 +845,7 @@ footer {
   }
 
   .project_cover {
-    height: 300px; /* Adjust height for mobile */
+    height: 250px; /* Adjust height for mobile */
   }
 
   .project_cover img {
@@ -767,5 +856,9 @@ footer {
 
   .project_images_scalable img {
     width: 100%; /* 1 image per row */
+  }
+
+  .project_tags_type, .project_tags_tools {
+    justify-content: left;
   }
 }
