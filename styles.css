@@ -242,11 +242,14 @@ h1 {
 .project:hover .project-tags {
   opacity: 1; /* Show on hover */
 }
+
 .project img {
   width: 100%;
   height: auto;
   display: block;
   transition: transform 0.3s ease;
+  border: 4px solid #E1D9C7; /* Adjust color and thickness */
+  border-radius: 8px; /* Optional: Adds rounded corners */
 }
 
 .project-info {
