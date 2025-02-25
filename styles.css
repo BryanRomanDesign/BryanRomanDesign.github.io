@@ -693,7 +693,7 @@ footer {
   justify-content: center; /* Centers the content horizontally */
   align-items: center; /* Aligns the content at the top */
   gap: 50px; /* Adds a smaller gap between the name and info */
-  margin: 100px;
+  margin: 50px;
 }
 
 .project_details_1 h2 {
@@ -708,7 +708,7 @@ footer {
   justify-content: center; /* Centers the content horizontally */
   align-items: center; /* Aligns the content at the top */
   gap: 50px; /* Adds a smaller gap between the name and info */
-  margin: 100px;
+  margin: 50px;
 }
 
 .project_details_2 p {
@@ -810,6 +810,18 @@ footer {
   object-fit: cover; /* Ensures images cover the space */
 }
 
+.project_images_scalable_full {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Ensures the structure matches */
+}
+
+.project_images_scalable_full img {
+  grid-column: span 3; /* Makes the image take up all 3 columns */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 .project_images {
   display: flex;
   flex-wrap: wrap; /* Allows items to wrap to the next line */
@@ -825,6 +837,7 @@ footer {
 
 .branding { background-color: #FF5733; }
 .packaging-design { background-color: #f831ff; }
+.social-media { background-color: #ff3142; }
 .motion-design { background-color: #33ffff; }
 .game-design { background-color: #f831ff; }
 .product-design { background-color: #a333ff; }
