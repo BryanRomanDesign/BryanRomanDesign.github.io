@@ -1,0 +1,12 @@
+{
+    "en": {
+        "trans-header-home": "Home",
+        "trans-header-projects": "Projects",
+        "trans-header-contact": "Contact"
+    },
+    "es": {
+        "trans-header-home": "Inicio",
+        "trans-header-projects": "Proyectos",
+        "trans-header-contact": "Contactar"
+    }
+}

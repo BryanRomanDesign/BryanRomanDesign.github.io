@@ -12,14 +12,12 @@ p{
 #social-bar {
   position: fixed;
   left: 20px;
-  /* Adjust if needed */
   top: 50%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
-  /* Space between icons */
+  gap: 10px; /* Reduce the gap between icons and buttons */
   z-index: 1000;
 }
 
@@ -28,14 +26,12 @@ p{
   position: absolute;
   width: 2px;
   height: 100%;
-  /* Adjust as needed */
   background-color: #E1D9C7;
   top: 0;
   left: -10px;
-  /* Move line to the left */
 }
 
-
+/* Social Icons */
 #social-bar a {
   color: #E1D9C7;
   font-size: 24px;
@@ -45,6 +41,34 @@ p{
 
 #social-bar a:hover {
   color: #ffffff;
+}
+
+/* Language buttons */
+#social-bar .lang-btn {
+  background-color: transparent;
+  color: #E1D9C7;
+  font-size: 16px; /* Smaller font size */
+  border: none;
+  padding: 5px 10px; /* Smaller padding */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0; /* No extra margin between buttons */
+}
+
+#social-bar .lang-btn:hover {
+  background-color: transparent; /* No background change on hover */
+  color: #E1D9C7; /* Keep the text color unchanged on hover */
+}
+
+/* Optional: If you want to remove the gap entirely between social icons and language buttons */
+#social-bar {
+  gap: 0px; /* No gap between icons and language buttons */
+}
+
+/* Style for selected/active language */
+#social-bar .lang-btn.active {
+  color: #A1A1A1; /* Light gray text for active language */
+  font-weight: bold; /* Optionally make the active button bold */
 }
 
 /* PAGE */
@@ -231,6 +255,10 @@ h1 {
   margin-right: 20px;
   font-size: clamp(18px, 3vw, 30px);
   /* Text size scales but doesn't go over 30px */
+}
+
+.myself-introduction_info p {
+  margin-bottom: 15px; /* Adds space between paragraphs */
 }
 
 /* PROJECTS */
@@ -663,6 +691,18 @@ footer {
     display: none;
   }
 
+  .language-select {
+    display: block; /* Show language options when the menu is toggled */
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .lang-btn {
+    padding: 10px;
+    color: #333;
+    font-weight: bold;
+  }
+
   .footer-container {
     flex-direction: column;
     align-items: center; /* Center content */
@@ -680,6 +720,8 @@ footer {
     align-items: center;
   }
   
+
+
 }
 
 @media (min-width: 1000px) {
@@ -992,4 +1034,86 @@ footer {
     grid-template-columns: repeat(2, 1fr); /* 2 images per row */
   }
 
+}
+
+.language-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Dark background overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.language-content {
+  background: #36563D;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  color: #E1D9C7; /* Text color */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
+  width: 320px; /* Set a fixed width */
+  max-width: 90%; /* Ensure responsiveness */
+}
+
+.language-content h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.lang-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.lang-btn {
+  background: #E1D9C7;
+  color: #36563D;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.lang-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: transparent; /* No fill, just border */
+  color: #E1D9C7; /* Text color */
+  border: 2px solid #E1D9C7; /* Same border as Contact button */
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.lang-btn:hover {
+  background-color: #E1D9C7; /* Fill with color on hover */
+  color: #36563D; /* Text color on hover */
+}
+
+.lang-btn.selected {
+  background-color: #E1D9C7; /* Or another color to indicate the selected button */
+  color: #36563D; /* Change text color for better visibility */
+  cursor: not-allowed; /* Disable click */
+}
+
+/* Initially, hide the language buttons */
+.language-select {
+  display: none;
+}
+
+/* When the menu is open, display language buttons */
+#nav-menu.active .language-select {
+  display: block;
 }

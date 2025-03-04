@@ -1,0 +1,18 @@
+{
+    "en": {
+        "trans-footer-home": "Home",
+        "trans-footer-projects": "Projects",
+        "trans-footer-contact": "Contact",
+        "trans-footer-quote": "Design is thinking made visual.",
+        "trans-footer-stay-connected" : "Stay Connected",
+        "trans-footer-stay-connected-submit" : "Submit"
+    },
+    "es": {
+        "trans-footer-home": "Inicio",
+        "trans-footer-projects": "Proyectos",
+        "trans-footer-contact": "Contactar",
+        "trans-footer-quote": "El diseño es el pensamiento hecho visual.",
+        "trans-footer-stay-connected" : "Quedate Conectado",
+        "trans-footer-stay-connected-submit" : "Someter"
+    }
+}
