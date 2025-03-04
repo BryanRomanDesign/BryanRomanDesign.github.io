@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  padding: 0;
+
   box-sizing: border-box;
 }
 
@@ -679,6 +679,7 @@ footer {
   .footer-right ul {
     align-items: center;
   }
+  
 }
 
 @media (min-width: 1000px) {
@@ -702,7 +703,6 @@ footer {
   align-items: center; /* Aligns the content at the top */
   gap: 50px; /* Adds a smaller gap between the name and info */
   margin: 100px;
-  height: 200px;
 }
 
 .project_name, .project_info {
@@ -737,49 +737,53 @@ footer {
   object-fit: cover; /* Makes sure it fills nicely */
 }
 
-/* Details 1 */
+.project_cover_full {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  width: 100%;
+  height: auto; /* Adjusts height based on image */
+  overflow: hidden; /* Prevents overflow issues */
+}
 
-.project_details_1 {
+.project_cover_full img {
+  max-height: 562.5px; /* Keeps the height limit for PC */
+  width: 100%; /* Makes the image responsive */
+  height: auto; /* Ensures it keeps aspect ratio */
+  object-fit: cover; /* Makes sure it fills nicely */
+}
+
+/* Details */
+
+.project_details {
   display: flex;
   justify-content: center; /* Centers content horizontally */
   align-items: center; /* Centers content vertically */
-  height: 450px;
+  min-height: 450px;
   width: 100%;
+  flex-direction: column; /* Stack items vertically on smaller screens */
+  text-align: center; /* Centers text inside the container */
+  overflow: hidden; /* Prevents text from spilling out of the container */
+  padding: 20px; /* Optional: Adds padding for better spacing */
 }
 
-.project_details_1 p {
-  text-align: center;
+.project_details p {
   font-size: 20px;
-  display: flex;
-  justify-content: center; /* Centers the content horizontally */
-  align-items: center; /* Aligns the content at the top */
-  gap: 50px; /* Adds a smaller gap between the name and info */
-  margin: 50px;
+  display: block; /* Ensures the paragraph is block-level, so it takes full width */
+  margin: 20px 0; /* Adjust margin to add spacing between paragraphs */
+  word-wrap: break-word; /* Prevents long words from overflowing */
 }
 
-.project_details_1 h2 {
+.project_details h2 {
   background: transparent;
   text-align: center;
-}
-
-/* Details 2 */
-
-.project_details_2 {
-  display: flex;
-  justify-content: center; /* Centers the content horizontally */
-  align-items: center; /* Aligns the content at the top */
-  gap: 50px; /* Adds a smaller gap between the name and info */
-  margin: 50px;
-}
-
-.project_details_2 p {
-  font-size: 20px;
   margin: 0;
+  word-wrap: break-word; /* Same for h2 to handle overflow */
 }
 
-.project_details_2 h2 {
-  background: transparent;
-  margin: 0; /* Optional: Removes any default margin for heading */
+.project_details p, .project_details h2 {
+  max-width: 600px; /* Optional: Limit max width of text */
+  margin: 0 auto; /* Centers the text horizontally */
 }
 
 /* GRID TAGS */ 
@@ -861,29 +865,57 @@ footer {
 }
 
 .project_images_scalable {
-  display: flex;
-  flex-wrap: wrap; /* Allows items to wrap to the next line */
-  justify-content: center; /* Centers the images */
-  gap: 0px; /* No space between images */
+  display: grid;
+}
+
+/* 1 image - spans full width */
+.project_images_scalable:has(img:nth-child(1):nth-last-child(1)) {
+  grid-template-columns: 1fr;
+}
+
+/* 2 images - each takes half */
+.project_images_scalable:has(img:nth-child(1):nth-last-child(2)) {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* 3 images - each takes a third */
+.project_images_scalable:has(img:nth-child(1):nth-last-child(3)) {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .project_images_scalable img {
-  width: 33.33%; /* Default: 3 images per row */
-  height: auto; /* Keeps aspect ratio */
-  object-fit: cover; /* Ensures images cover the space */
-}
-
-.project_images_scalable_full {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Ensures the structure matches */
-}
-
-.project_images_scalable_full img {
-  grid-column: span 3; /* Makes the image take up all 3 columns */
   width: 100%;
   height: auto;
   object-fit: cover;
 }
+
+.project_images_scalable_full {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 equal columns */
+}
+
+.project_images_scalable_full:has(img:nth-child(1):nth-last-child(4)) {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.project_images_scalable_full img {
+  width: 100%; /* Ensure images fill the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover;
+}
+
+.project_images_exclusive {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Default to 3 columns on PC */
+}
+
+
+.project_images_exclusive img {
+  width: 100%; /* Ensure images fill the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover;
+}
+
 
 .project_images {
   display: flex;
@@ -930,6 +962,20 @@ footer {
       width: auto; /* Maintains aspect ratio */
   }
 
+  .project_cover_full {
+    width: 100%; /* Ensure full width */
+    display: flex; /* Helps with centering */
+    justify-content: center; /* Centers the image */
+    align-items: center; /* Centers vertically */
+    overflow: hidden; /* Prevents any unwanted overflow */
+  }
+  
+  .project_cover_full img {
+    width: 100%; /* Makes the image fill the container */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 100%; /* Prevents it from exceeding its original size */
+  }
+
   .project_images_scalable img {
     width: 100%; /* 1 image per row */
   }
@@ -937,4 +983,13 @@ footer {
   .project_tags_type, .project_tags_tools {
     justify-content: left;
   }
+
+  .project_images_scalable_full {
+    grid-template-columns: 1fr; /* 1 image per row on mobile */
+  }
+
+  .project_images_exclusive {
+    grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+  }
+
 }
