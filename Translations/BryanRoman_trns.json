@@ -1,0 +1,12 @@
+{
+    "en": {
+        "trns-project-description": "Bryan Román Design is my personal branding for the public. The webpage you are currently watching is part of this project it self!",
+        "trns-project-details-1": "For my personal brand, I wanted to create the sense of professionalism while still being friendly. Logo consist of the initial of my first name, and last name using my own hand writing to make it personal and unique.",
+        "trns-project-details-2": "The webpage was developed using HTML, CSS & Javascript. It's hosted using Github Pages."
+    },
+    "es": {
+        "trns-project-description": "Bryan Román Design es mi marca personal para el público. ¡La página web que estás viendo actualmente es parte de este proyecto en sí mismo!",
+        "trns-project-details-1": "Para mi marca personal, quería crear una sensación de profesionalismo mientras mantenía una atmósfera amigable. El logotipo consiste en las iniciales de mi primer y segundo nombre, utilizando mi propia escritura a mano para hacerlo personal y único.",
+        "trns-project-details-2": "La página web fue desarrollada utilizando HTML, CSS y Javascript. Está alojada en Github Pages."
+    }
+}

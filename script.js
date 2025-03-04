@@ -76,7 +76,7 @@ fetch("Sections/socialbar.html")
         setCookie('language', selectedLang, 365); // Save for 365 days
 
         // Apply translations dynamically after language selection
-        loadTranslations(selectedLang, 'index');  // For general content
+        loadTranslations(selectedLang);  // For the general content (based on page name)
         loadTranslations(selectedLang, 'header'); // For header content
         loadTranslations(selectedLang, 'footer'); // For footer content
 
@@ -88,7 +88,6 @@ fetch("Sections/socialbar.html")
       });
     });
   });
-
 
 // Function to update Social Bar Language Buttons
 function updateSocialBarButtons(selectedLang) {
@@ -106,9 +105,13 @@ function updateSocialBarButtons(selectedLang) {
 }
 
 // Function to load translations from JSON (with section-specific file)
-function loadTranslations(language = 'en', section = 'index') {
-  // Construct the path to the translation JSON file for the specific section
-  const translationFilePath = `${section}_trns.json`;
+function loadTranslations(language = 'en', section = null) {
+  // Dynamically set section based on the page's filename or path (e.g., "index", "about", etc.)
+  if (!section) {
+    section = window.location.pathname.split('/').pop().split('.')[0]; // Get the current page name without extension
+  }
+
+  const translationFilePath = `${section}_trns.json`; // Dynamically fetch the translation file
 
   // Fetch the translations JSON file
   fetch('Translations/' + translationFilePath)
@@ -130,11 +133,10 @@ function loadTranslations(language = 'en', section = 'index') {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Check if there's a language cookie, if not, default to 'en'
-  const savedLang = getCookie('language'); // Default to 'en' if no cookie is set
-
+  const savedLang = getCookie('language');
+  
   // Apply translations based on the saved language
-  loadTranslations(savedLang, 'index');  // Apply translations for the general page
+  loadTranslations(savedLang);  // Apply translations for the general page (based on the page name)
   loadTranslations(savedLang, 'header'); // Apply translations for header content
   loadTranslations(savedLang, 'footer'); // Apply translations for footer content
 
@@ -152,7 +154,6 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log("Language modal not found in DOM.");
   }
 });
-
 
 // Footer Section
 fetch("Sections/footer.html")

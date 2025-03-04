@@ -8,6 +8,15 @@ p{
   background: transparent;
 }
 
+.project_container
+{
+  max-width: 90%; 
+  margin: 0 auto; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;   
+}
+
 /* SOCIAL BAR */
 #social-bar {
   position: fixed;
@@ -567,6 +576,15 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+  .project_container {
+    max-width: 100%; /* Default max-width is 100% */
+    margin: 0; /* Default margin is 0 */
+    display: block; /* Default display value for most elements is block */
+    flex-direction: row; /* Default flex-direction is row */
+    align-items: stretch; /* Default align-items is stretch */
+  }
+  
   header {
     padding: 20px 10px;
   }
