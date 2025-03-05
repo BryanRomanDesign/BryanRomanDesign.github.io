@@ -111,10 +111,16 @@ function loadTranslations(language = 'en', section = null) {
     section = window.location.pathname.split('/').pop().split('.')[0]; // Get the current page name without extension
   }
 
-  const translationFilePath = `${section}_trns.json`; // Dynamically fetch the translation file
+  let translationFilePath = `${section}_trns.json`; // Dynamically fetch the translation file
+
+  if(translationFilePath == "_trns.json")
+  {
+      console.log("changing: " + translationFilePath + " to: index_trns.json");
+      translationFilePath = "index_trns.json";
+  }
 
   // Fetch the translations JSON file
-  fetch('Translations/' + translationFilePath)
+  fetch('Translations/' + translationFilePath)  // Add a leading slash
     .then(response => response.json())  // Parse the JSON
     .then(translations => {
       // Get all elements with the data-translate attribute
