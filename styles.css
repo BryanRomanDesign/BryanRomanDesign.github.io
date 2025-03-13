@@ -509,6 +509,8 @@ footer {
   align-items: flex-start;
   gap: 40px;
   flex-wrap: wrap;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 /* MOBILE STUFF */
 /* Responsive Design */
@@ -573,6 +575,38 @@ footer {
     max-width: 200px;
     /* Smaller size for the center logo on mobile */
   }
+  
+  #social-bar {
+    display: none;
+  }
+
+  /* Styling for the burger menu */
+  .social-links {
+    display: none;
+    margin-top: 20px;
+    /* Add spacing between nav links and social links */
+    z-index: 1000;
+  }
+
+  #nav-menu.active .social-links {
+    display: flex;
+    justify-content: center;
+    /* Center the icons horizontally */
+    gap: 15px;
+    /* Space between icons */
+  }
+
+  .social-links a {
+    color: #E1D9C7;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .social-links a:hover {
+    color: #ffffff;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -586,7 +620,7 @@ footer {
   }
   
   header {
-    padding: 20px 10px;
+    padding-left: 20px;
   }
 
   .myself-introduction {
@@ -626,8 +660,6 @@ footer {
     font-size: 8vw;
     /* Smaller heading that scales with screen width */
   }
-
-  
 
   .project-info {
     position: absolute;
