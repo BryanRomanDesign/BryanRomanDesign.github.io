@@ -1189,3 +1189,14 @@ footer {
 #nav-menu.active .language-select {
   display: block;
 }
+
+/* Style for the separator with repeating paw prints */
+.separator {
+  width: 100%; /* Full width */
+  height: 25px; /* Adjust the height for the paw separator */
+  background-image: url('Images/PAWLOWER_PAW.svg');
+  background-repeat: repeat-x; /* Repeat horizontally */
+  background-position: center; /* Center the paws horizontally */
+  margin: 30px 0; /* Space above and below the separator */
+}
+
