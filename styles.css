@@ -1004,6 +1004,31 @@ footer {
   object-fit: cover;
 }
 
+.project_images_scalable_full_single {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 equal columns */
+}
+
+.project_images_scalable_full_single:has(img:nth-child(1):nth-last-child(1)) {
+  grid-template-columns: 1fr;
+}
+
+/* 2 images - each takes half */
+.project_images_scalable_full_single:has(img:nth-child(1):nth-last-child(2)) {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* 3 images - each takes a third */
+.project_images_scalable_full_single:has(img:nth-child(1):nth-last-child(3)) {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.project_images_scalable_full_single img {
+  width: 100%; /* Ensure images fill the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover;
+}
+
 .project_images_exclusive {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Default to 3 columns on PC */
@@ -1084,12 +1109,13 @@ footer {
     justify-content: left;
   }
 
-  .project_images_scalable_full {
-    grid-template-columns: 1fr; /* 1 image per row on mobile */
-  }
-
+  
   .project_images_exclusive {
     grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+  }
+
+  .project_images_scalable_full {
+    grid-template-columns: 1fr; /* 1 image per row on mobile */
   }
 
   .project_images_scalable_full:has(img:nth-child(1):nth-last-child(1)) {
@@ -1106,6 +1132,10 @@ footer {
     grid-template-columns: none;
   }
 
+  
+  .project_images_scalable_full_single {
+    
+  }
 }
 
 .language-modal {
