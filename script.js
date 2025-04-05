@@ -159,6 +159,42 @@ document.addEventListener('DOMContentLoaded', function () {
   } else {
     console.log("Language modal not found in DOM.");
   }
+
+  //Carousel
+
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('.slide'); // Select all the slides
+  const totalSlides = slides.length;
+
+  // Ensure the first image is visible on load (do it here for clarity)
+  if (slides.length > 0) {
+    slides[currentIndex].classList.add('active');
+  }
+
+  function showNextSlide() {
+    slides[currentIndex].classList.remove('active'); // Hide current slide
+    currentIndex = (currentIndex + 1) % totalSlides; // Move to the next slide, loop around if necessary
+    slides[currentIndex].classList.add('active'); // Show next slide
+  }
+
+  // Automatically switch to the next slide every 3 seconds
+  setInterval(showNextSlide, 3000); // Adjust the interval time as needed
+
+  const toggleBtn = document.querySelector('.hide-overlay-btn');
+  const overlay = document.querySelector('.overlay');
+  const welcomeText = document.querySelector('.carousel-text');
+  
+  let isHidden = false;
+  
+  toggleBtn.addEventListener('click', () => {
+    isHidden = !isHidden;
+  
+    overlay.classList.toggle('hidden', isHidden);
+    welcomeText.classList.toggle('hidden', isHidden);
+  
+    toggleBtn.textContent = isHidden ? 'Show Overlay' : 'Hide Overlay';
+  });
+  
 });
 
 // Footer Section
@@ -184,3 +220,7 @@ window.addEventListener('scroll', function () {
 
 // Enable Scroll Restoration
 window.history.scrollRestoration = 'auto';
+
+document.querySelectorAll('.slide img').forEach(img => {
+  img.addEventListener('dragstart', e => e.preventDefault());
+});
