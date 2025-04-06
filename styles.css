@@ -1245,7 +1245,7 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vw; /* Responsive to screen width */
+  height: 80vw; /* Responsive to screen width */
   max-height: 90vh; /* Prevent it from overflowing on small devices */
   overflow: hidden;
   position: relative;
@@ -1315,11 +1315,15 @@ footer {
   transition: opacity 0.5s ease-in-out;
 }
 
+@media (max-width: 768px) {
+  .slides{}
+}
+
 .slides {
   position: relative; /* Ensure that images are stacked within this container */
   width: 100%;
   height: 100%;
-  
+
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
@@ -1338,7 +1342,7 @@ footer {
 }
 
 .slide img {
-  width: auto%; /* Ensure the image fills the width */
+  width: auto; /* Ensure the image fills the width */
   height: 100%; /* Make the image take up the full height */
   object-fit: contain; /* Ensure the image fits inside the container */
 }
