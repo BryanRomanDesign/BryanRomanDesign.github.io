@@ -157,12 +157,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /*padding: 20px; /* Adjusted padding for smaller screens */
   position: relative;
-  /* Added relative positioning */
-  padding-left: 60px;
-  padding-right: 60px;
   padding-top: 20px;
+
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* NAV */
@@ -542,9 +541,6 @@ footer {
     border: none;
     color: #E1D9C7;
     font-size: 30px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
     z-index: 100;
     /* Ensure it stays on top */
   }
@@ -579,11 +575,13 @@ footer {
 
   .logo_small img {
     max-width: 100px;
+    width: 15vw;
     /* Smaller size for the small logo on mobile */
   }
 
   .nav-center-logo img {
     max-width: 200px;
+    width: 40vw;
     /* Smaller size for the center logo on mobile */
   }
   
@@ -629,10 +627,7 @@ footer {
     flex-direction: row; /* Default flex-direction is row */
     align-items: stretch; /* Default align-items is stretch */
   }
-  
-  header {
-    padding-left: 20px;
-  }
+
 
   .myself-introduction {
     padding: 20px;
