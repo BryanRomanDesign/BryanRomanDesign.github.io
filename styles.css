@@ -119,8 +119,8 @@ body {
 
 .logo_small img {
   max-width: clamp(100px, 10vw, 150px);
-  /* Adjusts between 100px and 150px */
   height: auto;
+  pointer-events: auto;
 }
 
 .nav-center-logo {
@@ -133,7 +133,7 @@ body {
   max-width: clamp(150px, 20vw, 300px);
   /* Adjusts between 150px and 300px */
   height: auto;
-
+  pointer-events: auto;
 }
 
 #header-container{
