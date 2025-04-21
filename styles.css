@@ -12,6 +12,11 @@ img {
   pointer-events: none;
 }
 
+main{
+  justify-content: center;
+  padding : 50px;
+}
+
 .call_to_action
 {
   display: flex; 
@@ -51,27 +56,27 @@ img {
   position: absolute;
   width: 2px;
   height: 100%;
-  background-color: #E1D9C7;
+  background-color: white;
   top: 0;
   left: -10px;
 }
 
 /* Social Icons */
 #social-bar a {
-  color: #E1D9C7;
+  color: white;
   font-size: 24px;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 #social-bar a:hover {
-  color: #ffffff;
+  color: #2D9CDB;
 }
 
 /* Language buttons */
 #social-bar .lang-btn {
   background-color: transparent;
-  color: #E1D9C7;
+  color: white;
   font-size: 16px; /* Smaller font size */
   border: none;
   padding: 5px 10px; /* Smaller padding */
@@ -82,7 +87,7 @@ img {
 
 #social-bar .lang-btn:hover {
   background-color: transparent; /* No background change on hover */
-  color: #E1D9C7; /* Keep the text color unchanged on hover */
+  color: #2D9CDB; /* Keep the text color unchanged on hover */
 }
 
 /* Optional: If you want to remove the gap entirely between social icons and language buttons */
@@ -92,7 +97,7 @@ img {
 
 /* Style for selected/active language */
 #social-bar .lang-btn.active {
-  color: #A1A1A1; /* Light gray text for active language */
+  color: #2D9CDB; /* Light gray text for active language */
   font-weight: bold; /* Optionally make the active button bold */
 }
 
@@ -104,8 +109,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  color: #E1D9C7;
-  background-color: #36563D;
+  color: white;
+  background-color: #1C1C1C;
   justify-content: center;
 
   /*ANIMATION STUFF*/
@@ -130,7 +135,7 @@ body {
 }
 
 .logo_small img {
-  max-width: clamp(100px, 10vw, 150px);
+  max-width: clamp(100px, 5vw, 150px);
   height: auto;
   pointer-events: auto;
 }
@@ -142,7 +147,7 @@ body {
 }
 
 .nav-center-logo img {
-  max-width: clamp(150px, 20vw, 300px);
+  max-width: clamp(150px, 10vw, 300px);
   /* Adjusts between 150px and 300px */
   height: auto;
   pointer-events: auto;
@@ -150,7 +155,8 @@ body {
 
 #header-container{
   min-height: 120px;
-  background-color: #36563D;
+  background-color: #1C1C1C;
+  padding-bottom: 10px;
 }
 
 header {
@@ -180,7 +186,7 @@ nav ul li {
 
 /* Navigation Links */
 nav ul li a {
-  color: #E1D9C7;
+  color: white;
   text-decoration: none;
   font-size: 1.2em;
   position: relative;
@@ -195,7 +201,7 @@ nav ul li a::after {
   width: 0;
   height: 2px;
   /* Line height */
-  background-color: #E1D9C7;
+  background-color: #2D9CDB;
   transition: width 0.3s ease;
   /* Smooth animation */
 }
@@ -223,7 +229,7 @@ nav ul li a:hover::after {
   display: inline-block;
   padding: 10px 15px;
   background-color: transparent; /* No fill, just border */
-  color: #E1D9C7; /* Text color */
+  color: white; /* Text color */
   border: 2px solid #E1D9C7; /* Black border */
   border-radius: 5px;
   text-decoration: none;
@@ -232,8 +238,8 @@ nav ul li a:hover::after {
 }
 
 .contact-button:hover {
-  background-color: #E1D9C7; /* Fill with black on hover */
-  color: #36563D; /* White text on hover */
+  background-color: #2D9CDB; /* Fill with black on hover */
+  color: white; /* White text on hover */
 }
 
 /* INTRODUCTION PART */
@@ -283,7 +289,7 @@ h1 {
 
 .projects {
   text-align: center;
-  padding: 50px 20px;
+  /*padding: 50px 20px;*/
 }
 
 .projects h1 {
@@ -294,7 +300,6 @@ h1 {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  /* Adjusts automatically based on screen size */
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
@@ -348,8 +353,8 @@ h1 {
 
 .project-info-text {
   margin: 0;
-  background-color: #36563D;
-  color: #E1D9C7;
+  background-color: #2D9CDB;
+
   /* Ensure the text is visible on the background */
   border-radius: 10px;
   /* Add curved corners */
@@ -365,7 +370,7 @@ h1 {
   transform: translateY(10px);
   transition: transform 0.3s ease;
   background-color: transparent;
-  color: #E1D9C7
+  color: white
 }
 
 .project:hover .project-info {
@@ -396,12 +401,11 @@ h1 {
 #footer-container
 {
   min-height: 240px; 
-  background-color: #36563D; 
+  background-color: #2D9CDB; 
 }
 
 footer {
-  color: #E1D9C7;
-
+  color: white;
   padding-top: 50px;
 }
 
@@ -433,8 +437,8 @@ footer {
   border: none;
   border-radius: 5px;
   font-size: 16px;
-  background-color: #E1D9C7;
-  color: #36563D;
+  background-color: white;
+  color: #1c1c1c;
   transition: background-color 0.3s;
 }
 
@@ -445,8 +449,8 @@ footer {
 
 .stay-connected button {
   padding: 15px;
-  background-color: #36563D;
-  color: #E1D9C7;
+  background-color: #2D9CDB;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -455,7 +459,7 @@ footer {
 }
 
 .stay-connected button:hover {
-  background-color: #b3a47c;
+  background-color: #2D9CDB;
 }
 
 .footer-social {
@@ -464,13 +468,13 @@ footer {
 }
 
 .footer-social a {
-  color: #E1D9C7;
+  color: white;
   font-size: 30px;
   transition: color 0.3s ease;
 }
 
 .footer-social a:hover {
-  color: #ffffff;
+  color: white;
 }
 
 /* Middle Section: Quote */
@@ -499,21 +503,21 @@ footer {
 }
 
 .footer-right a {
-  color: #E1D9C7;
+  color: white;
   font-size: 16px;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-right a:hover {
-  color: #E1D9C7;
+  color: white;
 }
 
 /* Footer Container */
 .footer-container {
   display: flex;
   justify-content: space-between;
-  max-width: 1200px;
+  /*max-width: 1200px;*/
   margin: 0 auto;
   align-items: flex-start;
   gap: 40px;
@@ -521,6 +525,7 @@ footer {
   padding-right: 20px;
   padding-left: 20px;
 }
+
 /* MOBILE STUFF */
 /* Responsive Design */
 
@@ -539,7 +544,7 @@ footer {
     /* Only show menu button on mobile */
     background: none;
     border: none;
-    color: #E1D9C7;
+    color: white;
     font-size: 30px;
     z-index: 100;
     /* Ensure it stays on top */
@@ -557,7 +562,7 @@ footer {
     top: 80px;
     right: 0;
     left: 0;
-    background-color: #36563D;
+    background-color: #1c1c1c;
     padding: 20px;
     text-align: center;
     z-index: 10;
@@ -606,14 +611,14 @@ footer {
   }
 
   .social-links a {
-    color: #E1D9C7;
+    color: white;
     font-size: 24px;
     text-decoration: none;
     transition: color 0.3s ease;
   }
 
   .social-links a:hover {
-    color: #ffffff;
+    color: white;
   }
 
 }
@@ -632,11 +637,8 @@ footer {
   .myself-introduction {
     padding: 20px;
     flex-direction: column;
-    /* Stack text and image vertically */
     justify-content: flex-start;
-    /* Align text to the left */
     text-align: left;
-    /* Align text to the left */
   }
 
   .myself-introduction_info {
@@ -659,7 +661,7 @@ footer {
   }
 
   .projects {
-    padding: 10px;
+    /*padding: 10px;*/
   }
 
   h1 {
@@ -692,8 +694,6 @@ footer {
 
   .project-info-text {
     margin: 0;
-    background-color: #36563D;
-    color: white;
     /* Ensure the text is visible on the background */
     border-radius: 10px;
     /* Add curved corners */
@@ -732,14 +732,13 @@ footer {
   }
 
   .social-links a {
-    color: #E1D9C7;
     font-size: 24px;
     text-decoration: none;
     transition: color 0.3s ease;
   }
 
   .social-links a:hover {
-    color: #ffffff;
+
   }
 
   #social-bar {
@@ -754,7 +753,7 @@ footer {
 
   .lang-btn {
     padding: 10px;
-    color: #333;
+    color: #1c1c1c;
     font-weight: bold;
   }
 
@@ -1156,11 +1155,11 @@ footer {
 }
 
 .language-content {
-  background: #36563D;
+  background: #1c1c1c;
   padding: 30px;
   border-radius: 12px;
   text-align: center;
-  color: #E1D9C7; /* Text color */
+  color: white; /* Text color */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
   width: 320px; /* Set a fixed width */
   max-width: 90%; /* Ensure responsiveness */
@@ -1178,8 +1177,8 @@ footer {
 }
 
 .lang-btn {
-  background: #E1D9C7;
-  color: #36563D;
+  background: white;
+  color: #2D9CDB;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
@@ -1192,8 +1191,8 @@ footer {
   display: inline-block;
   padding: 10px 15px;
   background-color: transparent; /* No fill, just border */
-  color: #E1D9C7; /* Text color */
-  border: 2px solid #E1D9C7; /* Same border as Contact button */
+  color: white; /* Text color */
+  border: 2px solid white; /* Same border as Contact button */
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
@@ -1204,13 +1203,13 @@ footer {
 }
 
 .lang-btn:hover {
-  background-color: #E1D9C7; /* Fill with color on hover */
-  color: #36563D; /* Text color on hover */
+  background-color: white; /* Fill with color on hover */
+  color: #2D9CDB; /* Text color on hover */
 }
 
 .lang-btn.selected {
   background-color: #E1D9C7; /* Or another color to indicate the selected button */
-  color: #36563D; /* Change text color for better visibility */
+  color: #2D9CDB; /* Change text color for better visibility */
   cursor: not-allowed; /* Disable click */
 }
 
@@ -1302,7 +1301,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 32, 8, 0.582); /* Dark transparent overlay */
+  background-color: rgba(0, 24, 32, 0.582); /* Dark transparent overlay */
   pointer-events: none; /* Allows clicks to pass through the overlay */
   z-index: 1; /* Make sure the overlay is on top of the images */
 
