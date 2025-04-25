@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bryan Román | Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="Images/Favicon/favicon-32x32.png">
+</head>
+
+<script src="script.js"></script>
+
+<body>
+
+
+    <div id="language-modal" class="language-modal">
+        <div class="language-content">
+            <h2>Choose Your Language:<br>Escoje tu lenguaje:</h2>
+            <button class="lang-btn" data-lang="en">English</button>
+            <button class="lang-btn" data-lang="es">Español</button>
+        </div>
+    </div>
+
+    <div id="header-container"></div>
+    <div id="social-bar-container"></div>
+    
+    <div class="strip-left">
+    </div>
+
+    <div class="strip-right">
+    </div>
+    
+    <main style="padding-bottom: 50px;">
+
+        <div class="contact-intro">
+            <h1> Let's work together!</h1>
+            <br>
+            <p>Whether you’re starting from a spark or already have a vision in mind, I’m here to turn it into something
+                real — and unforgettable. I bring bold design, clear strategy, and the kind of creative direction that
+                makes people stop scrolling.</p>
+            <br>
+            <p style="text-align: center;">Got something in mind? Tell me everything. I’ll take it from there.</p>
+        </div>
+
+        <div class="contact-form">
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+                <!-- Replace with your actual Access Key -->
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+                <!-- Your custom fields -->
+                <h2>First Name:</h2>
+                <input type="text" name="first_name" placeholder="First Name *" required>
+
+                <h2>Email:</h2>
+                <input type="email" name="email" placeholder="Your Email *" required>
+
+                <h2>Business Name:</h2>
+                <input type="text" name="business_name" placeholder="Business Name *" required>
+
+                <h2>Budget:</h2>
+                <input type="text" name="budget" placeholder="Budget *" required>
+
+                <h2>Tell me about your project:</h2>
+                <textarea name="message" placeholder="Tell me about your project..." required></textarea>
+
+                <!-- Spam Protection -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <h4>* - Required fields</h4>
+                <br>
+                <p class="contact-notice">Note: I carefully review every inquiry, but I may not be able to take on every
+                    project. If it’s not the right fit or timing, I’ll still do my best to point you in the right
+                    direction.</p>
+                <br>
+                <div class="send-form">
+                    <button class="send-form-button"
+                        style="font-size: 20px; padding: 15px 30px; text-decoration: none; border-radius: 5px;"
+                        type="submit">Send</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="contact-more">
+            <h2> Have questions?</h2>
+            <br>
+            <p> Visit our FAQ's or email me directly at:</p> 
+            <p style="color: #2d9cdb; font-size: 20px;"><strong>contact@bryanroman.design</strong></p>
+            <p>or by clicking the following button!</p>
+            <br>
+            <a href="mailto:contact@bryanroman.design" class="contact-button" 
+           style="font-size: 20px; padding: 15px 30px; text-decoration: none; border-radius: 5px;" 
+           data-translate="trans-header-contact">Click to send email</a>
+        </div>
+
+    </main>
+
+    <div id="footer-container"></div>
+</body>
+
+</html>

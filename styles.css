@@ -1,6 +1,5 @@
 * {
   margin: 0;
-
   box-sizing: border-box;
 }
 
@@ -14,7 +13,7 @@ img {
 
 main{
   justify-content: center;
-  padding : 50px;
+  min-height: 100vh;
 }
 
 .call_to_action
@@ -39,16 +38,25 @@ main{
 }
 
 /* SOCIAL BAR */
-#social-bar {
+
+#social-bar-container{
   position: fixed;
-  left: 20px;
+  left: 10px; /* or 20px if you prefer */
   top: 50%;
   transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 10px 10px 25px; /* Add left padding for the line */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+#social-bar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px; /* Reduce the gap between icons and buttons */
-  z-index: 1000;
+  gap: 0px;
+  position: relative; /* keep this for ::before to work */
 }
 
 #social-bar::before {
@@ -58,7 +66,7 @@ main{
   height: 100%;
   background-color: white;
   top: 0;
-  left: -10px;
+  left: -15px; /* Adjust as needed depending on your padding */
 }
 
 /* Social Icons */
@@ -90,10 +98,6 @@ main{
   color: #2D9CDB; /* Keep the text color unchanged on hover */
 }
 
-/* Optional: If you want to remove the gap entirely between social icons and language buttons */
-#social-bar {
-  gap: 0px; /* No gap between icons and language buttons */
-}
 
 /* Style for selected/active language */
 #social-bar .lang-btn.active {
@@ -108,14 +112,15 @@ body {
   font-family: 'Inter', sans-serif;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100%;
+  background-color: #1c1c1c;
   color: white;
-  background-color: #1C1C1C;
   justify-content: center;
 
-  /*ANIMATION STUFF*/
+  /* ANIMATION STUFF */
   opacity: 0; /* Initially set the body to be invisible */
-  animation: popUp 0.25s forwards; /* Apply animation when page loads */
+  animation: popUp 0.3s forwards; /* Apply animation when page loads */
+  
 }
 
 @keyframes popUp {
@@ -125,6 +130,34 @@ body {
   100% {
     opacity: 1;
   }
+}
+
+/* The strip element */
+.strip-left {
+  left: 0;
+  position: absolute; /* Makes the strip scroll with the page */
+  width: 100px; /* Adjust the width as needed */
+  height: 100%; /* This should make it fill the full height of the body or content */
+  background: url('Images/Projects/BryanRoman/BRYANROMAN_SEAMLESS_PATERN.avif'); /* Seamless image */
+  background-repeat: repeat-y; /* Repeat the image vertically */
+  background-size: 100% auto; /* Match width, adjust height automatically */
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0; /* hide until JS sets it up */
+}
+
+/* The strip element */
+.strip-right {
+  right:0;
+  position: absolute; /* Makes the strip scroll with the page */
+  width: 100px; /* Adjust the width as needed */
+  height: 100%; /* This should make it fill the full height of the body or content */
+  background: url('Images/Projects/BryanRoman/BRYANROMAN_SEAMLESS_PATERN.avif'); /* Seamless image */
+  background-repeat: repeat-y; /* Repeat the image vertically */
+  background-size: 100% auto; /* Match width, adjust height automatically */
+  -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0; /* hide until JS sets it up */
 }
 
 
@@ -157,6 +190,8 @@ body {
   min-height: 120px;
   background-color: #1C1C1C;
   padding-bottom: 10px;
+  position: relative; /* or fixed/absolute if needed */
+  z-index: 1001; /* Higher than carousel stuff */
 }
 
 header {
@@ -215,6 +250,7 @@ nav ul li a:hover::after {
   display: flex;
   align-items: center; /* Align items in the center */
   gap: 15px; /* Add spacing between elements */
+  z-index: 10;
 }
 
 #nav-menu ul {
@@ -285,11 +321,67 @@ h1 {
   margin-bottom: 15px; /* Adds space between paragraphs */
 }
 
+/* SERVICES */
+
+.services{
+  padding-top:50px;
+}
+
+.services h1 {
+  text-align: center;
+}
+
+.services-columns {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to avoid overflow */
+  justify-content: center;
+  gap: 150px;
+  margin-top: 30px;
+  align-items: flex-start;
+  padding: 0 80px;
+}
+
+
+.column {
+  flex: 1; /* Each column takes equal width */
+  padding: 10px;
+  border-radius: 8px; /* optional styling */
+  max-width: 300px;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+.column-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.column-info h2 {
+  /* Add your styles for the h2 */
+}
+
+.column-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  overflow: visible;
+}
+
+.column-icon img{
+  width: 80%;
+}
+
+
 /* PROJECTS */
 
 .projects {
   text-align: center;
-  /*padding: 50px 20px;*/
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .projects h1 {
@@ -303,6 +395,8 @@ h1 {
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  padding-left: 10px;
+  padding-right:10px;
 }
 
 .project {
@@ -402,6 +496,7 @@ h1 {
 {
   min-height: 240px; 
   background-color: #2D9CDB; 
+  z-index: 1;
 }
 
 footer {
@@ -530,11 +625,26 @@ footer {
 /* Responsive Design */
 
 @media (max-width: 1024px) { /* Adjusts for tablets like iPad Pro */
+  
+  .services-columns {
+    flex-direction: column;
+    padding: 0 0px; /* Less side padding on mobile */
+    gap: 0px; /* More space between stacked items, optional */
+  }
+
+  .column {
+    text-align: center;
+    width: 100%; /* Full width on mobile */
+    max-width: 800px; /* Optional: limit max width so it's not too wide */
+    margin: 0 auto; /* Center it horizontally */
+  }
+
   .introduction {
     flex-direction: column; /* Stack the elements */
     align-items: center;
     text-align: center;
   }
+  
 }
 
 @media (max-width: 1000px) 
@@ -590,6 +700,10 @@ footer {
     /* Smaller size for the center logo on mobile */
   }
   
+  #social-bar-container{
+    display:none;
+  }
+
   #social-bar {
     display: none;
   }
@@ -624,7 +738,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-
   .project_container {
     max-width: 100%; /* Default max-width is 100% */
     margin: 0; /* Default margin is 0 */
@@ -661,7 +774,8 @@ footer {
   }
 
   .projects {
-    /*padding: 10px;*/
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   h1 {
@@ -1075,6 +1189,7 @@ footer {
 
 /* Mobile view (adjusted for smaller screens) */
 @media (max-width: 768px) {
+
   .project_introduction {
       flex-direction: column; /* Stack the elements vertically */
       align-items: center; /* Center the items */
@@ -1309,10 +1424,6 @@ footer {
   transition: opacity 0.5s ease-in-out;
 }
 
-@media (max-width: 768px) {
-  .slides{}
-}
-
 .slides {
   position: relative; /* Ensure that images are stacked within this container */
   width: 100%;
@@ -1339,4 +1450,181 @@ footer {
   width: auto; /* Ensure the image fills the width */
   height: 100%; /* Make the image take up the full height */
   object-fit: contain; /* Ensure the image fits inside the container */
+}
+
+/* CONTACT PAGE*/
+
+.contact-intro{
+  justify-items: center;
+  padding: 50px;
+}
+
+.contact-intro p
+{
+  width: 75%;
+  font-size: 30px;
+}
+
+.contact-intro h1{
+  text-align: center;
+}
+
+.contact-form form {
+  width: 75%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.contact-form input{
+  width: 100%;
+  padding: 16px 12px; /* top-bottom, left-right */
+  height: 60px; /* optional: fixed height */
+  font-size: 16px;
+  border-radius: 8px;
+
+  margin-bottom: 15px;
+  background-color: #e7e7e7;
+  color: #1c1c1c;
+}
+
+.contact-form textarea{
+  width: 100%;
+  padding: 16px 12px; /* top-bottom, left-right */
+
+  font-size: 16px;
+  border-radius: 8px;
+
+  margin-bottom: 15px;
+  background-color: #e7e7e7;
+  color: #1c1c1c;
+
+  height: 200px;          /* adjust to taste */
+  resize: vertical;       /* allows only vertical resize, or use "none" to disable */
+  box-sizing: border-box; /* ensures padding doesn't overflow width */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #1c1c1c; /* soft purple */
+  opacity: .5;     /* optional: makes it more visible */
+}
+
+.send-form {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+}
+
+.send-form-button {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: transparent; /* No fill, just border */
+  color: white; /* Text color */
+  border: 2px solid #E1D9C7; /* Black border */
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.send-form-button:hover {
+  background-color: #2D9CDB; /* Fill with black on hover */
+  color: white; /* White text on hover */
+  cursor: pointer;
+}
+
+.contact-notice
+{
+  text-align: center;
+  font-weight: 200;
+}
+
+.contact-more{
+  padding-top: 50px;
+  justify-items: center;
+}
+
+/*FAQ's*/
+
+.faq-container {
+  max-width: 1000px;
+  margin: auto;
+
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+}
+
+.faq-collection{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+}
+
+.faq-question {
+  cursor: pointer;
+  display: flex;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+
+  display: flex;
+  justify-content: space-between; /* Keeps the + symbol on the far right */
+  align-items: center;
+}
+
+.question-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Adjust gap as needed */
+}
+
+.faq-icon {
+  width: 24px; /* Adjust size */
+  height: 24px; /* Adjust size */
+  flex-shrink: 0;
+}
+.faq-answer {
+  box-sizing: content-box; /* ✅ add this */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  font-size: 1rem;
+  color: white;
+}
+
+.faq-item.active .faq-answer {
+  padding-top: 0.5rem;
+}
+
+.icon {
+  transition: transform 0.3s;
+}
+
+.faq-item.active .icon {
+  transform: rotate(45deg);
+}
+
+@media (max-width: 768px) {
+  .slides{}
+
+  .contact-intro{
+    justify-items: center;
+    padding: 50px;
+  }
+  
+  .contact-intro p
+  {
+    width: 75%;
+    font-size: 20px;
+  }
+  
+  .contact-intro h1{
+    text-align: center;
+  }
 }

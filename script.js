@@ -113,10 +113,9 @@ function loadTranslations(language = 'en', section = null) {
 
   let translationFilePath = `${section}_trns.json`; // Dynamically fetch the translation file
 
-  if(translationFilePath == "_trns.json")
-  {
-      console.log("changing: " + translationFilePath + " to: index_trns.json");
-      translationFilePath = "index_trns.json";
+  if (translationFilePath == "_trns.json") {
+    console.log("changing: " + translationFilePath + " to: index_trns.json");
+    translationFilePath = "index_trns.json";
   }
 
   // Fetch the translations JSON file
@@ -140,7 +139,7 @@ function loadTranslations(language = 'en', section = null) {
 
 document.addEventListener('DOMContentLoaded', function () {
   const savedLang = getCookie('language');
-  
+
   // Apply translations based on the saved language
   loadTranslations(savedLang);  // Apply translations for the general page (based on the page name)
   loadTranslations(savedLang, 'header'); // Apply translations for header content
@@ -183,18 +182,18 @@ document.addEventListener('DOMContentLoaded', function () {
   const toggleBtn = document.querySelector('.hide-overlay-btn');
   const overlay = document.querySelector('.overlay');
   const welcomeText = document.querySelector('.carousel-text');
-  
+
   let isHidden = false;
-  
+
   toggleBtn.addEventListener('click', () => {
     isHidden = !isHidden;
-  
+
     overlay.classList.toggle('hidden', isHidden);
     welcomeText.classList.toggle('hidden', isHidden);
-  
+
     toggleBtn.textContent = isHidden ? 'Show Overlay' : 'Hide Overlay';
   });
-  
+
 });
 
 // Footer Section
@@ -224,3 +223,94 @@ window.history.scrollRestoration = 'auto';
 document.querySelectorAll('.slide img').forEach(img => {
   img.addEventListener('dragstart', e => e.preventDefault());
 });
+
+// Function to update the strip's height
+const updateStripHeight = () => {
+  const strip_left = document.querySelector('.strip-left');
+  strip_left.style.height = document.body.scrollHeight + 'px';
+
+  const strip_right = document.querySelector('.strip-right');
+  strip_right.style.height = document.body.scrollHeight + 'px';
+};
+
+// Run it on load
+window.addEventListener('load', () => {
+  const strip_left = document.querySelector('.strip-left');
+  strip_left.style.backgroundImage = "url('Images/Projects/BryanRoman/BRYANROMAN_SEAMLESS_PATERN.avif')";
+  strip_left.style.opacity = '1'; // reveal it
+
+  const strip_right = document.querySelector('.strip-right');
+  strip_right.style.backgroundImage = "url('Images/Projects/BryanRoman/BRYANROMAN_SEAMLESS_PATERN.avif')";
+  strip_right.style.opacity = '1'; // reveal it
+  updateStripHeight(); // Set initial height
+});
+
+// Update strip height on window resize
+window.addEventListener('resize', updateStripHeight);
+
+function updateStripSize() {
+  const strips = document.querySelectorAll('.strip-left, .strip-right');
+  const patternSize = window.innerWidth * 0.05; // 5vw
+
+  strips.forEach(strip => {
+    strip.style.width = `${patternSize}px`;
+    strip.style.backgroundSize = `${patternSize}px`;
+  });
+}
+
+window.addEventListener('load', updateStripSize);
+window.addEventListener('resize', updateStripSize);
+
+// FAQ's
+
+document.addEventListener("DOMContentLoaded", function () {
+  const items = document.querySelectorAll('.faq-item');
+
+  items.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+
+    question.addEventListener('click', () => {
+      const isOpen = item.classList.contains('active');
+
+      // Close all other items
+      items.forEach(i => {
+        i.classList.remove('active');
+        i.querySelector('.faq-answer').style.maxHeight = null;
+      });
+
+      // Toggle current
+      if (!isOpen) {
+        item.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  const iconURLs = [
+    'Images/Projects/BryanRoman/ICONS/BRYANROMAN_TRIANGLE.png',
+    'Images/Projects/BryanRoman/ICONS/BRYANROMAN_STAR.png',
+    'Images/Projects/BryanRoman/ICONS/BRYANROMAN_SQUARE.png'
+    // Add as many as you want
+  ];
+  
+  document.querySelectorAll('.faq-question').forEach((el, index) => {
+    const icon = el.querySelector('.faq-icon');
+    const imgURL = iconURLs[index % iconURLs.length];
+    icon.src = imgURL;
+  
+    // Optional: reuse the same hover color logic
+    const hoverColors = ['#2d9cdb', '#f9cb40', '#e84545'];
+    const color = hoverColors[index % hoverColors.length];
+  
+    el.addEventListener('mouseenter', () => {
+      el.style.color = color;
+    });
+  
+    el.addEventListener('mouseleave', () => {
+      el.style.color = '';
+    });
+  });
+  
+});
+

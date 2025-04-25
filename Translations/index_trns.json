@@ -6,8 +6,16 @@
         "trans-intro-paragraph": "I’m a graphic designer with a Master’s Degree in Graphic Arts. I’m passionate about using creativity to solve design challenges and bring ideas to life. The area of design that excites me the most is branding. Whether it’s creating, developing, or refining a brand, I love the process of shaping its identity and story. I also enjoy working on various design projects, always ensuring each one is purposeful and impactful.",
         "trans-intro-bye": "I'm glad you are here,",
         "trans-intro-name": "Bryan Román",
-        "trans-projects": "Projects",
-        "trans-call-to-action": "Ready to make your idea a reality?"
+        "trans-projects": "Portfolio",
+        "trans-call-to-action": "Ready to make your idea a reality?",
+        "trans-services": "Services",
+        "trans-service-1": "Brand Identity",
+        "trans-service-1-desc": "Craft a bold, memorable brand that captures attention and builds trust. I shape your brand’s identity from the ground up—defining its voice, style, and visuals to fuel recognition, connection, and growth.",
+        "trans-service-2": "Brand Strategy",
+        "trans-service-2-desc": "Lay the groundwork for a brand that means something. I help you define the why behind your business—your purpose, audience, positioning, and personality—so every decision feels aligned and intentional. It's not just about how your brand looks, but what it stands for.",
+        "trans-service-3": "Rebranding",
+        "trans-service-3-desc": "Evolve your brand to match your growth. Whether you're shifting direction, outgrowing your old look, or reconnecting with your purpose, I help you reimagine your brand through strategy and design—so you move forward with clarity and confidence.",
+        "trans-lets-work-together": "LET'S WORK TOGETHER!"
     },
       "es": {
         "trans-carousel_intro": "Construyendo marcas con ideas audaces.",
@@ -16,7 +24,15 @@
         "trans-intro-paragraph": "Soy diseñador gráfico con una Maestría en Artes Gráficas. Me apasiona usar la creatividad para resolver desafíos de diseño y dar vida a ideas. El área del diseño que más me emociona es la creación de marcas. Ya sea creando, desarrollando o refinando una marca, me encanta el proceso de darle forma a su identidad e historia. También disfruto trabajando en diversos proyectos de diseño, siempre asegurándome de que cada uno sea significativo e impactante.",
         "trans-intro-bye": "Me alegra que estes aquí,",
         "trans-intro-name": "Bryan Román",
-        "trans-projects": "Proyectos",
-        "trans-call-to-action": "¿Listo para hacer tu idea una realidad?"
+        "trans-projects": "Portafolio",
+        "trans-call-to-action": "¿Listo para hacer tu idea una realidad?",
+        "trans-services": "Servicios",
+        "trans-service-1": "Identidad de Marca",
+        "trans-service-1-desc": "Crea una marca audaz y memorable que capte la atención y genere confianza. Construyo la identidad de tu marca desde cero: defino su voz, estilo y elementos visuales para impulsar el reconocimiento, la conexión y el crecimiento.",
+        "trans-service-2": "Estrategia de Marca",
+        "trans-service-2-desc": "Establece la base para una marca con significado. Te ayudo a definir el porqué de tu negocio: su propósito, audiencia, posicionamiento y personalidad, para que cada decisión esté alineada y sea intencional. No se trata solo de cómo se ve tu marca, sino de lo que representa.",
+        "trans-service-3": "Rebranding",
+        "trans-service-3-desc": "Haz que tu marca evolucione al ritmo de tu crecimiento. Ya sea que estés cambiando de rumbo, superando tu imagen actual o volviendo a conectar con tu propósito, te ayudo a reinventar tu marca a través de estrategia y diseño, para que avances con claridad y confianza.",
+        "trans-lets-work-together": "TRABAJEMOS TU MARCA JUNTOS!"
     }
 }
