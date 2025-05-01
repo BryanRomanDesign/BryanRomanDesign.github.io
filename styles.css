@@ -1455,6 +1455,7 @@ footer {
 /* CONTACT PAGE*/
 
 .contact-intro{
+  display: grid;
   justify-items: center;
   padding: 50px;
 }
@@ -1542,6 +1543,7 @@ footer {
 
 .contact-more{
   padding-top: 50px;
+  display: grid;
   justify-items: center;
 }
 
