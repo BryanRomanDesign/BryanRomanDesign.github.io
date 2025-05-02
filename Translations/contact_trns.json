@@ -1,0 +1,32 @@
+{
+    "en": {
+        "trans-lets_work_together": "Let's work together!",
+        "trans-lets_work_together_description": "Whether you’re starting from a spark or already have a vision in mind, I’m here to turn it into something real — and unforgettable. I bring bold design, clear strategy, and the kind of creative direction that makes people stop scrolling.",
+        "trans-got_something_in_mind": "Got something in mind? Tell me everything. I’ll take it from there.",
+        "trans-contact_notice": "Note: I carefully review every inquiry, but I may not be able to take on every project. If it’s not the right fit or timing, I’ll still do my best to point you in the right direction.",
+        "trans-send_form": "Send",
+        "trans-have_question": "Have questions?",
+        "trans-have_question_visit": "Visit our FAQ's",
+        "trans-button-faqs": "Frequently Asked Questions",
+        "trans-name": "First Name:",
+        "trans-business_name": "Business Name:",
+        "trans-budget": "Budget:",
+        "trans-tell_me": "Tell me about your project:",
+        "trans-required_fields": "* - Required fields"
+    },
+    "es": {
+        "trans-lets_work_together": "¡Trabajemos juntos!",
+        "trans-lets_work_together_description": "Ya sea que estés comenzando con una chispa o ya tengas una visión en mente, estoy aquí para convertirla en algo real — e inolvidable. Aporto un diseño audaz, una estrategia clara y una dirección creativa que hace que la gente se detenga al hacer scroll.",
+        "trans-got_something_in_mind": "¿Tienes algo en mente? Cuéntamelo todo. Yo me encargo del resto.",
+        "trans-contact_notice": "Nota: Reviso cuidadosamente cada consulta, pero puede que no pueda aceptar todos los proyectos. Si no es el momento o encaje adecuado, igual haré lo posible por orientarte en la dirección correcta.",
+        "trans-send_form": "Enviar",
+        "trans-have_question": "¿Tienes preguntas?",
+        "trans-have_question_visit": "Visita nuestras preguntas frecuentes",
+        "trans-button-faqs": "Preguntas Frecuentes",
+        "trans-name": "Nombre:",
+        "trans-business_name": "Nombre del negocio:",
+        "trans-budget": "Presupuesto:",
+        "trans-tell_me": "Cuéntame sobre tu proyecto:",
+        "trans-required_fields": "* - Campos obligatorios"
+    }
+}
