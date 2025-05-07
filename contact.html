@@ -15,6 +15,7 @@
     <link rel="icon" type="image/x-icon" href="Images/Favicon/favicon-32x32.png">
 </head>
 
+
 <script src="script.js"></script>
 
 <body>
@@ -50,30 +51,19 @@
         </div>
 
         <div class="contact-form">
-            <form action="https://api.web3forms.com/submit" method="POST">
-
-                <!-- Replace with your actual Access Key -->
+            <form id="form">
                 <input type="hidden" name="access_key" value="58fb3e7f-8c47-408f-af02-052f018378ce">
-
-                <!-- Your custom fields -->
                 <h2 data-translate="trans-name">First Name:</h2>
-                <input type="text" name="first_name" placeholder="First Name *" required>
-
-                <h2>Email:</h2>
-                <input type="email" name="email" placeholder="Your Email *" required>
-
+                <input type="text" name="first_name" placeholder="First Name *" >
+                <h2 data-translate="trans-email">Email:</h2>
+                <input type="email" name="email" placeholder="Your Email *" >
                 <h2 data-translate="trans-business_name">Business Name:</h2>
-                <input type="text" name="business_name" placeholder="Business Name *" required>
-
+                <input type="text" name="business_name" placeholder="Business Name *" >
                 <h2 data-translate="trans-budget">Budget:</h2>
-                <input type="text" name="budget" placeholder="Budget *" required>
-
+                <input type="text" name="budget" placeholder="Budget *" >
                 <h2 data-translate="trans-tell_me">Tell me about your project:</h2>
-                <textarea name="message" placeholder="Tell me about your project..." required></textarea>
-
-                <!-- Spam Protection -->
-                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
+                <textarea name="message" placeholder="Tell me about your project..." ></textarea>
+   
                 <h4 data-translate="trans-required_fields">* - Required fields</h4>
                 <br>
                 <p class="contact-notice" data-translate="trans-contact_notice">Note: I carefully review every inquiry, but I may not be able to take on every

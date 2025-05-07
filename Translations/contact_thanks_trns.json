@@ -1,0 +1,18 @@
+{
+    "en": {
+        "trans-thank_you": "Thank You for Reaching Out!",
+        "trans-thank_you_description-1": "Your message has been successfully submitted, and I want to personally thank you for taking the time to get in touch.",
+        "trans-thank_you_description-2": "I carefully review each inquiry to ensure I fully understand your needs, and I will get back to you as soon as possible.",
+        "trans-thank_you_description-3": "In the meantime, feel free to explore more of the website, check out my past projects, or connect with me on social media.",
+        "trans-thank_you_description-4": "Looking forward to making great things happen together!",
+        "trans-back-home": "Back to Home"
+    },
+    "es": {
+        "trans-thank_you": "¡Gracias por Ponerte en Contacto!",
+        "trans-thank_you_description-1": "Tu mensaje ha sido enviado exitosamente, y quiero agradecerte personalmente por tomarte el tiempo de ponerte en contacto.",
+        "trans-thank_you_description-2": "Reviso cuidadosamente cada consulta para asegurarme de comprender tus necesidades, y te responderé lo antes posible.",
+        "trans-thank_you_description-3": "Mientras tanto, siéntete libre de explorar más el sitio web, revisar mis proyectos pasados o conectarte conmigo en redes sociales.",
+        "trans-thank_you_description-4": "¡Espero con ansias hacer grandes cosas juntos!",
+        "trans-back-home": "Volver al Inicio"
+    }
+}

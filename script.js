@@ -314,4 +314,55 @@ document.addEventListener("DOMContentLoaded", function () {
   
 });
 
-//SCROLLING
+//CONTACT
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById('form');
+
+  form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      try {
+          const response = await fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json'
+              },
+              body: json
+          });
+
+          const result = await response.json();
+
+          if (response.ok) {
+            form.reset();
+            window.location.href = "contact_thanks.html";
+          } else {
+            window.location.href = "contact_failed.html";
+          }
+
+      } catch (error) {
+        window.location.href = "contact_failed.html";
+      }
+  });
+
+  // Function to close the popup
+  window.closeMessageModal = function() {
+      messageModal.style.display = 'none';
+  }
+});
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   const form = document.getElementById('form');
+
+//   form.addEventListener("submit", function(e) {
+//     e.preventDefault(); // Prevents page refresh
+//     console.log("CLICK SUBMIT");
+
+//     window.location.href = "contact_thanks.html";
+
+//     form.reset(); // Reset the form fields after showing the modal
+//   });
+// });

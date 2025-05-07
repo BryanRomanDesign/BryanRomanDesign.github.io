@@ -1,0 +1,16 @@
+{
+    "en": {
+        "trans-error": "Oops! Something Went Wrong",
+        "trans-error-description-1": "Unfortunately, your message couldn't be sent at this time. This could be due to a temporary network issue or an unexpected error on our end. We sincerely apologize for the inconvenience.",
+        "trans-error-description-2": "Please try submitting the form again in a few minutes. If the issue persists, you can send me an email directly at forms@bryanroman.design with all the information you previously entered. I will make sure to respond as soon as possible.",
+        "trans-error-description-3": "Thank you for your patience and understanding. I look forward to connecting with you soon.",
+        "trans-back-home": "Back to Home"
+    },
+    "es": {
+        "trans-error": "¡Ups! Algo Salió Mal",
+        "trans-error-description-1": "Lamentablemente, tu mensaje no pudo ser enviado en este momento. Esto podría deberse a un problema temporal de red o a un error inesperado de nuestra parte. Lamentamos mucho las molestias.",
+        "trans-error-description-2": "Por favor, intenta enviar el formulario nuevamente en unos minutos. Si el problema persiste, puedes enviarme un correo directamente a forms@bryanroman.design con toda la información que ingresaste anteriormente. Me aseguraré de responder lo antes posible.",
+        "trans-error-description-3": "Gracias por tu paciencia y comprensión. Espero poder conectar contigo pronto.",
+        "trans-back-home": "Volver al Inicio"
+    }
+}
