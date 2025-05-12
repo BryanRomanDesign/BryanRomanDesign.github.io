@@ -10,7 +10,7 @@
         "trans-button-faqs": "Frequently Asked Questions",
         "trans-name": "First Name:",
         "trans-business_name": "Business Name:",
-        "trans-budget": "Budget:",
+        "trans-budget": "Budget (In USD)",
         "trans-tell_me": "Tell me about your project:",
         "trans-required_fields": "* - Required fields"
     },
@@ -25,7 +25,7 @@
         "trans-button-faqs": "Preguntas Frecuentes",
         "trans-name": "Nombre:",
         "trans-business_name": "Nombre del negocio:",
-        "trans-budget": "Presupuesto:",
+        "trans-budget": "Presupuesto (USD / Dolar Americano):",
         "trans-tell_me": "Cuéntame sobre tu proyecto:",
         "trans-required_fields": "* - Campos obligatorios"
     }
