@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Automatically switch to the next slide every 3 seconds
-  setInterval(showNextSlide, 3000); // Adjust the interval time as needed
+  setInterval(showNextSlide, 4000); // Adjust the interval time as needed
 
   const toggleBtn = document.querySelector('.hide-overlay-btn');
   const overlay = document.querySelector('.overlay');
