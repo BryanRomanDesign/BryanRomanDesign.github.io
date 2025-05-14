@@ -237,11 +237,11 @@ const updateStripHeight = () => {
 window.addEventListener('load', () => {
   const strip_left = document.querySelector('.strip-left');
   strip_left.style.backgroundImage = "url('Images/Projects/BryanRoman/BRYANROMAN_SEAMLESS_PATERN.avif')";
-  strip_left.style.opacity = '1'; // reveal it
+  strip_left.style.opacity = '.25'; // reveal it
 
   const strip_right = document.querySelector('.strip-right');
   strip_right.style.backgroundImage = "url('Images/Projects/BryanRoman/BRYANROMAN_SEAMLESS_PATERN.avif')";
-  strip_right.style.opacity = '1'; // reveal it
+  strip_right.style.opacity = '.25'; // reveal it
   updateStripHeight(); // Set initial height
 });
 

@@ -1,4 +1,4 @@
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -7,7 +7,7 @@ html{
   box-sizing: border-box;
 }
 
-p{
+p {
   background: transparent;
 }
 
@@ -15,41 +15,41 @@ img {
   pointer-events: none;
 }
 
-main{
+main {
   justify-content: center;
   min-height: 60vh;
 }
 
-.call_to_action
-{
-  display: flex; 
-  flex-direction: column; 
-  justify-content: center; 
-  align-items: center; 
-  text-align: center; 
-  margin-left: 20px; 
+.call_to_action {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 20px;
   margin-right: 20px;
 }
 
 
-.project_container
-{
-  max-width: 90%; 
-  margin: 0 auto; 
-  display: flex; 
-  flex-direction: column; 
-  align-items: center;   
+.project_container {
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* SOCIAL BAR */
 
-#social-bar-container{
+#social-bar-container {
   position: fixed;
-  left: 10px; /* or 20px if you prefer */
+  left: 10px;
+  /* or 20px if you prefer */
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 10px 10px 10px 25px; /* Add left padding for the line */
+  padding: 10px 10px 10px 25px;
+  /* Add left padding for the line */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   z-index: 1000;
@@ -60,7 +60,8 @@ main{
   flex-direction: column;
   align-items: center;
   gap: 0px;
-  position: relative; /* keep this for ::before to work */
+  position: relative;
+  /* keep this for ::before to work */
 }
 
 #social-bar::before {
@@ -70,7 +71,8 @@ main{
   height: 100%;
   background-color: white;
   top: 0;
-  left: -15px; /* Adjust as needed depending on your padding */
+  left: -15px;
+  /* Adjust as needed depending on your padding */
 }
 
 /* Social Icons */
@@ -89,24 +91,31 @@ main{
 #social-bar .lang-btn {
   background-color: transparent;
   color: white;
-  font-size: 16px; /* Smaller font size */
+  font-size: 16px;
+  /* Smaller font size */
   border: none;
-  padding: 5px 10px; /* Smaller padding */
+  padding: 5px 10px;
+  /* Smaller padding */
   cursor: pointer;
   transition: all 0.3s ease;
-  margin: 0; /* No extra margin between buttons */
+  margin: 0;
+  /* No extra margin between buttons */
 }
 
 #social-bar .lang-btn:hover {
-  background-color: transparent; /* No background change on hover */
-  color: #2D9CDB; /* Keep the text color unchanged on hover */
+  background-color: transparent;
+  /* No background change on hover */
+  color: #2D9CDB;
+  /* Keep the text color unchanged on hover */
 }
 
 
 /* Style for selected/active language */
 #social-bar .lang-btn.active {
-  color: #2D9CDB; /* Light gray text for active language */
-  font-weight: bold; /* Optionally make the active button bold */
+  color: #2D9CDB;
+  /* Light gray text for active language */
+  font-weight: bold;
+  /* Optionally make the active button bold */
 }
 
 /* PAGE */
@@ -122,15 +131,18 @@ body {
   justify-content: center;
 
   /* ANIMATION STUFF */
-  opacity: 0; /* Initially set the body to be invisible */
-  animation: popUp 0.3s forwards; /* Apply animation when page loads */
-  
+  opacity: 0;
+  /* Initially set the body to be invisible */
+  animation: popUp 0.3s forwards;
+  /* Apply animation when page loads */
+
 }
 
 @keyframes popUp {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -139,29 +151,43 @@ body {
 /* The strip element */
 .strip-left {
   left: 0;
-  position: absolute; /* Makes the strip scroll with the page */
-  width: 100px; /* Adjust the width as needed */
-  height: 100%; /* This should make it fill the full height of the body or content */
-  background: url('Images/Projects/BryanRoman/BRYANROMAN_SEAMLESS_PATERN.avif'); /* Seamless image */
-  background-repeat: repeat-y; /* Repeat the image vertically */
-  background-size: 100% auto; /* Match width, adjust height automatically */
+  position: absolute;
+  /* Makes the strip scroll with the page */
+  width: 100px;
+  /* Adjust the width as needed */
+  height: 100%;
+  /* This should make it fill the full height of the body or content */
+  background: url('Images/Projects/BryanRoman/BRYANROMAN_SEAMLESS_PATERN.avif');
+  /* Seamless image */
+  background-repeat: repeat-y;
+  /* Repeat the image vertically */
+  background-size: 100% auto;
+  /* Match width, adjust height automatically */
   -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 0) 100%);
   mask-image: linear-gradient(to right, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 0) 100%);
-  opacity: 0; /* hide until JS sets it up */
+  opacity: 0;
+  /* hide until JS sets it up */
 }
 
 /* The strip element */
 .strip-right {
-  right:0;
-  position: absolute; /* Makes the strip scroll with the page */
-  width: 100px; /* Adjust the width as needed */
-  height: 100%; /* This should make it fill the full height of the body or content */
-  background: url('Images/Projects/BryanRoman/BRYANROMAN_SEAMLESS_PATERN.avif'); /* Seamless image */
-  background-repeat: repeat-y; /* Repeat the image vertically */
-  background-size: 100% auto; /* Match width, adjust height automatically */
+  right: 0;
+  position: absolute;
+  /* Makes the strip scroll with the page */
+  width: 100px;
+  /* Adjust the width as needed */
+  height: 100%;
+  /* This should make it fill the full height of the body or content */
+  background: url('Images/Projects/BryanRoman/BRYANROMAN_SEAMLESS_PATERN.avif');
+  /* Seamless image */
+  background-repeat: repeat-y;
+  /* Repeat the image vertically */
+  background-size: 100% auto;
+  /* Match width, adjust height automatically */
   -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 0) 100%);
   mask-image: linear-gradient(to left, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, 0) 100%);
-  opacity: 0; /* hide until JS sets it up */
+  opacity: 0;
+  /* hide until JS sets it up */
 }
 
 
@@ -190,12 +216,14 @@ body {
   pointer-events: auto;
 }
 
-#header-container{
+#header-container {
   min-height: 120px;
   background-color: #1C1C1C;
   padding-bottom: 10px;
-  position: relative; /* or fixed/absolute if needed */
-  z-index: 1001; /* Higher than carousel stuff */
+  position: relative;
+  /* or fixed/absolute if needed */
+  z-index: 1001;
+  /* Higher than carousel stuff */
 }
 
 header {
@@ -252,15 +280,18 @@ nav ul li a:hover::after {
 
 #nav-menu {
   display: flex;
-  align-items: center; /* Align items in the center */
-  gap: 15px; /* Add spacing between elements */
+  align-items: center;
+  /* Align items in the center */
+  gap: 15px;
+  /* Add spacing between elements */
   z-index: 10;
 }
 
 #nav-menu ul {
   display: flex;
   list-style: none;
-  gap: 0px; /* Space between links */
+  gap: 0px;
+  /* Space between links */
   padding: 0;
   margin: 0;
 }
@@ -268,9 +299,12 @@ nav ul li a:hover::after {
 .contact-button {
   display: inline-block;
   padding: 10px 15px;
-  background-color: transparent; /* No fill, just border */
-  color: white; /* Text color */
-  border: 2px solid #E1D9C7; /* Black border */
+  background-color: transparent;
+  /* No fill, just border */
+  color: white;
+  /* Text color */
+  border: 2px solid #E1D9C7;
+  /* Black border */
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
@@ -278,8 +312,10 @@ nav ul li a:hover::after {
 }
 
 .contact-button:hover {
-  background-color: #2D9CDB; /* Fill with black on hover */
-  color: white; /* White text on hover */
+  background-color: #2D9CDB;
+  /* Fill with black on hover */
+  color: white;
+  /* White text on hover */
 }
 
 /* INTRODUCTION PART */
@@ -322,13 +358,14 @@ h1 {
 }
 
 .myself-introduction_info p {
-  margin-bottom: 15px; /* Adds space between paragraphs */
+  margin-bottom: 15px;
+  /* Adds space between paragraphs */
 }
 
 /* SERVICES */
 
-.services{
-  padding-top:50px;
+.services {
+  padding-top: 50px;
 }
 
 .services h1 {
@@ -337,7 +374,8 @@ h1 {
 
 .services-columns {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping to avoid overflow */
+  flex-wrap: wrap;
+  /* Allow wrapping to avoid overflow */
   justify-content: center;
   gap: 150px;
   margin-top: 30px;
@@ -347,13 +385,17 @@ h1 {
 
 
 .column {
-  flex: 1; /* Each column takes equal width */
+  flex: 1;
+  /* Each column takes equal width */
   padding: 10px;
-  border-radius: 8px; /* optional styling */
+  border-radius: 8px;
+  /* optional styling */
   max-width: 300px;
   display: flex;
-  flex-direction: column; /* Stack content vertically */
-  align-items: center; /* Center content horizontally */
+  flex-direction: column;
+  /* Stack content vertically */
+  align-items: center;
+  /* Center content horizontally */
 }
 
 .column-info {
@@ -375,7 +417,7 @@ h1 {
   overflow: visible;
 }
 
-.column-icon img{
+.column-icon img {
   width: 80%;
 }
 
@@ -400,7 +442,7 @@ h1 {
   max-width: 1200px;
   margin: 0 auto;
   padding-left: 10px;
-  padding-right:10px;
+  padding-right: 10px;
 }
 
 .project {
@@ -414,14 +456,17 @@ h1 {
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
-  justify-content: center; /* Centers the tags */
-  opacity: 0; /* Hidden by default */
+  justify-content: center;
+  /* Centers the tags */
+  opacity: 0;
+  /* Hidden by default */
   transition: opacity 0.3s ease;
   margin-top: 20px;
 }
 
 .project:hover .project-tags {
-  opacity: 1; /* Show on hover */
+  opacity: 1;
+  /* Show on hover */
 }
 
 .project img {
@@ -429,8 +474,10 @@ h1 {
   height: auto;
   display: block;
   transition: transform 0.3s ease;
-  border: 4px solid #E1D9C7; /* Adjust color and thickness */
-  border-radius: 8px; /* Optional: Adds rounded corners */
+  border: 4px solid #E1D9C7;
+  /* Adjust color and thickness */
+  border-radius: 8px;
+  /* Optional: Adds rounded corners */
 }
 
 .project-info {
@@ -486,20 +533,26 @@ h1 {
 
 .offert {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
-  justify-content: center; /* Center items vertically (if it has a height) */
-  text-align: center; /* Center text */
-  gap: 10px; /* Add spacing between text and button */
-  padding: 20px; /* Add padding for spacing */
+  flex-direction: column;
+  /* Stack items vertically */
+  align-items: center;
+  /* Center items horizontally */
+  justify-content: center;
+  /* Center items vertically (if it has a height) */
+  text-align: center;
+  /* Center text */
+  gap: 10px;
+  /* Add spacing between text and button */
+  padding: 20px;
+  /* Add padding for spacing */
 }
+
 /* FOOTER */
 /* Footer Styling */
 
-#footer-container
-{
-  min-height: 240px; 
-  background-color: #2D9CDB; 
+#footer-container {
+  min-height: 240px;
+  background-color: #2D9CDB;
   z-index: 1;
 }
 
@@ -628,31 +681,37 @@ footer {
 /* MOBILE STUFF */
 /* Responsive Design */
 
-@media (max-width: 1024px) { /* Adjusts for tablets like iPad Pro */
-  
+@media (max-width: 1024px) {
+  /* Adjusts for tablets like iPad Pro */
+
   .services-columns {
     flex-direction: column;
-    padding: 0 0px; /* Less side padding on mobile */
-    gap: 0px; /* More space between stacked items, optional */
+    padding: 0 0px;
+    /* Less side padding on mobile */
+    gap: 0px;
+    /* More space between stacked items, optional */
   }
 
   .column {
     text-align: center;
-    width: 100%; /* Full width on mobile */
-    max-width: 800px; /* Optional: limit max width so it's not too wide */
-    margin: 0 auto; /* Center it horizontally */
+    width: 100%;
+    /* Full width on mobile */
+    max-width: 800px;
+    /* Optional: limit max width so it's not too wide */
+    margin: 0 auto;
+    /* Center it horizontally */
   }
 
   .introduction {
-    flex-direction: column; /* Stack the elements */
+    flex-direction: column;
+    /* Stack the elements */
     align-items: center;
     text-align: center;
   }
-  
+
 }
 
-@media (max-width: 1000px) 
-{
+@media (max-width: 1000px) {
   .menu-toggle {
     display: block;
     /* Only show menu button on mobile */
@@ -703,9 +762,9 @@ footer {
     width: 40vw;
     /* Smaller size for the center logo on mobile */
   }
-  
-  #social-bar-container{
-    display:none;
+
+  #social-bar-container {
+    display: none;
   }
 
   #social-bar {
@@ -743,11 +802,16 @@ footer {
 
 @media (max-width: 768px) {
   .project_container {
-    max-width: 100%; /* Default max-width is 100% */
-    margin: 0; /* Default margin is 0 */
-    display: block; /* Default display value for most elements is block */
-    flex-direction: row; /* Default flex-direction is row */
-    align-items: stretch; /* Default align-items is stretch */
+    max-width: 100%;
+    /* Default max-width is 100% */
+    margin: 0;
+    /* Default margin is 0 */
+    display: block;
+    /* Default display value for most elements is block */
+    flex-direction: row;
+    /* Default flex-direction is row */
+    align-items: stretch;
+    /* Default align-items is stretch */
   }
 
 
@@ -855,16 +919,15 @@ footer {
     transition: color 0.3s ease;
   }
 
-  .social-links a:hover {
-
-  }
+  .social-links a:hover {}
 
   #social-bar {
     display: none;
   }
 
   .language-select {
-    display: block; /* Show language options when the menu is toggled */
+    display: block;
+    /* Show language options when the menu is toggled */
     margin-top: 10px;
     text-align: center;
   }
@@ -877,15 +940,19 @@ footer {
 
   .footer-container {
     flex-direction: column;
-    align-items: center; /* Center content */
-    text-align: center; /* Align text center */
+    align-items: center;
+    /* Center content */
+    text-align: center;
+    /* Align text center */
   }
 
   .footer-left,
   .footer-middle,
   .footer-right {
-    align-items: center; /* Center individual sections */
-    text-align: center; /* Align text within sections */
+    align-items: center;
+    /* Center individual sections */
+    text-align: center;
+    /* Align text within sections */
   }
 
   .footer-right ul {
@@ -911,14 +978,19 @@ footer {
 
 .project_introduction {
   display: flex;
-  justify-content: center; /* Centers the content horizontally */
-  align-items: center; /* Aligns the content at the top */
-  gap: 50px; /* Adds a smaller gap between the name and info */
+  justify-content: center;
+  /* Centers the content horizontally */
+  align-items: center;
+  /* Aligns the content at the top */
+  gap: 50px;
+  /* Adds a smaller gap between the name and info */
   margin: 100px;
 }
 
-.project_name, .project_info {
-  max-width: 500px; /* Optional: Limit width of each section */
+.project_name,
+.project_info {
+  max-width: 500px;
+  /* Optional: Limit width of each section */
 }
 
 .project_name h2 {
@@ -934,95 +1006,131 @@ footer {
 
 .project_cover {
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
+  justify-content: center;
+  /* Centers horizontally */
+  align-items: center;
+  /* Centers vertically */
   width: 100%;
-  height: auto; /* Adjusts height based on image */
-  overflow: hidden; /* Prevents overflow issues */
+  height: auto;
+  /* Adjusts height based on image */
+  overflow: hidden;
+  /* Prevents overflow issues */
 }
 
 .project_cover img {
-  max-height: 562.5px; /* Keeps the height limit for PC */
-  width: 100%; /* Makes the image responsive */
-  height: auto; /* Ensures it keeps aspect ratio */
-  object-fit: cover; /* Makes sure it fills nicely */
+  max-height: 562.5px;
+  /* Keeps the height limit for PC */
+  width: 100%;
+  /* Makes the image responsive */
+  height: auto;
+  /* Ensures it keeps aspect ratio */
+  object-fit: cover;
+  /* Makes sure it fills nicely */
 }
 
 .project_cover_full {
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
+  justify-content: center;
+  /* Centers horizontally */
+  align-items: center;
+  /* Centers vertically */
   width: 100%;
-  height: auto; /* Adjusts height based on image */
-  overflow: hidden; /* Prevents overflow issues */
+  height: auto;
+  /* Adjusts height based on image */
+  overflow: hidden;
+  /* Prevents overflow issues */
 }
 
 .project_cover_full img {
-  max-height: 562.5px; /* Keeps the height limit for PC */
-  width: 100%; /* Makes the image responsive */
-  height: auto; /* Ensures it keeps aspect ratio */
-  object-fit: cover; /* Makes sure it fills nicely */
+  max-height: 562.5px;
+  /* Keeps the height limit for PC */
+  width: 100%;
+  /* Makes the image responsive */
+  height: auto;
+  /* Ensures it keeps aspect ratio */
+  object-fit: cover;
+  /* Makes sure it fills nicely */
 }
 
 /* Details */
 
 .project_details {
   display: flex;
-  justify-content: center; /* Centers content horizontally */
-  align-items: center; /* Centers content vertically */
+  justify-content: center;
+  /* Centers content horizontally */
+  align-items: center;
+  /* Centers content vertically */
   min-height: 450px;
   width: 100%;
-  flex-direction: column; /* Stack items vertically on smaller screens */
-  text-align: center; /* Centers text inside the container */
-  overflow: hidden; /* Prevents text from spilling out of the container */
-  padding: 20px; /* Optional: Adds padding for better spacing */
+  flex-direction: column;
+  /* Stack items vertically on smaller screens */
+  text-align: center;
+  /* Centers text inside the container */
+  overflow: hidden;
+  /* Prevents text from spilling out of the container */
+  padding: 20px;
+  /* Optional: Adds padding for better spacing */
 }
 
 .project_details p {
   font-size: 20px;
-  display: block; /* Ensures the paragraph is block-level, so it takes full width */
-  margin: 20px 0; /* Adjust margin to add spacing between paragraphs */
-  word-wrap: break-word; /* Prevents long words from overflowing */
+  display: block;
+  /* Ensures the paragraph is block-level, so it takes full width */
+  margin: 20px 0;
+  /* Adjust margin to add spacing between paragraphs */
+  word-wrap: break-word;
+  /* Prevents long words from overflowing */
 }
 
 .project_details h2 {
   background: transparent;
   text-align: center;
   margin: 0;
-  word-wrap: break-word; /* Same for h2 to handle overflow */
+  word-wrap: break-word;
+  /* Same for h2 to handle overflow */
 }
 
-.project_details p, .project_details h2 {
-  max-width: 600px; /* Optional: Limit max width of text */
-  margin: 0 auto; /* Centers the text horizontally */
+.project_details p,
+.project_details h2 {
+  max-width: 600px;
+  /* Optional: Limit max width of text */
+  margin: 0 auto;
+  /* Centers the text horizontally */
 }
 
-/* GRID TAGS */ 
-.tag-container {
+/* GRID TAGS */
+.tag-container {}
 
-}
-
-.project_tags_type, .project_tags_tools {
+.project_tags_type,
+.project_tags_tools {
   display: flex;
-  gap: 8px; /* Space between tags */
-  flex-wrap: wrap; /* Ensures they wrap if needed */
+  gap: 8px;
+  /* Space between tags */
+  flex-wrap: wrap;
+  /* Ensures they wrap if needed */
   margin-top: 5px;
   margin-bottom: 5px;
   justify-content: center;
 }
 
-.project_tags_type .tag, .project_tags_tools .tag {
+.project_tags_type .tag,
+.project_tags_tools .tag {
   display: flex;
-  align-items: center; /* Align icon and text */
-  gap: 5px; /* Space between icon and text */
-  padding: 3px 6px; /* Smaller padding */
+  align-items: center;
+  /* Align icon and text */
+  gap: 5px;
+  /* Space between icon and text */
+  padding: 3px 6px;
+  /* Smaller padding */
   border-radius: 5px;
-  font-size: 12px; /* Adjust font size to make text smaller */
+  font-size: 12px;
+  /* Adjust font size to make text smaller */
 }
 
 
 .project_tags_tools img {
-  width: 14px; /* Smaller icon size */
+  width: 14px;
+  /* Smaller icon size */
   height: auto;
   margin-right: 5px;
   border: none;
@@ -1032,47 +1140,60 @@ footer {
 
 /* INFO TAGS*/
 
-.tag-container_info {
+.tag-container_info {}
 
-}
-
-.project_tags_type_info, .project_tags_tools_info {
-  display: grid; /* Use grid for better control */
-  grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
-  gap: 8px; /* Space between tags */
-  justify-items: left; /* Center the items in each cell */
+.project_tags_type_info,
+.project_tags_tools_info {
+  display: grid;
+  /* Use grid for better control */
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 columns by default */
+  gap: 8px;
+  /* Space between tags */
+  justify-items: left;
+  /* Center the items in each cell */
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
-.project_tags_type_info .tag, .project_tags_tools_info .tag {
+.project_tags_type_info .tag,
+.project_tags_tools_info .tag {
   display: flex;
-  align-items: center; /* Align icon and text */
-  gap: 5px; /* Space between icon and text */
+  align-items: center;
+  /* Align icon and text */
+  gap: 5px;
+  /* Space between icon and text */
   border-radius: 5px;
-  text-align: center; /* Center the text */
+  text-align: center;
+  /* Center the text */
 
-  font-size: 12px; /* Smaller font size for info tags */
-  padding: 3px 6px; /* Smaller padding */
+  font-size: 12px;
+  /* Smaller font size for info tags */
+  padding: 3px 6px;
+  /* Smaller padding */
 }
 
 .project_tags_tools_info img {
-  width: 14px; /* Smaller icon size for info tags */
+  width: 14px;
+  /* Smaller icon size for info tags */
   height: auto;
   margin-right: 5px;
 }
 
 .tag {
-  background-color: #0d86c9; /* Main color */
+  background-color: #0d86c9;
+  /* Main color */
   color: white;
   font-size: 14px;
   font-weight: 600;
   padding: 6px 12px;
-  border-radius: 20px; /* Makes the capsule shape */
+  border-radius: 20px;
+  /* Makes the capsule shape */
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  white-space: nowrap; /* Prevents breaking in two lines */
+  white-space: nowrap;
+  /* Prevents breaking in two lines */
 }
 
 .project_images_scalable {
@@ -1102,7 +1223,8 @@ footer {
 
 .project_images_scalable_full {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Default: 3 equal columns */
+  grid-template-columns: repeat(3, 1fr);
+  /* Default: 3 equal columns */
 }
 
 .project_images_scalable_full:has(img:nth-child(1):nth-last-child(1)) {
@@ -1120,14 +1242,17 @@ footer {
 }
 
 .project_images_scalable_full img {
-  width: 100%; /* Ensure images fill the container */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  /* Ensure images fill the container */
+  height: auto;
+  /* Maintain aspect ratio */
   object-fit: cover;
 }
 
 .project_images_scalable_full_single {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Default: 3 equal columns */
+  grid-template-columns: repeat(3, 1fr);
+  /* Default: 3 equal columns */
 }
 
 .project_images_scalable_full_single:has(img:nth-child(1):nth-last-child(1)) {
@@ -1145,119 +1270,180 @@ footer {
 }
 
 .project_images_scalable_full_single img {
-  width: 100%; /* Ensure images fill the container */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  /* Ensure images fill the container */
+  height: auto;
+  /* Maintain aspect ratio */
   object-fit: cover;
 }
 
 .project_images_exclusive {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Default to 3 columns on PC */
+  grid-template-columns: repeat(4, 1fr);
+  /* Default to 3 columns on PC */
 }
 
 
 .project_images_exclusive img {
-  width: 100%; /* Ensure images fill the container */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  /* Ensure images fill the container */
+  height: auto;
+  /* Maintain aspect ratio */
   object-fit: cover;
 }
 
 
 .project_images {
   display: flex;
-  flex-wrap: wrap; /* Allows items to wrap to the next line */
-  justify-content: center; /* Centers the images */
-  gap: 0px; /* No space between images */
+  flex-wrap: wrap;
+  /* Allows items to wrap to the next line */
+  justify-content: center;
+  /* Centers the images */
+  gap: 0px;
+  /* No space between images */
 }
 
 .project_images img {
-  width: 33.33%; /* Default: 3 images per row */
-  height: auto; /* Keeps aspect ratio */
-  object-fit: cover; /* Ensures images cover the space */
+  width: 33.33%;
+  /* Default: 3 images per row */
+  height: auto;
+  /* Keeps aspect ratio */
+  object-fit: cover;
+  /* Ensures images cover the space */
 }
 
-.branding { background-color: #FF5733; }
-.packaging-design { background-color: #f831ff; }
-.social-media { background-color: #ff3142; }
-.motion-design { background-color: #33ffff; }
-.game-design { background-color: #f831ff; }
-.product-design { background-color: #a333ff; }
-.editorial-design { background-color: #a333ff; }
-.web-design { background-color: #33a3ff; }
-.web-development { background-color: #33ffe4; }
+.branding {
+  background-color: #FF5733;
+}
+
+.packaging-design {
+  background-color: #f831ff;
+}
+
+.social-media {
+  background-color: #ff3142;
+}
+
+.motion-design {
+  background-color: #33ffff;
+}
+
+.game-design {
+  background-color: #f831ff;
+}
+
+.product-design {
+  background-color: #a333ff;
+}
+
+.editorial-design {
+  background-color: #a333ff;
+}
+
+.web-design {
+  background-color: #33a3ff;
+}
+
+.web-development {
+  background-color: #33ffe4;
+}
 
 
-.Illustrator { background-color: #FF9A00 ; }
-.Photoshop{ background-color: #31A8FF; }
-.InDesign { background-color: #F36; }
+.Illustrator {
+  background-color: #FF9A00;
+}
+
+.Photoshop {
+  background-color: #31A8FF;
+}
+
+.InDesign {
+  background-color: #F36;
+}
 
 /* Mobile view (adjusted for smaller screens) */
 @media (max-width: 768px) {
 
   .project_introduction {
-      flex-direction: column; /* Stack the elements vertically */
-      align-items: center; /* Center the items */
+    flex-direction: column;
+    /* Stack the elements vertically */
+    align-items: center;
+    /* Center the items */
   }
 
   .project_cover {
-    height: 250px; /* Adjust height for mobile */
+    height: 250px;
+    /* Adjust height for mobile */
   }
 
   .project_cover img {
-      max-height: none; /* Removes PC height limit */
-      height: 100%; /* Makes sure it fills container */
-      width: auto; /* Maintains aspect ratio */
+    max-height: none;
+    /* Removes PC height limit */
+    height: 100%;
+    /* Makes sure it fills container */
+    width: auto;
+    /* Maintains aspect ratio */
   }
 
   .project_cover_full {
-    width: 100%; /* Ensure full width */
-    display: flex; /* Helps with centering */
-    justify-content: center; /* Centers the image */
-    align-items: center; /* Centers vertically */
-    overflow: hidden; /* Prevents any unwanted overflow */
+    width: 100%;
+    /* Ensure full width */
+    display: flex;
+    /* Helps with centering */
+    justify-content: center;
+    /* Centers the image */
+    align-items: center;
+    /* Centers vertically */
+    overflow: hidden;
+    /* Prevents any unwanted overflow */
   }
-  
+
   .project_cover_full img {
-    width: 100%; /* Makes the image fill the container */
-    height: auto; /* Maintains aspect ratio */
-    max-width: 100%; /* Prevents it from exceeding its original size */
+    width: 100%;
+    /* Makes the image fill the container */
+    height: auto;
+    /* Maintains aspect ratio */
+    max-width: 100%;
+    /* Prevents it from exceeding its original size */
   }
 
   .project_images_scalable img {
-    width: 100%; /* 1 image per row */
+    width: 100%;
+    /* 1 image per row */
   }
 
-  .project_tags_type, .project_tags_tools {
+  .project_tags_type,
+  .project_tags_tools {
     justify-content: left;
   }
 
-  
+
   .project_images_exclusive {
-    grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 images per row */
   }
 
   .project_images_scalable_full {
-    grid-template-columns: 1fr; /* 1 image per row on mobile */
+    grid-template-columns: 1fr;
+    /* 1 image per row on mobile */
   }
 
   .project_images_scalable_full:has(img:nth-child(1):nth-last-child(1)) {
     grid-template-columns: none;
   }
-  
+
   /* 2 images - each takes half */
   .project_images_scalable_full:has(img:nth-child(1):nth-last-child(2)) {
     grid-template-columns: none;
   }
-  
+
   /* 3 images - each takes a third */
   .project_images_scalable_full:has(img:nth-child(1):nth-last-child(3)) {
     grid-template-columns: none;
   }
 
-  
-  .project_images_scalable_full_single {
-    
-  }
+
+  .project_images_scalable_full_single {}
 }
 
 .language-modal {
@@ -1266,7 +1452,8 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Dark background overlay */
+  background: rgba(0, 0, 0, 0.7);
+  /* Dark background overlay */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1278,10 +1465,14 @@ footer {
   padding: 30px;
   border-radius: 12px;
   text-align: center;
-  color: white; /* Text color */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow */
-  width: 320px; /* Set a fixed width */
-  max-width: 90%; /* Ensure responsiveness */
+  color: white;
+  /* Text color */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  /* Soft shadow */
+  width: 320px;
+  /* Set a fixed width */
+  max-width: 90%;
+  /* Ensure responsiveness */
 }
 
 .language-content h2 {
@@ -1306,12 +1497,16 @@ footer {
   border-radius: 8px;
   transition: 0.3s;
 }
+
 .lang-btn {
   display: inline-block;
   padding: 10px 15px;
-  background-color: transparent; /* No fill, just border */
-  color: white; /* Text color */
-  border: 2px solid white; /* Same border as Contact button */
+  background-color: transparent;
+  /* No fill, just border */
+  color: white;
+  /* Text color */
+  border: 2px solid white;
+  /* Same border as Contact button */
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
@@ -1322,14 +1517,19 @@ footer {
 }
 
 .lang-btn:hover {
-  background-color: white; /* Fill with color on hover */
-  color: #2D9CDB; /* Text color on hover */
+  background-color: white;
+  /* Fill with color on hover */
+  color: #2D9CDB;
+  /* Text color on hover */
 }
 
 .lang-btn.selected {
-  background-color: #E1D9C7; /* Or another color to indicate the selected button */
-  color: #2D9CDB; /* Change text color for better visibility */
-  cursor: not-allowed; /* Disable click */
+  background-color: #E1D9C7;
+  /* Or another color to indicate the selected button */
+  color: #2D9CDB;
+  /* Change text color for better visibility */
+  cursor: not-allowed;
+  /* Disable click */
 }
 
 /* Initially, hide the language buttons */
@@ -1344,12 +1544,17 @@ footer {
 
 /* Style for the separator with repeating paw prints */
 .separator {
-  width: 100%; /* Full width */
-  height: 25px; /* Adjust the height for the paw separator */
+  width: 100%;
+  /* Full width */
+  height: 25px;
+  /* Adjust the height for the paw separator */
   background-image: url('Images/PAWLOWER_PAW.svg');
-  background-repeat: repeat-x; /* Repeat horizontally */
-  background-position: center; /* Center the paws horizontally */
-  margin: 30px 0; /* Space above and below the separator */
+  background-repeat: repeat-x;
+  /* Repeat horizontally */
+  background-position: center;
+  /* Center the paws horizontally */
+  margin: 30px 0;
+  /* Space above and below the separator */
 }
 
 /* Carousel */
@@ -1358,14 +1563,16 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 80vw; /* Responsive to screen width */
-  max-height: 90vh; /* Prevent it from overflowing on small devices */
+  height: 80vw;
+  /* Responsive to screen width */
+  max-height: 90vh;
+  /* Prevent it from overflowing on small devices */
   overflow: hidden;
   position: relative;
   margin: 0 auto;
 }
 
-.carousel-text{
+.carousel-text {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0%);
@@ -1376,13 +1583,15 @@ footer {
 }
 
 .carousel-text h1 {
-  font-size: clamp(1.5rem, 4.5vw, 4rem); /* smaller max and ideal */
+  font-size: clamp(1.5rem, 4.5vw, 4rem);
+  /* smaller max and ideal */
   font-weight: 1000;
   margin: 0;
 }
 
 .carousel-text p {
-  font-size: clamp(0.9rem, 1.5vw, 1.2rem); /* slightly smaller */
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  /* slightly smaller */
   margin-top: 1rem;
   font-weight: 500;
 }
@@ -1411,123 +1620,172 @@ footer {
 .overlay.hidden,
 .carousel-text.hidden {
   opacity: 0;
-  pointer-events: none; /* Prevent interactions while faded out */
+  pointer-events: none;
+  /* Prevent interactions while faded out */
 }
 
 .overlay {
-  position: absolute; /* Position the overlay on top of the images */
+  position: absolute;
+  /* Position the overlay on top of the images */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 24, 32, 0.582); /* Dark transparent overlay */
-  pointer-events: none; /* Allows clicks to pass through the overlay */
-  z-index: 1; /* Make sure the overlay is on top of the images */
+  background-color: rgba(0, 24, 32, 0.582);
+  /* Dark transparent overlay */
+  pointer-events: none;
+  /* Allows clicks to pass through the overlay */
+  z-index: 1;
+  /* Make sure the overlay is on top of the images */
 
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
 
 .slides {
-  position: relative; /* Ensure that images are stacked within this container */
+  position: relative;
+  /* Ensure that images are stacked within this container */
   width: 100%;
   height: 100%;
 
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
 }
 
 .slide {
-  position: absolute; /* Stack images on top of each other */
-  width: auto; /* Width should adjust to the image's aspect ratio */
+  position: absolute;
+  /* Stack images on top of each other */
+  width: auto;
+  /* Width should adjust to the image's aspect ratio */
   height: 100%;
-  opacity: 0; /* Make images invisible initially */
-  transition: opacity .5s ease-in-out; /* Fade transition */
+  opacity: 0;
+  /* Make images invisible initially */
+  transition: opacity .5s ease-in-out;
+  /* Fade transition */
 }
 
 .slide.active {
-  opacity: 1; /* Make the active image visible */
+  opacity: 1;
+  /* Make the active image visible */
 }
 
 .slide img {
-  width: auto; /* Ensure the image fills the width */
-  height: 100%; /* Make the image take up the full height */
-  object-fit: contain; /* Ensure the image fits inside the container */
+  width: auto;
+  /* Ensure the image fills the width */
+  height: 100%;
+  /* Make the image take up the full height */
+  object-fit: contain;
+  /* Ensure the image fits inside the container */
 }
 
 /* CONTACT PAGE*/
 
-.contact-intro{
+.contact-intro {
   display: grid;
   justify-items: center;
   text-align: left;
   padding: 50px;
 }
 
-.contact-intro p
-{
+.contact-intro p {
   width: 75%;
   font-size: 30px;
 }
 
-.contact-intro h1{
+.contact-intro h1 {
   text-align: center;
 }
 
-.contact-form form {
+/* FORM */
+
+.contact-form {
   width: 75%;
   margin: 0 auto;
   padding: 20px;
   border-radius: 8px;
 }
 
-.contact-form input{
-  width: 100%;
-  padding: 16px 12px; /* top-bottom, left-right */
-  height: 60px; /* optional: fixed height */
-  font-size: 16px;
-  border-radius: 8px;
-
-  margin-bottom: 15px;
-  background-color: #e7e7e7;
-  color: #1c1c1c;
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.contact-form textarea{
-  width: 100%;
-  padding: 16px 12px; /* top-bottom, left-right */
-
-  font-size: 16px;
-  border-radius: 8px;
-
-  margin-bottom: 15px;
-  background-color: #e7e7e7;
-  color: #1c1c1c;
-
-  height: 200px;          /* adjust to taste */
-  resize: vertical;       /* allows only vertical resize, or use "none" to disable */
-  box-sizing: border-box; /* ensures padding doesn't overflow width */
+.contact-form .name-fields {
+  display: flex;
+  gap: 15px;
 }
 
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #1c1c1c; /* soft purple */
-  opacity: .5;     /* optional: makes it more visible */
+.contact-form .name-fields div {
+  flex: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 16px 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #e7e7e7;
+  color: #1c1c1c;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  height: 200px;
+  resize: vertical;
+}
+
+.send-form-button {
+  font-size: 20px;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.send-form-button:hover {
+  background-color: #45a049;
+}
+
+.send-form-button {
+  font-size: 20px;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.send-form-button:hover {
+  background-color: #45a049;
 }
 
 .send-form {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center;     /* Center vertically */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
 }
 
 .send-form-button {
   display: inline-block;
   padding: 10px 15px;
-  background-color: transparent; /* No fill, just border */
-  color: white; /* Text color */
-  border: 2px solid #E1D9C7; /* Black border */
+  background-color: transparent;
+  /* No fill, just border */
+  color: white;
+  /* Text color */
+  border: 2px solid #E1D9C7;
+  /* Black border */
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
@@ -1535,18 +1793,19 @@ footer {
 }
 
 .send-form-button:hover {
-  background-color: #2D9CDB; /* Fill with black on hover */
-  color: white; /* White text on hover */
+  background-color: #2D9CDB;
+  /* Fill with black on hover */
+  color: white;
+  /* White text on hover */
   cursor: pointer;
 }
 
-.contact-notice
-{
+.contact-notice {
   text-align: center;
   font-weight: 200;
 }
 
-.contact-more{
+.contact-more {
   padding-top: 50px;
   display: grid;
   justify-items: center;
@@ -1585,7 +1844,8 @@ footer {
 }
 
 .contact-result-info p {
-  margin-bottom: 15px; /* Adds space between paragraphs */
+  margin-bottom: 15px;
+  /* Adds space between paragraphs */
 }
 
 /*FAQ's*/
@@ -1599,7 +1859,7 @@ footer {
   padding: 2rem;
 }
 
-.faq-collection{
+.faq-collection {
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -1617,23 +1877,29 @@ footer {
   transition: color 0.3s;
 
   display: flex;
-  justify-content: space-between; /* Keeps the + symbol on the far right */
+  justify-content: space-between;
+  /* Keeps the + symbol on the far right */
   align-items: center;
 }
 
 .question-content {
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* Adjust gap as needed */
+  gap: 0.5rem;
+  /* Adjust gap as needed */
 }
 
 .faq-icon {
-  width: 24px; /* Adjust size */
-  height: 24px; /* Adjust size */
+  width: 24px;
+  /* Adjust size */
+  height: 24px;
+  /* Adjust size */
   flex-shrink: 0;
 }
+
 .faq-answer {
-  box-sizing: content-box; /* ✅ add this */
+  box-sizing: content-box;
+  /* ✅ add this */
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease;
@@ -1654,20 +1920,19 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .slides{}
+  .slides {}
 
-  .contact-intro{
+  .contact-intro {
     justify-items: center;
     padding: 50px;
   }
-  
-  .contact-intro p
-  {
-    width: 75%;
+
+  .contact-intro p {
+    width: 100%;
     font-size: 20px;
   }
-  
-  .contact-intro h1{
+
+  .contact-intro h1 {
     text-align: center;
   }
 
