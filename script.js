@@ -26,7 +26,7 @@ function getCookie(name) {
 }
 
 // Fetch Header
-fetch("Sections/header.html")
+fetch("/Sections/header")
   .then(response => response.text())
   .then(data => {
     document.getElementById("header-container").innerHTML = data;
@@ -59,7 +59,7 @@ fetch("Sections/header.html")
 
 
 // Fetch Social Bar 
-fetch("Sections/socialbar.html")
+fetch("/Sections/socialbar")
   .then(response => response.text())
   .then(data => {
     document.getElementById("social-bar-container").innerHTML = data;
@@ -105,37 +105,33 @@ function updateSocialBarButtons(selectedLang) {
 }
 
 // Function to load translations from JSON (with section-specific file)
-function loadTranslations(language = 'en', section = null) {
-  // Dynamically set section based on the page's filename or path (e.g., "index", "about", etc.)
-  if (!section) {
-    section = window.location.pathname.split('/').pop().split('.')[0]; // Get the current page name without extension
+function loadTranslations(language = 'en', section = '') {
+  let translationFilePath;
+
+  if (section === 'header') {
+    translationFilePath = '/Sections/header/trans.json';
+  } else if (section === 'footer') {
+    translationFilePath = '/Sections/footer/trans.json';
+  } else {
+    translationFilePath = './trans.json'; // default: page-local
   }
 
-  let translationFilePath = `${section}_trns.json`; // Dynamically fetch the translation file
-
-  if (translationFilePath == "_trns.json") {
-    console.log("changing: " + translationFilePath + " to: index_trns.json");
-    translationFilePath = "index_trns.json";
-  }
-
-  // Fetch the translations JSON file
-  fetch('Translations/' + translationFilePath)  // Add a leading slash
-    .then(response => response.json())  // Parse the JSON
+  fetch(translationFilePath)
+    .then(response => response.json())
     .then(translations => {
-      // Get all elements with the data-translate attribute
       document.querySelectorAll('[data-translate]').forEach(element => {
         const translationKey = element.getAttribute('data-translate');
 
-        // If the key exists in the translations object, set the translated text
         if (translations[language] && translations[language][translationKey]) {
           element.textContent = translations[language][translationKey];
         }
       });
     })
     .catch(error => {
-      console.error('Error loading translations:', error);
+      console.error(`Error loading translations for ${section || 'page'}:`, error);
     });
 }
+
 
 document.addEventListener('DOMContentLoaded', function () {
   const savedLang = getCookie('language');
@@ -197,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Footer Section
-fetch("Sections/footer.html")
+fetch("/Sections/footer")
   .then(response => response.text())
   .then(data => {
     document.getElementById("footer-container").innerHTML = data;
@@ -288,9 +284,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const iconURLs = [
-    'Images/Projects/BryanRoman/ICONS/BRYANROMAN_TRIANGLE.png',
-    'Images/Projects/BryanRoman/ICONS/BRYANROMAN_STAR.png',
-    'Images/Projects/BryanRoman/ICONS/BRYANROMAN_SQUARE.png'
+    '/Images/Projects/BryanRoman/ICONS/BRYANROMAN_TRIANGLE.png',
+    '/Images/Projects/BryanRoman/ICONS/BRYANROMAN_STAR.png',
+    '/Images/Projects/BryanRoman/ICONS/BRYANROMAN_SQUARE.png'
     // Add as many as you want
   ];
   
