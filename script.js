@@ -334,13 +334,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
           if (response.ok) {
             form.reset();
-            window.location.href = "contact_thanks.html";
+            window.location.href = "/contact_thanks/index.html";
           } else {
-            window.location.href = "contact_failed.html";
+            window.location.href = "/contact_failed/index.html";
           }
 
       } catch (error) {
-        window.location.href = "contact_failed.html";
+        window.location.href = "/contact_failed/index.html";
       }
   });
 
