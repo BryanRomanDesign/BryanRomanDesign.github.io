@@ -313,6 +313,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //CONTACT
 document.addEventListener("DOMContentLoaded", function() {
   const form = document.getElementById('form');
+  const result = document.getElementById('result');
 
   form.addEventListener('submit', async function (e) {
       e.preventDefault();
@@ -330,16 +331,19 @@ document.addEventListener("DOMContentLoaded", function() {
               body: json
           });
 
-          const result = await response.json();
-
           if (response.ok) {
             form.reset();
             window.location.href = "/contact_thanks/index.html";
-          } else {
+          } else 
+          {
+            //console.error("❌ Web3Forms responded with an error:", result);
             window.location.href = "/contact_failed/index.html";
           }
 
-      } catch (error) {
+      } catch (error) 
+      {
+        //console.error("❌ Network or JavaScript error occurred:", error);
+        //alert("Network error: " + error.message);
         window.location.href = "/contact_failed/index.html";
       }
   });
