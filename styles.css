@@ -1979,4 +1979,8 @@ footer {
     max-width: 90%;
     /* Let the image resize but keep it within 90% of its container */
   }
+
+  .carousel {
+    height: 100vw;
+  }
 }
