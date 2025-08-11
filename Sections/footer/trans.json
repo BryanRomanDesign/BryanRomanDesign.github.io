@@ -3,6 +3,8 @@
         "trans-footer-home": "Home",
         "trans-footer-projects": "Projects",
         "trans-footer-contact": "Contact",
+        "trans-header-terms": "Terms & Conditions",
+        "trans-header-privacy": "Privacy Policy",
         "trans-footer-quote": "In the middle of every difficulty lies opportunity.",
         "trans-footer-stay-connected" : "Stay Connected",
         "trans-footer-stay-connected-submit" : "Submit"
@@ -11,6 +13,8 @@
         "trans-footer-home": "Inicio",
         "trans-footer-projects": "Proyectos",
         "trans-footer-contact": "Contactar",
+        "trans-header-terms": "Términos y Condiciones",
+        "trans-header-privacy": "Política de Privacidad",
         "trans-footer-quote": "En medio de cada dificultad, hay una oportunidad.",
         "trans-footer-stay-connected" : "Quedate Conectado",
         "trans-footer-stay-connected-submit" : "Someter"
