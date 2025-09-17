@@ -13,6 +13,13 @@ p {
 
 img {
   pointer-events: none;
+  -webkit-user-select: none; /* Safari/Chrome */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
+  user-select: none;         /* standard */
+    
+  -webkit-touch-callout: none; /* disable long-press menu on iOS */
+  -webkit-tap-highlight-color: transparent; /* remove blue highlight on tap */
 }
 
 main {
@@ -333,13 +340,6 @@ h1 {
   align-items: center;
   padding: 50px;
   flex-wrap: wrap;
-  gap: 30px;
-}
-
-.myself-introduction img {
-  max-width: 35%;
-  /* Image size limits to 50% of container */
-  height: auto;
 }
 
 .myself-introduction_info {
@@ -361,6 +361,109 @@ h1 {
   margin-bottom: 15px;
   /* Adds space between paragraphs */
 }
+
+.interactable-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.floating-icon {
+  position: relative;
+  display: inline-block;
+  perspective: 800px; /* needed for 3D effect */
+}
+
+.floating-icon img {
+    -webkit-user-select: none; /* Safari/Chrome */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE/Edge */
+    user-select: none;         /* standard */
+    
+    -webkit-touch-callout: none; /* disable long-press menu on iOS */
+    -webkit-tap-highlight-color: transparent; /* remove blue highlight on tap */
+}
+
+/* wrapper does the floating up and down */
+.icon-wrapper {
+  display: inline-block;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* the coin image */
+#icon {
+  max-width: 300px;
+  height: auto;
+  cursor: pointer;
+  pointer-events: auto;
+  transform-style: preserve-3d; /* allows 3D rotation */
+  position: relative; /* must have position for z-index to work */
+  z-index: 10; 
+}
+
+/* spin animation applied on click */
+#icon.animate-spin {
+  animation: coin-spin 1s ease forwards;
+}
+
+/* shadow */
+.floating-shadow {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 15px;
+  background: radial-gradient(ellipse, rgba(255,255,255,0.4) 0%, transparent 80%);
+  border-radius: 50%;
+  z-index: -1;
+  animation: shadowPulse 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+/* SHADOW PULSE */
+@keyframes shadowPulse {
+  0%   { transform: translateX(-50%) scaleX(1); opacity: 0.3; }
+  50%  { transform: translateX(-50%) scaleX(1.2); opacity: 0.15; }
+  100% { transform: translateX(-50%) scaleX(1); opacity: 0.3; }
+}
+
+/* COIN SPIN (YAW) */
+@keyframes coin-spin {
+  0%   { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+.gStar {
+  position: absolute;
+  pointer-events: none; /* So clicks go through */
+  z-index: 1; /* Above everything */
+  font-size: 48px; /* default size */
+  opacity: 0; /* start invisible */
+  color: yellow; /* default, will be overridden by JS */
+}
+
+@keyframes particleMove {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(var(--x), var(--y)) scale(1.2);
+  }
+  100% {
+    transform: translate(calc(var(--x) * 1), calc(var(--y) + 50px)) scale(0.8);
+    opacity: 0;
+  }
+}
+
 
 /* SERVICES */
 
@@ -548,7 +651,6 @@ h1 {
 }
 
 /* FOOTER */
-/* Footer Styling */
 
 #footer-container {
   min-height: 240px;
@@ -561,62 +663,41 @@ footer {
   padding-top: 50px;
 }
 
+/* Footer Container: 3-column layout */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+  flex-wrap: nowrap; /* prevent sections from wrapping */
+  padding: 0 20px;
+}
+
+/* Each section takes equal width */
 .footer-left,
 .footer-middle,
 .footer-right {
+  flex: 1 1 0;
+  min-width: 200px; /* prevents sections from shrinking too much on small screens */
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
+/* Footer Left */
 .footer-left {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
   align-items: flex-start;
-}
-
-.stay-connected form {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  align-items: center;
-}
-
-.stay-connected input {
-  padding: 15px;
-  width: 300px;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  background-color: white;
-  color: #1c1c1c;
-  transition: background-color 0.3s;
-}
-
-.stay-connected input:focus {
-  background-color: #b3a47c;
-  outline: none;
-}
-
-.stay-connected button {
-  padding: 15px;
-  background-color: #2D9CDB;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
-}
-
-.stay-connected button:hover {
-  background-color: #2D9CDB;
 }
 
 .footer-social {
   display: flex;
   gap: 20px;
+}
+
+.footer-social a i {
+  font-size: 32px;
 }
 
 .footer-social a {
@@ -629,20 +710,40 @@ footer {
   color: white;
 }
 
+.footer-left ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-left li {
+  margin: 5px 0;
+}
+
+.footer-left a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-left a:hover {
+  color: white;
+}
+
 /* Middle Section: Quote */
 .footer-middle {
   text-align: center;
   font-size: 18px;
   font-style: italic;
   line-height: 1.6;
+  word-wrap: break-word; /* wrap long quotes */
 }
 
 /* Right Section: Links */
 .footer-right {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
   align-items: flex-end;
+  text-align: right;
+  gap: 10px;
 }
 
 .footer-right ul {
@@ -665,42 +766,29 @@ footer {
   color: white;
 }
 
-/**/
-
-.footer-left ul {
-  list-style-type: none;
-  padding: 0;
+.footer-quote
+{
+  font-weight: bold;  
 }
 
-.footer-left li {
-  margin: 5px 0;
+/* Responsive tweak (optional) */
+@media screen and (max-width: 800px) {
+  .footer-container {
+    flex-wrap: wrap;
+  }
+  
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    flex: 1 1 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
 }
-
-.footer-left a {
-  color: white;
-  font-size: 16px;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-left a:hover {
-  color: white;
-}
-
-
-/* Footer Container */
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  /*max-width: 1200px;*/
-  margin: 0 auto;
-  align-items: flex-start;
-  gap: 40px;
-  flex-wrap: wrap;
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
 /* MOBILE STUFF */
 /* Responsive Design */
 

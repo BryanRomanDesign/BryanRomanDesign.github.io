@@ -179,17 +179,18 @@ document.addEventListener('DOMContentLoaded', function () {
   const overlay = document.querySelector('.overlay');
   const welcomeText = document.querySelector('.carousel-text');
 
-  let isHidden = false;
+  if (toggleBtn && overlay && welcomeText) {
+    let isHidden = false;
 
-  toggleBtn.addEventListener('click', () => {
-    isHidden = !isHidden;
+    toggleBtn.addEventListener('click', () => {
+      isHidden = !isHidden;
 
-    overlay.classList.toggle('hidden', isHidden);
-    welcomeText.classList.toggle('hidden', isHidden);
+      overlay.classList.toggle('hidden', isHidden);
+      welcomeText.classList.toggle('hidden', isHidden);
 
-    toggleBtn.textContent = isHidden ? 'Show Overlay' : 'Hide Overlay';
-  });
-
+      toggleBtn.textContent = isHidden ? 'Show Overlay' : 'Hide Overlay';
+    });
+  }
 });
 
 // Footer Section
@@ -220,42 +221,6 @@ document.querySelectorAll('.slide img').forEach(img => {
   img.addEventListener('dragstart', e => e.preventDefault());
 });
 
-// Function to update the strip's height
-const updateStripHeight = () => {
-  const strip_left = document.querySelector('.strip-left');
-  strip_left.style.height = document.body.scrollHeight + 'px';
-
-  const strip_right = document.querySelector('.strip-right');
-  strip_right.style.height = document.body.scrollHeight + 'px';
-};
-
-// Run it on load
-window.addEventListener('load', () => {
-  const strip_left = document.querySelector('.strip-left');
-  strip_left.style.backgroundImage = "url('Images/Projects/BryanRoman/BRYANROMAN_SEAMLESS_PATERN.avif')";
-  strip_left.style.opacity = '.25'; // reveal it
-
-  const strip_right = document.querySelector('.strip-right');
-  strip_right.style.backgroundImage = "url('Images/Projects/BryanRoman/BRYANROMAN_SEAMLESS_PATERN.avif')";
-  strip_right.style.opacity = '.25'; // reveal it
-  updateStripHeight(); // Set initial height
-});
-
-// Update strip height on window resize
-window.addEventListener('resize', updateStripHeight);
-
-function updateStripSize() {
-  const strips = document.querySelectorAll('.strip-left, .strip-right');
-  const patternSize = window.innerWidth * 0.05; // 5vw
-
-  strips.forEach(strip => {
-    strip.style.width = `${patternSize}px`;
-    strip.style.backgroundSize = `${patternSize}px`;
-  });
-}
-
-window.addEventListener('load', updateStripSize);
-window.addEventListener('resize', updateStripSize);
 
 // FAQ's
 
@@ -266,103 +231,195 @@ document.addEventListener("DOMContentLoaded", function () {
     const question = item.querySelector('.faq-question');
     const answer = item.querySelector('.faq-answer');
 
-    question.addEventListener('click', () => {
-      const isOpen = item.classList.contains('active');
+    if (question && answer) {
+      question.addEventListener('click', () => {
+        const isOpen = item.classList.contains('active');
 
-      // Close all other items
-      items.forEach(i => {
-        i.classList.remove('active');
-        i.querySelector('.faq-answer').style.maxHeight = null;
+        // Close all other items
+        items.forEach(i => {
+          i.classList.remove('active');
+          const ans = i.querySelector('.faq-answer');
+          if (ans) ans.style.maxHeight = null;
+        });
+
+        // Toggle current
+        if (!isOpen) {
+          item.classList.add('active');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
       });
-
-      // Toggle current
-      if (!isOpen) {
-        item.classList.add('active');
-        answer.style.maxHeight = answer.scrollHeight + 'px';
-      }
-    });
+    }
   });
 
   const iconURLs = [
     '/Images/Projects/BryanRoman/ICONS/BRYANROMAN_TRIANGLE.png',
     '/Images/Projects/BryanRoman/ICONS/BRYANROMAN_STAR.png',
     '/Images/Projects/BryanRoman/ICONS/BRYANROMAN_SQUARE.png'
-    // Add as many as you want
   ];
-  
+
+  const hoverColors = ['#2d9cdb', '#f9cb40', '#e84545'];
+
   document.querySelectorAll('.faq-question').forEach((el, index) => {
     const icon = el.querySelector('.faq-icon');
-    const imgURL = iconURLs[index % iconURLs.length];
-    icon.src = imgURL;
-  
-    // Optional: reuse the same hover color logic
-    const hoverColors = ['#2d9cdb', '#f9cb40', '#e84545'];
+    if (icon) { // ✅ Null check
+      const imgURL = iconURLs[index % iconURLs.length];
+      icon.src = imgURL;
+    }
+
     const color = hoverColors[index % hoverColors.length];
-  
-    el.addEventListener('mouseenter', () => {
-      el.style.color = color;
-    });
-  
-    el.addEventListener('mouseleave', () => {
-      el.style.color = '';
-    });
+    el.addEventListener('mouseenter', () => el.style.color = color);
+    el.addEventListener('mouseleave', () => el.style.color = '');
   });
-  
 });
 
+
 //CONTACT
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById('form');
   const result = document.getElementById('result');
 
-  form.addEventListener('submit', async function (e) {
+  if (form) {
+    form.addEventListener('submit', async function (e) {
       e.preventDefault();
       const formData = new FormData(form);
       const object = Object.fromEntries(formData);
       const json = JSON.stringify(object);
 
       try {
-          const response = await fetch('https://api.web3forms.com/submit', {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/json',
-                  'Accept': 'application/json'
-              },
-              body: json
-          });
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: json
+        });
 
-          if (response.ok) {
-            form.reset();
-            window.location.href = "/contact_thanks/index.html";
-          } else 
-          {
-            //console.error("Web3Forms responded with an error:", result);
-            window.location.href = "/contact_failed/index.html";
-          }
+        if (response.ok) {
+          form.reset();
+          window.location.href = "/contact_thanks/index.html";
+        } else {
+          //console.error("Web3Forms responded with an error:", result);
+          window.location.href = "/contact_failed/index.html";
+        }
 
-      } catch (error) 
-      {
+      } catch (error) {
         //console.error("Network or JavaScript error occurred:", error);
         //alert("Network error: " + error.message);
         window.location.href = "/contact_failed/index.html";
       }
-  });
+    });
+  }
 
   // Function to close the popup
-  window.closeMessageModal = function() {
-      messageModal.style.display = 'none';
+  window.closeMessageModal = function () {
+    messageModal.style.display = 'none';
   }
 });
 
-// document.addEventListener("DOMContentLoaded", function() {
-//   const form = document.getElementById('form');
+document.addEventListener("DOMContentLoaded", () => {
+    const icon = document.getElementById("icon");
 
-//   form.addEventListener("submit", function(e) {
-//     e.preventDefault(); // Prevents page refresh
-//     console.log("CLICK SUBMIT");
+    if (!icon) {
+        console.log("Icon not found!");
+        return;
+    }
 
-//     window.location.href = "contact_thanks.html";
+    icon.addEventListener("click", () => {
+        console.log("Icon clicked!"); // debug
 
-//     form.reset(); // Reset the form fields after showing the modal
-//   });
-// });
+        // Remove class if already there to restart animation
+        icon.classList.remove("animate-spin");
+        void icon.offsetWidth; // force reflow
+        icon.classList.add("animate-spin");
+    });
+});
+
+const icon = document.getElementById('icon');
+
+// Disable right-click on the image
+icon.addEventListener('contextmenu', (e) => {
+  e.preventDefault();
+  console.log('Right-click disabled on icon');
+});
+
+// ===== STAR BURST ON ICON CLICK =====
+var stars = 15;
+var starSize = 80;
+var starDistance = 200;
+var starSpeed = 1.25;
+var colors = ["#e84545", "#f9cb40", "#2d9cdb", "#48cc61"];
+
+function buildStars() {
+  for (let i = 0; i < stars; i++) {
+    var id = 'gStar' + i;
+    var sz = Math.floor((Math.random() * (starSize)) + (starSize / 3));
+    var createStar = {
+      id: id,
+      class: "gStar",
+      html: '<i class="fa fa-star"></i>',
+      css: {
+        position: 'absolute',
+        zIndex: 510,
+        fontSize: sz + 'px',
+        opacity: 0
+      }
+    };
+    $("body").append($("<div>", createStar));
+  }
+}
+
+function fireStars(e) {
+  e.preventDefault();
+
+  const icon = $(e.currentTarget)[0];
+
+  // Get the icon's center relative to the document, works on mobile & desktop
+  const rect = icon.getBoundingClientRect();
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+  const iconCenterX = rect.left + scrollLeft + rect.width / 2;
+  const iconCenterY = rect.top + scrollTop + rect.height / 2;
+
+  const colors = ["#e84545", "#f9cb40", "#2d9cdb", "#48cc61"];
+
+  for (let i = 0; i < stars; i++) {
+    const sz = parseFloat($("#gStar" + i).css("font-size"));
+    const angle = Math.random() * 2 * Math.PI;
+    const distance = Math.random() * starDistance;
+
+    const x = Math.cos(angle) * distance;
+    const y = Math.sin(angle) * distance;
+
+    const tl = gsap.timeline();
+    tl.set('#gStar' + i, {
+      x: 0,
+      y: 0,
+      rotation: 0,
+      scale: 0.35,
+      left: iconCenterX - sz / 2,
+      top: iconCenterY - sz / 2,
+      color: colors[i % colors.length]
+    })
+    .to('#gStar' + i, 0.35, { autoAlpha: 0.7 })
+    .to('#gStar' + i, 0.6, {
+      x: x,
+      y: y - 50,
+      rotation: 280,
+      scale: 1,
+      ease: "power1.out"
+    }, '<')
+    .to('#gStar' + i, 0.35, {
+      autoAlpha: 0,
+      y: "+=50",
+      force3D: true
+    }, ">-.25");
+  }
+}
+
+// Build stars once
+buildStars();
+
+// Trigger when clicking your floating icon
+$("#icon").click(fireStars);

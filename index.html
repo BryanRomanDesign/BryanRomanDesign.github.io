@@ -13,11 +13,11 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="Images/Favicon/favicon-32x32.png">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <meta name="p:domain_verify" content="827b20ea86f2ec19e7ff7dd2987595a1"/>
 </head>
-
-<script src="script.js"></script>
 
 <body>
 
@@ -104,7 +104,7 @@
             </div>
         </div>
           
-        <div class="myself-introduction">
+        <div class="myself-introduction" style="gap: 100px;">
             <div class="myself-introduction_info">
                 <h1 data-translate="trans-intro_hey" style="color: #2D9CDB">Hey, I'm Bryan!</h1>
                 <br>
@@ -119,7 +119,8 @@
                 <p data-translate="trans-intro-bye">I’m glad you are here,</p>
                 <p data-translate="trans-intro-name" style="color: #2D9CDB">Bryan Román</p>
             </div>
-            <img src="Images/Pic_Color.jpg">
+
+            <img src="Images/Pic_Color.jpg" style="height: 800px"> 
         </div>
 
         <!--Projects-->
@@ -201,6 +202,18 @@
                     </div>
                 </a>
 
+                <a href="/ember_&_pine/">
+                    <div class="project">
+                        <img src="Images\Projects\Ember_&_Pines\Ember&Pine_Cover_Green.avif" alt="Project 4">
+                        <div class="project-info">
+                            <div class="project-info-text">
+                                <h2>Ember & Pine</h2>
+                                <p>2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
                 <!-- <a href="Ember&Pine.html">
                     <div class="project">
                         <img src="Images\Projects\Ember_&_Pines\Ember&Pine_Cover_Green.avif" alt="Project 6">
@@ -237,6 +250,15 @@
     </main>
 
     <!-- Call To Action Part -->
+    <div class="interactable-icon">
+            <div class="floating-icon" id="floating_icon">
+                <div class="icon-wrapper">
+                    <img id="icon" src="Images/Projects/BryanRoman/BRYANROMAN_PICTOGRAM_WHITE_BLACK.avif" alt="Icon">
+                </div>
+                <div class="floating-shadow"></div>
+            </div>
+    </div>
+
 
     <div class="faq-container">
 
@@ -248,7 +270,7 @@
             <div class="faq-item">
                 <div class="faq-question">
                     <div class="question-content">
-                        <img class="faq-icon" src="path/to/icon1.png" alt="FAQ icon" />
+                        <img class="faq-icon" src="" alt="FAQ icon" />
                         <h3 data-translate="trans-question-a-1">Why is branding important?</h3>
                     </div>
                     <span class="icon">+</span>
@@ -264,7 +286,7 @@
             <div class="faq-item">
                 <div class="faq-question">
                     <div class="question-content">
-                        <img class="faq-icon" src="path/to/icon1.png" alt="FAQ icon" />
+                        <img class="faq-icon" src="" alt="FAQ icon" />
                         <h3 data-translate="trans-question-a-2">I’ve worked with a designer before and it didn’t go well—how
                             are you different?</h3>
                     </div>
@@ -283,7 +305,7 @@
             <div class="faq-item">
                 <div class="faq-question">
                     <div class="question-content">
-                        <img class="faq-icon" src="path/to/icon1.png" alt="FAQ icon" />
+                        <img class="faq-icon" src="" alt="FAQ icon" />
                         <h3 data-translate="trans-question-a-3">I’m just starting out—is now the right time to invest in
                             branding?</h3>
                     </div>
@@ -302,7 +324,7 @@
             <div class="faq-item">
                 <div class="faq-question">
                     <div class="question-content">
-                        <img class="faq-icon" src="path/to/icon1.png" alt="FAQ icon" />
+                        <img class="faq-icon" src="" alt="FAQ icon" />
                         <h3 data-translate="trans-question-a-4">Can I just get a logo?</h3>
                     </div>
                     <span class="icon">+</span>
@@ -320,7 +342,7 @@
             <div class="faq-item">
                 <div class="faq-question">
                     <div class="question-content">
-                        <img class="faq-icon" src="path/to/icon1.png" alt="FAQ icon" />
+                        <img class="faq-icon" src="" alt="FAQ icon" />
                         <h3 data-translate="trans-question-a-5">How long does the branding process take?</h3>
                     </div>
                     <span class="icon">+</span>
@@ -337,7 +359,7 @@
             <div class="faq-item">
                 <div class="faq-question">
                     <div class="question-content">
-                        <img class="faq-icon" src="path/to/icon1.png" alt="FAQ icon" />
+                        <img class="faq-icon" src="" alt="FAQ icon" />
                         <h3 data-translate="trans-question-a-6">What types of businesses do you work with?</h3>
                     </div>
                     <span class="icon">+</span>
@@ -359,9 +381,8 @@
         </div>
     </div>
     
-
-    
     <div id="footer-container"></div>
+    <script src="script.js"></script>
 </body>
 
 </html>
