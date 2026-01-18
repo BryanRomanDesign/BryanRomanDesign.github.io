@@ -1,0 +1,156 @@
+/* SOCIAL BAR */
+
+#social-bar a
+{
+  font-size: 24px;
+}
+
+#social-bar-container {
+  position: fixed;
+  left: 10px;
+  /* or 20px if you prefer */
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 10px 10px 25px;
+  /* Add left padding for the line */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+#social-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+  position: relative;
+  /* keep this for ::before to work */
+}
+
+#social-bar::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: white;
+  top: 0;
+  left: -15px;
+  /* Adjust as needed depending on your padding */
+}
+
+/* Social Icons */
+#social-bar a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#social-bar a:hover {
+  color: #2D9CDB;
+}
+
+/* Language buttons */
+#social-bar .lang-btn {
+  background-color: transparent;
+  color: white;
+  /* Smaller font size */
+  border: none;
+  padding: 5px 10px;
+  /* Smaller padding */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0;
+  /* No extra margin between buttons */
+}
+
+#social-bar .lang-btn:hover {
+  background-color: transparent;
+  /* No background change on hover */
+  color: #2D9CDB;
+  /* Keep the text color unchanged on hover */
+}
+
+
+/* Style for selected/active language */
+#social-bar .lang-btn.active {
+  color: #2D9CDB;
+  /* Light gray text for active language */
+  font-weight: bold;
+  /* Optionally make the active button bold */
+}
+
+@media (max-width: 1000px) 
+{
+  #social-bar-container {
+    display: none;
+  }
+
+  #social-bar {
+    display: none;
+  }
+
+  /* Styling for the burger menu */
+  .social-links {
+    display: none;
+    margin-top: 20px;
+    /* Add spacing between nav links and social links */
+    z-index: 1000;
+  }
+
+  #nav-menu.active .social-links {
+    display: flex;
+    justify-content: center;
+    /* Center the icons horizontally */
+    gap: 15px;
+    /* Space between icons */
+  }
+
+  .social-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .social-links a:hover {
+    color: white;
+  }
+}
+
+@media (max-width: 768px) 
+{
+  /* Styling for the burger menu */
+  .social-links {
+    display: none;
+    margin-top: 20px;
+    /* Add spacing between nav links and social links */
+    z-index: 1000;
+  }
+
+  #nav-menu.active .social-links {
+    display: flex;
+    justify-content: center;
+    /* Center the icons horizontally */
+    gap: 15px;
+    /* Space between icons */
+  }
+
+  .social-links a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .social-links a:hover {}
+
+  #social-bar {
+    display: none;
+  }
+}
+
+@media (min-width: 1000px) 
+{
+  .social-links {
+    display: none;
+    /* Hide social links on PC */
+  }
+}

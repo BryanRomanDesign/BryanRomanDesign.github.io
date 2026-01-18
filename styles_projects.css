@@ -1,0 +1,145 @@
+.portfolio-project-intro {
+  width: 100%;
+}
+
+.portfolio-project-intro-container {
+  max-width: 1100px; /* or whatever width you want */
+  margin: 0 auto;    /* centers it */
+  padding: 80px 20px;
+}
+
+.portfolio-project-intro-container h1 {
+  font-weight: 900;
+  font-size: clamp(42px, 8vw, 100px);
+  line-height: 1;
+}
+
+.project-intro-title__sub {
+  margin-top: clamp(-12px, -1vw, -6px);
+  font-size: clamp(16px, 2.5vw, 30px);
+  letter-spacing: 0.08em;
+}
+
+.portfolio-project-tabs {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.portfolio-project-tabs h3{
+    color: #2D9CDB;
+    font-size: clamp(12px, 1.6vw, 15px);
+    font-weight: 900;
+}
+
+.portfolio-project-tabs h2{
+    color: white;
+    font-size: clamp(14px, 2vw, 20px);
+    font-weight: 600;
+}
+
+/*/////////////////////////////*/
+
+.portfolio-project-info {
+  display: flex;
+  gap: 48px;
+  width: 100%;
+  max-width: 1200px; /* optional but recommended */
+  margin: 0 auto;
+  padding: 20px 24px;
+}
+
+.portfolio-project-info-title
+{
+  padding-bottom: 20px;
+  font-weight: 900;
+}
+
+.portfolio-project-info-title h1 {
+  font-size: clamp(28px, 4vw, 48px);
+}
+
+
+.project-info-spine {
+  text-align: right;
+  flex: 0 0 clamp(60px, 10vw, 120px);
+  padding-top: 12px;
+}
+
+
+.project-info-spine h4 {
+  position: relative;   /* THIS was missing */
+  padding-top: 6px;    /* space for the line */
+}
+
+.project-info-spine h4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;              /* aligns with right-aligned text */
+  width: 48px;           /* length of the line */
+  height: 2px;           /* thickness */
+  background-color: #fff; /* or your accent color */
+}
+
+.portfolio-project-context {
+  display: flex;
+  gap: 32px;
+}
+
+.portfolio-project-context-text {
+  font-size: clamp(16px, 2.2vw, 20px);
+  font-weight: bold;
+  max-width: 65ch;
+}
+
+.portfolio-image-wrapper {
+    display: flex;
+    justify-content: center; /* horizontal center */
+    padding: 20px 0;         /* space top & bottom */
+
+    height:auto;
+}
+
+.portfolio-image-wrapper img 
+{
+    width: 100vw;   /* 100% of the viewport width */
+    max-width: 100%; /* never overflow */
+    height: auto;   /* maintain aspect ratio */
+    display: block; /* remove extra inline spacing */
+}
+
+.portfolio-placeholder {
+    background-color: #777;
+}
+
+@media (max-width: 768px) {
+  .portfolio-project-tabs {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .portfolio-project-info {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .portfolio-project-context {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .project-info-spine {
+    text-align: left;
+    flex: none;
+  }
+
+  .project-info-spine h4::before {
+    right: auto;
+    left: 0;
+  }
+}

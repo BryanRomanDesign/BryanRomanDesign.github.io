@@ -1,0 +1,159 @@
+/* FOOTER */
+
+#footer-container {
+  min-height: 240px;
+  background-color: #2D9CDB;
+  z-index: 1;
+}
+
+footer {
+  color: white;
+  padding-top: 50px;
+}
+
+/* Footer Container: 3-column layout */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+  flex-wrap: nowrap; /* prevent sections from wrapping */
+  padding: 0 20px;
+}
+
+/* Each section takes equal width */
+.footer-left,
+.footer-middle,
+.footer-right {
+  flex: 1 1 0;
+  min-width: 200px; /* prevents sections from shrinking too much on small screens */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Footer Left */
+.footer-left {
+  align-items: flex-start;
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+
+  font-size: 24px;
+}
+
+.footer-social a i {
+}
+
+.footer-social a {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: white;
+}
+
+.footer-left ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-left li {
+  margin: 5px 0;
+}
+
+.footer-left a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-left a:hover {
+  color: white;
+}
+
+/* Middle Section: Quote */
+.footer-middle {
+  text-align: center;
+  font-style: italic;
+  line-height: 1.6;
+  word-wrap: break-word; /* wrap long quotes */
+}
+
+/* Right Section: Links */
+.footer-right {
+  align-items: flex-end;
+  text-align: right;
+  gap: 10px;
+}
+
+.footer-right ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-right li {
+  margin: 5px 0;
+}
+
+.footer-right a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-right a:hover {
+  color: white;
+}
+
+.footer-quote
+{
+  font-weight: bold;  
+}
+
+/* Responsive tweak (optional) */
+@media screen and (max-width: 800px) {
+  .footer-container {
+    flex-wrap: wrap;
+  }
+  
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    flex: 1 1 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    /* Center content */
+    text-align: center;
+    /* Align text center */
+  }
+
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    align-items: center;
+    /* Center individual sections */
+    text-align: center;
+    /* Align text within sections */
+  }
+
+  .footer-right ul {
+    align-items: center;
+  }
+}

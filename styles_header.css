@@ -1,0 +1,206 @@
+/* Header */
+
+.logo_small {
+  justify-self: start;
+}
+
+.logo_small img {
+  max-width: clamp(100px, 5vw, 150px);
+  height: auto;
+  pointer-events: auto;
+}
+
+.nav-center-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-center-logo img {
+  max-width: clamp(100px, 10vw, 200px);
+  /* Adjusts between 150px and 300px */
+  height: auto;
+  pointer-events: auto;
+}
+
+#header-container {
+  min-height: 120px;
+  background-color: #1C1C1C;
+  padding-bottom: 10px;
+  position: relative;
+  /* or fixed/absolute if needed */
+  z-index: 1001;
+  /* Higher than carousel stuff */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-top: 20px;
+
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+/* NAV */
+nav {
+  margin-left: auto;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  font-size: 24px;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+/* Navigation Links */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  /* Ensure the pseudo-element is positioned relative to the link */
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  /* Line height */
+  background-color: #2D9CDB;
+  transition: width 0.3s ease;
+  /* Smooth animation */
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  /* Make the line span across the entire width of the link */
+}
+
+#nav-menu {
+  display: flex;
+  align-items: center;
+  /* Align items in the center */
+  gap: 15px;
+  /* Add spacing between elements */
+  z-index: 10;
+}
+
+#nav-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 0px;
+  /* Space between links */
+  padding: 0;
+  margin: 0;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: transparent;
+  /* No fill, just border */
+  color: white;
+  /* Text color */
+  border: 2px solid #E1D9C7;
+  /* Black border */
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+
+  font-size: 24px;
+}
+
+.contact-button:hover {
+  background-color: #2D9CDB;
+  /* Fill with black on hover */
+  color: white;
+  /* White text on hover */
+}
+
+
+@media (max-width: 1000px) {
+	
+	header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		padding-top: 20px;
+
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	
+  .menu-toggle {
+    display: block;
+    /* Only show menu button on mobile */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    z-index: 100;
+    /* Ensure it stays on top */
+  }
+
+  /* Hide the navigation menu by default on mobile */
+  #nav-menu {
+    display: none;
+  }
+
+  /* Show the navigation menu when active */
+  #nav-menu.active {
+  display: flex;
+  position: fixed; /* Use fixed to cover the whole viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1c1c1c;
+  padding: 0;
+  justify-content: center;  /* Center items horizontally */
+  align-items: center;      /* Center items vertically */
+  flex-direction: column;   /* Stack menu buttons vertically */
+  text-align: center;
+  z-index: 99;            /* Make sure it's on top of other content */
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .logo_small img {
+    max-width: 100px;
+    width: 15vw;
+    /* Smaller size for the small logo on mobile */
+  }
+
+  .nav-center-logo img {
+    max-width: 150px;
+    width: 40vw;
+    /* Smaller size for the center logo on mobile */
+  }
+}
+
+@media (min-width: 1000px) {
+  /* Hide the menu button on larger screens */
+  .menu-toggle {
+    display: none;
+  }
+}

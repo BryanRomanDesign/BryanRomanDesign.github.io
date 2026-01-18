@@ -64,30 +64,38 @@ fetch("/Sections/socialbar")
   .then(data => {
     document.getElementById("social-bar-container").innerHTML = data;
 
-    // Now that the social bar is added, we can attach the language button event listeners
+    // Get saved language (default to 'en')
+    const savedLang = getCookie('language') || 'en';
+
+    // Apply translations AFTER social bar is injected
+    loadTranslations(savedLang);
+    loadTranslations(savedLang, 'header');
+    loadTranslations(savedLang, 'footer');
+
+    // Disable the active language button
+    updateSocialBarButtons(savedLang);
+
+    // Attach click listeners
     const langButtons = document.querySelectorAll('.lang-btn');
 
     langButtons.forEach(button => {
       button.addEventListener('click', function (e) {
-        const selectedLang = e.target.getAttribute('data-lang');
-        console.log('Language Selected:', selectedLang); // For debugging
+        const selectedLang = e.currentTarget.getAttribute('data-lang');
 
-        // Store the selected language in a cookie
-        setCookie('language', selectedLang, 365); // Save for 365 days
+        setCookie('language', selectedLang, 365);
 
-        // Apply translations dynamically after language selection
-        loadTranslations(selectedLang);  // For the general content (based on page name)
-        loadTranslations(selectedLang, 'header'); // For header content
-        loadTranslations(selectedLang, 'footer'); // For footer content
+        loadTranslations(selectedLang);
+        loadTranslations(selectedLang, 'header');
+        loadTranslations(selectedLang, 'footer');
 
-        // Update the social bar buttons to disable the selected language button
         updateSocialBarButtons(selectedLang);
 
-        // Hide the language modal after selecting a language
-        document.getElementById('language-modal').style.display = 'none'; // Hide the modal
+        const modal = document.getElementById('language-modal');
+        if (modal) modal.style.display = 'none';
       });
     });
   });
+
 
 // Function to update Social Bar Language Buttons
 function updateSocialBarButtons(selectedLang) {
@@ -423,3 +431,8 @@ buildStars();
 
 // Trigger when clicking your floating icon
 $("#icon").click(fireStars);
+
+document.querySelectorAll('.project').forEach(el => {
+    const delay = Math.random() * 3; // 0s – 3s
+    el.style.animationDelay = `${delay}s`;
+  });
