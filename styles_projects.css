@@ -143,3 +143,23 @@
     left: 0;
   }
 }
+
+.work-in-progress-notice {
+    max-width: 800px;
+    width: calc(100% - 2rem);
+    margin: 30px auto;
+    padding: clamp(14px, 4vw, 24px) clamp(16px, 5vw, 30px);
+
+    text-align: center;
+    font-size: clamp(1.2rem, 3.5vw, 1.8rem);
+    font-weight: 900;
+
+    background-color: #DD3E45;
+    color: white;
+    border: 3px solid white;
+    border-radius: 10px;
+
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+
