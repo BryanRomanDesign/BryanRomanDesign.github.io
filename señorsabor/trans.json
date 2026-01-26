@@ -1,0 +1,46 @@
+{
+  "en": {
+    "project-category": "MEXICAN FOOD TRUCK",
+    "project-year": "Year",
+    "project-activity": "Activity",
+    "project-industry": "Industry",
+    "project-industry-answer": "Food",
+
+    "project-context": "CONTEXT",
+    "project-context-text": "Señor Sabor is a vibrant and approachable Mexican food truck brand that brings authentic flavors and a lively street-food experience to its community. Inspired by traditional Mexican cuisine and culture, the brand balances heritage and playfulness, using a charro mascot to create personality and connection with customers. Its visual identity — warm, bold colors, a friendly mascot, and dynamic typography — communicates flavor, energy, and craftsmanship, making the brand memorable, recognizable, and inviting across all touchpoints, from the truck and menus to social media and packaging.",
+
+    "project-design-decisions": "DESIGN DECISIONS",
+    "project-design-decisions-logo": "LOGO",
+    "project-design-decisions-logo-text": "The charro represents Mexican heritage, tradition, and pride, instantly connecting the brand to authentic Mexican culture. It adds personality and approachability to the food truck, making the brand memorable and visually distinctive. The mascot also conveys a sense of craftsmanship and care, signaling to customers that the food is made with passion and authenticity.",
+
+    "project-design-decisions-color": "COLOR PALETTE",
+    "project-design-decisions-color-text": "The color palette of Señor Sabor is warm, bold, and authentic, reflecting the energy and flavor of Mexican street food. The vibrant orange serves as the primary color, evoking heat and spice, while a deep red-brown adds richness and highlights details. A warm charcoal provides contrast and structure, ensuring legibility and balance, and a soft creamy beige offers breathing space, evoking traditional ingredients and craftsmanship. Together, the palette conveys a sense of tradition, approachability, and flavorful energy that makes the brand instantly recognizable.",
+
+    "project-graphics": "GRAPHIC ELEMENTS",
+    "project-graphics-text": "The graphic elements of Señor Sabor are rooted in Mexican culture and designed to feel friendly, lively, and inviting. The charro mascot plays a central role, bringing personality and warmth to the brand while creating an instant emotional connection with customers. Supporting elements draw from traditional Mexican motifs, food culture, and festive aesthetics, using bold shapes, playful illustrations, and decorative details that celebrate heritage without feeling heavy or rigid. Together, these elements create a visual language that is recognizable, approachable, and full of flavor across menus, packaging, the food truck, and social media.","project-work-progress": "WORK IN PROGRESS:",
+    "project-work-progress-text": "This project is still work in progress. Come back later to see it once again once its finished!"
+},
+  "es": {
+    "project-category": "FOOD TRUCK MEXICANO",
+    "project-year": "Año",
+    "project-activity": "Actividad",
+    "project-industry": "Industria",
+    "project-industry-answer": "Comida",
+
+    "project-context": "CONTEXTO",
+    "project-context-text": "Señor Sabor es una marca de food truck mexicano vibrante y cercana que lleva sabores auténticos y una experiencia dinámica de comida callejera a su comunidad. Inspirada en la cocina y la cultura tradicional mexicana, la marca equilibra herencia y diversión, utilizando un personaje charro para crear personalidad y conexión con los clientes. Su identidad visual — colores cálidos e intensos, una mascota amigable y tipografía dinámica — comunica sabor, energía y artesanía, haciendo que la marca sea memorable, reconocible y atractiva en todos sus puntos de contacto, desde el camión y los menús hasta las redes sociales y el empaque.",
+
+    "project-design-decisions": "DECISIONES DE DISEÑO",
+    "project-design-decisions-logo": "LOGOTIPO",
+    "project-design-decisions-logo-text": "El charro representa la herencia, tradición y orgullo mexicano, conectando instantáneamente la marca con la cultura mexicana auténtica. Aporta personalidad y cercanía al food truck, haciendo que la marca sea memorable y visualmente distintiva. La mascota también transmite un sentido de artesanía y cuidado, señalando a los clientes que la comida se prepara con pasión y autenticidad.",
+
+    "project-design-decisions-color": "PALETA DE COLOR",
+    "project-design-decisions-color-text": "La paleta de color de Señor Sabor es cálida, audaz y auténtica, reflejando la energía y el sabor de la comida callejera mexicana. El naranja vibrante funciona como color principal, evocando calor y picante, mientras que un rojo marrón profundo aporta riqueza y resalta los detalles. Un carbón cálido proporciona contraste y estructura, asegurando legibilidad y equilibrio, y un beige cremoso suave ofrece espacios de respiro, evocando ingredientes tradicionales y artesanía. En conjunto, la paleta transmite tradición, cercanía y una energía llena de sabor que hace a la marca instantáneamente reconocible.",
+
+    "project-graphics": "ELEMENTOS GRÁFICOS",
+    "project-graphics-text": "Los elementos gráficos de Señor Sabor están arraigados en la cultura mexicana y están diseñados para sentirse amigables, vivos e invitantes. La mascota del charro juega un papel central, aportando personalidad y calidez a la marca mientras crea una conexión emocional inmediata con los clientes. Los elementos de apoyo se inspiran en motivos tradicionales mexicanos, la cultura gastronómica y una estética festiva, utilizando formas audaces, ilustraciones juguetonas y detalles decorativos que celebran la herencia sin sentirse pesados ni rígidos. En conjunto, estos elementos crean un lenguaje visual reconocible, cercano y lleno de sabor a través de menús, empaques, el food truck y redes sociales.",
+
+    "project-work-progress": "TRABAJO EN PROCESO:",
+    "project-work-progress-text": "Este proyecto aún está en proceso. ¡Vuelve más adelante para verlo una vez esté terminado!"
+  }
+}

@@ -1,30 +1,43 @@
 {
-    "en": {
-        "trans-project-description": "Kindrove is a daycare brand inspired by the world of dinosaurs, designed to spark curiosity, adventure, and discovery among children. The brand aims to create a fun, educational, and safe environment where kids can learn, play, and explore.",
-        "trans-project-brand-purpose": "Brand Purpose:",
-        "trans-project-purpose": "To inspire young explorers by providing a nurturing space where curiosity and imagination can thrive, grounded in a theme of adventure and discovery.",
-        "trans-project-target-audience": "Target Audience:",
-        "trans-project-target": "Parents of children aged 0-12 years looking for a fun, safe, and educational daycare experience.",
-        "trans-project-core-values": "Core Values:",
-        "trans-project-values-1": "Curiosity: Encouraging children to ask questions and explore their surroundings.",
-        "trans-project-values-2": "Adventure: Creating an exciting and playful environment where children can experience new things.",
-        "trans-project-values-3": "Learning: Fostering a love of knowledge through age-appropriate activities and lessons.",
-        "trans-project-values-4": "Safety: Ensuring a secure and caring space for all children.",
-        "trans-project-details-1-1": "The Kindrove logo is a playful and dynamic representation that aligns with the brand’s theme of dinosaurs, exploration, and discovery. The logo’s dinosaur mascot helps children easily identify with the daycare’s divisions, while the name ‘Kindrove’ captures a sense of kindness and growth.",
-        "trans-project-details-3-1": "Kindrove is more than just a daycare—it is a place of adventure, exploration, and discovery. Through its dinosaur-themed environment, fun activities, and nurturing approach, Kindrove aims to ignite a love of learning and create unforgettable memories for children."
-    },
-    "es": {
-        "trans-project-description": "Kindrove es una marca de guardería inspirada en el mundo de los dinosaurios, diseñada para despertar la curiosidad, la aventura y el descubrimiento entre los niños. La marca tiene como objetivo crear un entorno divertido, educativo y seguro donde los niños puedan aprender, jugar y explorar.",
-        "trans-project-brand-purpose": "Propósito de la Marca:",
-        "trans-project-purpose": "Inspirar a los jóvenes exploradores proporcionando un espacio de cuidado donde la curiosidad y la imaginación puedan prosperar, basado en un tema de aventura y descubrimiento.",
-        "trans-project-target-audience": "Público Objetivo:",
-        "trans-project-target": "Padres de niños de 0 a 12 años que buscan una experiencia de guardería divertida, segura y educativa.",
-        "trans-project-core-values": "Valores Fundamentales:",
-        "trans-project-values-1": "Curiosidad: Fomentar que los niños hagan preguntas y exploren su entorno.",
-        "trans-project-values-2": "Aventura: Crear un entorno emocionante y lúdico donde los niños puedan vivir nuevas experiencias.",
-        "trans-project-values-3": "Aprendizaje: Promover el amor por el conocimiento a través de actividades y lecciones adecuadas a su edad.",
-        "trans-project-values-4": "Seguridad: Garantizar un espacio seguro y acogedor para todos los niños.",
-        "trans-project-details-1-1": "El logotipo de Kindrove es una representación lúdica y dinámica que se alinea con el tema de la marca de dinosaurios, exploración y descubrimiento. La mascota dinosaurio del logo ayuda a los niños a identificar fácilmente las divisiones de la guardería, mientras que el nombre 'Kindrove' transmite una sensación de amabilidad y crecimiento.",
-        "trans-project-details-3-1": "Kindrove es más que una guardería: es un lugar de aventura, exploración y descubrimiento. A través de su entorno temático de dinosaurios, actividades divertidas y un enfoque de cuidado, Kindrove busca encender el amor por el aprendizaje y crear recuerdos inolvidables para los niños."
-    }
+  "en": {
+    "project-category": "KID'S DAYCARE & EDUCATION CENTER",
+    "project-year": "Year",
+    "project-activity": "Activity",
+    "project-industry": "Industry",
+    "project-industry-answer": "Education",
+
+    "project-context": "CONTEXT",
+    "project-context-text": "Kindrove is an engaging brand designed for young children, functioning as a nurturing space where little explorers can learn, play, and grow through adventurous activities. Inspired by themes of discovery and wonder, it targets parents seeking safe, educational environments that foster curiosity and creativity in kids, blending fun dinosaur motifs with a focus on wholesome development.",
+
+    "project-design-decisions": "DESIGN DECISIONS",
+    "project-design-decisions-logo": "LOGO",
+    "project-design-decisions-logo-text": "The Kindrove logo features soft, rounded, playful lettering in a vibrant, child-friendly palette, with the standout 'K' cleverly stylized as the graceful, curving long neck and head of a sauropod dinosaur. This thoughtful design choice captures the essence of gentle giants, symbolizing wonder, height, and boundless exploration—inviting little ones to reach for big adventures while remaining safe and approachable. The friendly typography, bright yet soothing colors, and overall warm aesthetic evoke joy, curiosity, and trust for parents, perfectly aligning with the brand's theme of discovery in a nurturing world of wonder. The accompanying tagline, 'Where Little Explorers Roam,' beautifully reinforces this spirit of playful, imaginative journeying.",
+
+    "project-design-decisions-color": "COLOR PALETTE",
+    "project-design-decisions-color-text": "Kindrove's color palette draws from nature and energy, with primary shades like Willow Green for growth and freshness, paired with Parchment for a clean, neutral background. Secondary colors include Sky Reflection for calm skies, Sunflower Gold for sunny optimism, and Vibrant Coral for lively accents, creating a balanced, child-friendly scheme that feels warm and inviting.",
+
+    "project-graphics": "GRAPHIC ELEMENTS",
+    "project-graphics-text": "Kindrove's brand visuals extend the playful identity across various applications, such as colorful business cards, letterheads, and stamps in green and multicolored motifs; dinosaur-themed toys and patterns on drawstring bags; professional name badges and brochures featuring photos of kids in action; all unified by the logo, fonts like Lilita One and Magallanes, and a consistent palette to maintain a cohesive, fun, and educational aesthetic."
+  },
+
+  "es": {
+    "project-category": "GUARDERÍA Y CENTRO EDUCATIVO PARA NIÑOS",
+    "project-year": "Año",
+    "project-activity": "Actividad",
+    "project-industry": "Industria",
+    "project-industry-answer": "Educación",
+
+    "project-context": "CONTEXTO",
+    "project-context-text": "Kindrove es una marca diseñada para niños pequeños, funcionando como un espacio de cuidado donde los pequeños exploradores pueden aprender, jugar y crecer a través de actividades aventureras. Inspirada en temas de descubrimiento y asombro, se dirige a padres que buscan entornos educativos seguros que fomenten la curiosidad y creatividad de los niños, combinando divertidos motivos de dinosaurios con un enfoque en el desarrollo integral.",
+
+    "project-design-decisions": "DECISIONES DE DISEÑO",
+    "project-design-decisions-logo": "LOGOTIPO",
+    "project-design-decisions-logo-text": "El logotipo de Kindrove presenta letras suaves, redondeadas y juguetonas en una paleta vibrante y amigable para los niños, con la 'K' destacada, estilizada inteligentemente como el largo y curvado cuello y cabeza de un dinosaurio saurópodo. Esta elección de diseño captura la esencia de los gigantes gentiles, simbolizando asombro, altura y exploración sin límites, invitando a los pequeños a aventurarse mientras se mantienen seguros y accesibles. La tipografía amigable, los colores brillantes pero suaves y la estética cálida evocan alegría, curiosidad y confianza para los padres, alineándose perfectamente con el tema de descubrimiento en un mundo acogedor. El eslogan 'Where Little Explorers Roam' refuerza este espíritu de juego y exploración imaginativa.",
+
+    "project-design-decisions-color": "PALETA DE COLORES",
+    "project-design-decisions-color-text": "La paleta de colores de Kindrove se inspira en la naturaleza y la energía, con tonos primarios como Verde Sauce para crecimiento y frescura, combinados con Pergamino para un fondo limpio y neutro. Los colores secundarios incluyen Reflejo del Cielo para cielos tranquilos, Oro Girasol para optimismo soleado y Coral Vibrante para acentos enérgicos, creando un esquema equilibrado, amigable para los niños, que se siente cálido y acogedor.",
+
+    "project-graphics": "ELEMENTOS GRÁFICOS",
+    "project-graphics-text": "Los elementos visuales de Kindrove extienden la identidad juguetona en varias aplicaciones, como tarjetas de presentación coloridas, membretes y sellos en motivos verdes y multicolores; juguetes y patrones con temática de dinosaurios en mochilas; gafetes profesionales y folletos con fotos de niños en acción; todo unificado por el logotipo, fuentes como Lilita One y Magallanes, y una paleta consistente para mantener una estética cohesionada, divertida y educativa."
+  }
 }

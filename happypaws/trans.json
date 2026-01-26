@@ -1,0 +1,49 @@
+{
+  "en": {
+    "project-category": "PET GROOMING",
+    "project-year": "Year",
+    "project-activity": "Activity",
+    "project-industry": "Industry",
+    "project-industry-answer": "Pets",
+
+    "project-context": "CONTEXT",
+    "project-context-text": "Happy Paws is a grooming brand that combines professional care with playful personality. Through its stylish poodle mascot, the brand communicates friendliness, trust, and attention to detail, making pet owners feel confident that their pets will look and feel their best. With a focus on quality grooming and a memorable, approachable identity, Happy Paws stands out as both fun and reliable, appealing to pet owners who want their pets to shine.",
+
+    "project-design-decisions": "DESIGN DECISIONS",
+    "project-design-decisions-logo": "LOGO",
+    "project-design-decisions-logo-text": "The poodle mascot represents style, personality, and care, perfectly reflecting the grooming brand’s focus on keeping pets looking their best. Its cute and sassy expression conveys friendliness and approachability, while also signaling professional grooming expertise. The mascot creates an immediate emotional connection with pet owners, making the brand memorable, fun, and trustworthy.",
+
+    "project-design-decisions-color": "COLOR PALETTE",
+    "project-design-decisions-color-text": "The Happy Paws color palette was chosen to be pop, modern, and stylish, reflecting the brand’s playful and fashionable personality. The bright pink-red gives a bold, eye-catching energy that makes the brand instantly memorable, while the cream acts as a neutral canvas to balance the vibrancy. The deep red adds structure and contrast, keeping the palette grounded, and the bright blue and fresh green accents inject fun, liveliness, and modern flair. Altogether, the colors create a pop-inspired, contemporary identity that emphasizes style, joy, and approachability in pet grooming.",
+
+    "project-graphics": "GRAPHIC ELEMENTS",
+    "project-graphics-text": "The graphic elements of Happy Paws are designed to enhance the brand’s fun, stylish, and approachable personality. Playful shapes, decorative accents, and dynamic compositions reflect movement, grooming flair, and a sense of care. These elements complement the mascot and color palette, creating a cohesive visual language that feels lively, modern, and instantly recognizable across all brand applications.",
+
+    "project-imagery": "IMAGERY",
+    "project-imagery-text": "Happy Paws imagery focuses on showcasing well-groomed, happy pets in bright and clean environments. Photos are meant to feel joyful, stylish, and full of personality, highlighting both the pets and the grooming results. The imagery reinforces trust, care, and the brand’s playful yet professional character."
+  },
+
+  "es": {
+    "project-category": "ESTÉTICA CANINA",
+    "project-year": "Año",
+    "project-activity": "Actividad",
+    "project-industry": "Industria",
+    "project-industry-answer": "Mascotas",
+
+    "project-context": "CONTEXTO",
+    "project-context-text": "Happy Paws es una marca de estética canina que combina cuidado profesional con una personalidad juguetona. A través de su elegante mascota de caniche, la marca comunica cercanía, confianza y atención al detalle, haciendo que los dueños se sientan seguros de que sus mascotas lucirán y se sentirán increíbles. Con un enfoque en calidad y una identidad memorable y accesible, Happy Paws se destaca como una marca divertida y confiable, pensada para dueños que quieren que sus mascotas brillen.",
+
+    "project-design-decisions": "DECISIONES DE DISEÑO",
+    "project-design-decisions-logo": "LOGOTIPO",
+    "project-design-decisions-logo-text": "La mascota del caniche representa estilo, personalidad y cuidado, reflejando perfectamente el enfoque de la marca en mantener a las mascotas en su mejor versión. Su expresión linda y atrevida transmite cercanía y simpatía, al mismo tiempo que señala experiencia profesional en estética canina. La mascota crea una conexión emocional inmediata con los dueños, haciendo que la marca sea memorable, divertida y confiable.",
+
+    "project-design-decisions-color": "PALETA DE COLOR",
+    "project-design-decisions-color-text": "La paleta de color de Happy Paws fue elegida para ser pop, moderna y estilizada, reflejando la personalidad juguetona y fashion de la marca. El rosa-rojo brillante aporta una energía audaz y llamativa que hace a la marca instantáneamente memorable, mientras que el crema actúa como un lienzo neutral que equilibra la intensidad. El rojo profundo añade estructura y contraste, manteniendo la paleta equilibrada, y los acentos en azul brillante y verde fresco inyectan diversión, vitalidad y un aire moderno. En conjunto, los colores crean una identidad contemporánea de inspiración pop que enfatiza estilo, alegría y cercanía en la estética canina.",
+
+    "project-graphics": "ELEMENTOS GRÁFICOS",
+    "project-graphics-text": "Los elementos gráficos de Happy Paws están diseñados para reforzar la personalidad divertida, estilizada y accesible de la marca. Formas juguetonas, acentos decorativos y composiciones dinámicas reflejan movimiento, estilo de grooming y un fuerte sentido de cuidado. Estos elementos complementan la mascota y la paleta de color, creando un lenguaje visual coherente, moderno y fácilmente reconocible en todas las aplicaciones de la marca.",
+
+    "project-imagery": "IMAGENES",
+    "project-imagery-text": "Las imagenes de Happy Paws se enfoca en mostrar mascotas felices y bien arregladas en entornos brillantes y limpios. Las fotografías deben sentirse alegres, estilizadas y llenas de personalidad, resaltando tanto a las mascotas como los resultados del grooming. La imaginería refuerza la confianza, el cuidado y el carácter juguetón pero profesional de la marca."
+  }
+}
