@@ -1,0 +1,103 @@
+{
+  "en": {
+    "project-category": "AUTO AND AIRCRAFT DETAILING",
+    "project-year": "Year",
+    "project-activity": "Activity",
+    "project-industry": "Industry",
+    "project-industry-answer": "Vehicle",
+
+    "project-context": "CONTEXT",
+    "project-context-text": "Pegasus Mobile Detailing is an established car detailing business expanding its services into the aircraft detailing industry. The goal of this project was to reposition the brand to support this expansion, improve overall visual consistency, and elevate its perceived quality to align with a more premium audience. The engagement included a full brand refresh, refinement of the visual identity, and a complete redesign of the company’s website (built on Wix for operational continuity).",
+
+    "project-context-text-objective": "Objectives",
+    "project-context-text-objective-1": "Strengthen the existing brand identity while maintaining recognition",
+    "project-context-text-objective-2": "Improve logo clarity, scalability, and usability across formats",
+    "project-context-text-objective-3": "Align the visual direction with a more premium market positioning",
+    "project-context-text-objective-4": "Prepare the brand for expansion into aircraft detailing services",
+    "project-context-text-objective-5": "Redesign the website to reflect the updated identity and improve user experience",
+
+    "project-design-decisions": "DESIGN DECISIONS",
+    "project-design-decisions-logo": "LOGO",
+    "project-design-decisions-logo-text": "The original logo presented several issues related to scalability, readability, and balance. Certain elements became unclear at smaller sizes, while others dominated the composition and reduced overall legibility. To address this, the logo system was refined and expanded:",
+    "project-design-decisions-logo-text-1": "Simplified and optimized the original mark for better readability across sizes",
+    "project-design-decisions-logo-text-2": "Developed a secondary logo mark combining a “P” with a wing element to reinforce brand recognition",
+    "project-design-decisions-logo-text-3": "Created a mascot-style logo featuring a Pegasus with a more balanced composition and dual wings, used for more expressive branding applications",
+    "project-design-decisions-logo-text-4": "Introduced alternative logo variations to ensure flexibility across different use cases while maintaining brand consistency",
+    "project-design-decisions-logo-text-5": "The updated system improves clarity, adaptability, and visual cohesion across platforms",
+
+    "project-design-color-palette": "COLOR PALETTE",
+    "project-design-color-palette-text": "The original palette consisted of a bright yellow paired with pure black. While functional, it lacked depth and did not fully communicate a premium feel. The revised palette includes:",
+    "project-design-color-palette-text-1": "A shift from bright yellow to a more muted mustard gold tone",
+    "project-design-color-palette-text-2": "Replacement of pure black with a softer shadow gray",
+    "project-design-color-palette-text-3": "This adjustment helps establish a more refined and premium visual identity, aligning better with the brand’s positioning in high-value vehicle care.",
+
+    "project-design-graphics": "GRAPHIC ELEMENTS",
+    "projectproject-design-graphics-text": "A consistent set of graphic elements was introduced to support the identity across various applications:",
+    "projectproject-design-graphics-text-1": "Wing-inspired motifs used as subtle design accents and bullet point indicators",
+    "projectproject-design-graphics-text-2": "Linear stripe elements referencing motion, speed, and automotive aesthetics",
+    "projectproject-design-graphics-text-3": "Structured layouts that balance technical precision with a premium feel",
+    "projectproject-design-graphics-text-4": "These elements help reinforce brand recognition while maintaining visual consistency across print and digital materials.",
+
+    "project-graphics": "WEB DESIGN",
+    "project-web": "WEB DESIGN",
+    "project-web-text": "The website was originally built on Wix. To accommodate the client’s operational preferences, the redesign was implemented within the same platform while significantly improving visual quality and structure. Key improvements include:",
+    "project-web-text-1": "A modernized layout aligned with the new brand identity",
+    "project-web-text-2": "Clear presentation of services and offerings",
+    "project-web-text-3": "Design considerations for future expansion into aircraft detailing services",
+    "project-web-text-4": "Improved visual hierarchy and user flow for better usability",
+    "project-web-text-5": "Despite platform limitations, the redesign achieves a more polished and premium digital presence.",
+    "project-web-text-6": "To visit the website and see it for yourself, visit:",
+    "project-web-text-7": "or click the image below:"
+  },
+
+  "es": {
+    "project-category": "DETALLADO AUTOMOTRIZ Y DE AERONAVES",
+    "project-year": "Año",
+    "project-activity": "Actividad",
+    "project-industry": "Industria",
+    "project-industry-answer": "Vehículo",
+
+    "project-context": "CONTEXTO",
+    "project-context-text": "Pegasus Mobile Detailing es un negocio establecido de detallado automotriz que está expandiendo sus servicios hacia el detallado de aeronaves. El objetivo de este proyecto fue reposicionar la marca para apoyar esta expansión, mejorar la consistencia visual general y elevar su percepción de calidad para alinearla con un público más premium. El proyecto incluyó una renovación completa de la marca, refinamiento de la identidad visual y un rediseño completo del sitio web de la empresa (construido en Wix para mantener la continuidad operativa).",
+
+    "project-context-text-objective": "Objetivos",
+    "project-context-text-objective-1": "Fortalecer la identidad de marca existente manteniendo su reconocimiento",
+    "project-context-text-objective-2": "Mejorar la claridad, escalabilidad y usabilidad del logotipo en diferentes formatos",
+    "project-context-text-objective-3": "Alinear la dirección visual con un posicionamiento de mercado más premium",
+    "project-context-text-objective-4": "Preparar la marca para la expansión hacia servicios de detallado de aeronaves",
+    "project-context-text-objective-5": "Rediseñar el sitio web para reflejar la identidad actualizada y mejorar la experiencia de usuario",
+
+    "project-design-decisions": "DECISIONES DE DISEÑO",
+    "project-design-decisions-logo": "LOGOTIPO",
+    "project-design-decisions-logo-text": "El logotipo original presentaba varios problemas relacionados con escalabilidad, legibilidad y equilibrio. Algunos elementos se volvían poco claros en tamaños pequeños, mientras que otros dominaban la composición y reducían la legibilidad general. Para resolver esto, el sistema de logotipo fue refinado y ampliado:",
+    "project-design-decisions-logo-text-1": "Se simplificó y optimizó el logotipo original para mejorar su legibilidad en diferentes tamaños",
+    "project-design-decisions-logo-text-2": "Se desarrolló un logotipo secundario combinando la letra “P” con un elemento de ala para reforzar el reconocimiento de marca",
+    "project-design-decisions-logo-text-3": "Se creó un logotipo tipo mascota con un Pegaso de composición más equilibrada y dos alas, utilizado en aplicaciones de branding más expresivas",
+    "project-design-decisions-logo-text-4": "Se introdujeron variaciones alternativas del logotipo para asegurar flexibilidad en distintos usos manteniendo la coherencia de marca",
+    "project-design-decisions-logo-text-5": "El sistema actualizado mejora la claridad, adaptabilidad y coherencia visual en todas las plataformas",
+
+    "project-design-color-palette": "PALETA DE COLORES",
+    "project-design-color-palette-text": "La paleta original consistía en un amarillo brillante combinado con negro puro. Aunque funcional, carecía de profundidad y no transmitía completamente una sensación premium. La paleta revisada incluye:",
+    "project-design-color-palette-text-1": "Transición de un amarillo brillante a un tono dorado mostaza más suave",
+    "project-design-color-palette-text-2": "Reemplazo del negro puro por un gris sombra más suave",
+    "project-design-color-palette-text-3": "Este ajuste ayuda a establecer una identidad visual más refinada y premium, alineada mejor con el posicionamiento de la marca en el cuidado de vehículos de alto valor.",
+
+    "project-design-graphics": "ELEMENTOS GRÁFICOS",
+    "project-design-graphics-text": "Se introdujo un conjunto consistente de elementos gráficos para apoyar la identidad en diversas aplicaciones:",
+    "project-design-graphics-text-1": "Motivos inspirados en alas utilizados como acentos visuales y viñetas",
+    "project-design-graphics-text-2": "Elementos de líneas que hacen referencia al movimiento, velocidad y estética automotriz",
+    "project-design-graphics-text-3": "Diseños estructurados que equilibran precisión técnica con una sensación premium",
+    "project-design-graphics-text-4": "Estos elementos ayudan a reforzar el reconocimiento de marca manteniendo coherencia visual en materiales impresos y digitales.",
+
+    "project-graphics": "DISEÑO WEB",
+    "project-web": "DISEÑO WEB",
+    "project-web-text": "El sitio web fue originalmente construido en Wix. Para adaptarse a las preferencias operativas del cliente, el rediseño se implementó dentro de la misma plataforma mientras se mejoraba significativamente la calidad visual y la estructura. Las mejoras incluyen:",
+    "project-web-text-1": "Un diseño modernizado alineado con la nueva identidad de marca",
+    "project-web-text-2": "Presentación clara de servicios y ofertas",
+    "project-web-text-3": "Consideraciones de diseño para futura expansión hacia servicios de detallado de aeronaves",
+    "project-web-text-4": "Mejora de la jerarquía visual y flujo de usuario para mayor usabilidad",
+    "project-web-text-5": "A pesar de las limitaciones de la plataforma, el rediseño logra una presencia digital más pulida y premium.",
+    "project-web-text-6": "Para visitar el sitio web, puedes hacerlo aquí:",
+    "project-web-text-7": "o haz clic en la imagen de abajo:"
+  }
+}
