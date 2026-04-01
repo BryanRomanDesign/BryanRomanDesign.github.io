@@ -350,13 +350,17 @@ h1 {
 }
 
 .projects h1 {
-  max-width: 1200px; /* or whatever width you want */
-  margin: 0 auto;    /* centers it */
+  max-width: 1200px;
+  margin: 0 auto;
   padding-top: 6px;
-  padding-bottom: 80px;
+
+  padding-bottom: clamp(30px, 5vw, 80px);
+
   margin-bottom: 10px;
-  font-size: clamp(60px, 5vw, 80px);
-  position: relative;   /* THIS was missing */
+
+  font-size: clamp(32px, 6vw, 72px);
+
+  position: relative;
   color: #2D9CDB;
 }
 
@@ -365,9 +369,9 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 400px;           /* length of the line */
-  height: 2px;           /* thickness */
-  background-color: white; /* or your accent color */
+  width: clamp(120px, 40%, 400px);
+  height: 2px;
+  background-color: white;
 }
 
 .projects-grid {
@@ -1085,17 +1089,33 @@ h1 {
 
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  padding: 2rem;
+  padding: clamp(1rem, 3vw, 2rem);
 }
 
-.faq-container h1
-{
-  font-size: 70px;  
+.faq-container h1 {
+  font-size: clamp(28px, 5vw, 64px);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.faq-collection h2 {
+  font-size: clamp(20px, 3vw, 36px);
+  margin-bottom: 1rem;
+}
+
+.faq-question h3 {
+  font-size: clamp(14px, 2.2vw, 18px);
+  line-height: 1.4;
+}
+
+.faq-answer p {
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: 1.6;
 }
 
 .faq-collection {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: clamp(20px, 5vw, 50px);
+  padding-bottom: clamp(20px, 5vw, 50px);
 }
 
 .faq-item {
