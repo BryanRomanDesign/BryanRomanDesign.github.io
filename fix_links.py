@@ -5,7 +5,6 @@ import re
 root_dir = os.path.dirname(os.path.realpath(__file__))
 
 # Regex pattern to find links ending in .html within href attributes
-# This matches things like href="projects.html" or href="/projects.html"
 html_link_pattern = re.compile(r'href=["\']([^"\']+\.html)["\']')
 
 def clean_file_links(file_path):
@@ -23,13 +22,16 @@ def clean_file_links(file_path):
         if match.startswith('http://') or match.startswith('https://'):
             continue
             
-        # 1. Strip the .html extension
-        clean_url = match.replace('.html', '')
-        
-        # 2. Fix the relative path issue at the same time!
-        # If it doesn't already start with a slash, add one so it looks at the root
-        if not clean_url.startswith('/') and not clean_url.startswith('#'):
-            clean_url = '/' + clean_url
+        # FIX: If the link is exactly 'index.html' or '/index.html', route it directly to the root domain '/'
+        if match in ['index.html', '/index.html']:
+            clean_url = '/'
+        else:
+            # Otherwise, strip the .html extension normally
+            clean_url = match.replace('.html', '')
+            
+            # If it doesn't already start with a slash, add one so it looks at the root
+            if not clean_url.startswith('/') and not clean_url.startswith('#'):
+                clean_url = '/' + clean_url
             
         # Replace the old link with the new clean link
         new_content = new_content.replace(f'href="{match}"', f'href="{clean_url}"')
