@@ -271,42 +271,44 @@
                   <script>
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById('contact-form');
-  const result = document.getElementById('result');
-  if (form) {
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
-      const formData = new FormData(form);
-      // FIX: This strips out the Turnstile payload before sending to Web3Forms 
-      formData.delete('cf-turnstile-response'); 
-      const object = Object.fromEntries(formData);
-      const json = JSON.stringify(object);
-      try {
-        const response = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: json
-        });
-        if (response.ok) {
-          form.reset();
-          //window.location.href = "/contact_thanks/index.html";
-        } else {
-          //console.error("Web3Forms responded with an error:", result);
-          window.location.href = "/contact_failed/index.html";
-        }
-      } catch (error) {
-        //console.error("Network or JavaScript error occurred:", error);
-        //alert("Network error: " + error.message);
-        //window.location.href = "/contact_failed/index.html";
+  if (!form) return;
+
+  const wrapper = form.closest('.form-block');
+  const successMsg = wrapper.querySelector('.success-message');
+  const errorMsg = wrapper.querySelector('.error-message');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation(); // blocks Webflow's own submit handler
+
+    const formData = new FormData(form);
+    formData.delete('cf-turnstile-response');
+    const json = JSON.stringify(Object.fromEntries(formData));
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: json
+      });
+
+      if (response.ok) {
+        form.reset();
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+      } else {
+        form.style.display = 'none';
+        errorMsg.style.display = 'block';
       }
-    });
-  }
-  // Function to close the popup
-  window.closeMessageModal = function () {
-    messageModal.style.display = 'none';
-  }
+    } catch (error) {
+      form.style.display = 'none';
+      errorMsg.style.display = 'block';
+    }
+  }, true); // <-- capture: true is the key part
 });
 </script>
                 </div><label for="name">Name</label><input class="contact-field w-input" maxlength="256" name="name" data-name="name" placeholder="Enter your name or business name" type="text" id="name"><label for="email">Email Address</label><input class="contact-field w-input" maxlength="256" name="email" data-name="email" placeholder="How can I reach you?" type="email" id="email" required=""><label for="message">Message</label><textarea id="message" name="message" maxlength="5000" data-name="message" placeholder="Tell me everything about it!" required="" class="contact-field text-area w-input"></textarea><input type="submit" data-wait="Please wait..." class="button-primary w-button" value="Submit">
